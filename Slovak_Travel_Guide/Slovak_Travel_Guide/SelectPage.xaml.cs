@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Slovak_Travel_Guide.Sights;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,19 @@ namespace Slovak_Travel_Guide
         public SelectPage()
         {
             InitializeComponent();
+
+            NavigationPage.SetHasNavigationBar(this, false);
         }
+
+        async void CastlesBtnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Castles());
+        }
+
+        async void CavesBtnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Caves());
+        }
+
     }
 }

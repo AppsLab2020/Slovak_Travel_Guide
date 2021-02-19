@@ -1,16 +1,78 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Slovak_Travel_Guide.SelectPage">
-    
-    <StackLayout>
+             x:Class="Slovak_Travel_Guide.SelectPage"
+             BackgroundColor="#E0E0E0">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
         <Label
-            Text="Čau Maťo"
-            TextColor="Green"
-            FontSize="60"
+            Text="Select Sight"
+            FontSize="26"
+            HorizontalTextAlignment="Center"
             FontAttributes="Bold"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"/>
-    </StackLayout>
-    
+            TextColor="Green"
+            Grid.Row="1"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            />
+
+        <StackLayout
+            Grid.Column="1"
+            Grid.Row="2">
+
+            <Button
+                HeightRequest="150"
+                WidthRequest="100"
+                Clicked="CastlesBtnClicked"
+                Text="CASTLES"
+                TextColor="Green"
+                FontAttributes="Bold"
+                FontSize="Large"/>
+
+        </StackLayout>
+
+        <StackLayout
+            Grid.Column="2"
+            Grid.Row="2">
+
+            <Button
+                HeightRequest="150"
+                WidthRequest="100"
+                Clicked="CavesBtnClicked"
+                Text="CAVES"
+                TextColor="Green"
+                FontAttributes="Bold"
+                FontSize="Large"/>
+
+        </StackLayout>
+
+        <StackLayout
+                Grid.Row="5"
+                Grid.Column="1"
+                Grid.ColumnSpan="2">
+
+            <Entry/>
+
+        </StackLayout>
+
+
+    </Grid>
+
 </ContentPage>

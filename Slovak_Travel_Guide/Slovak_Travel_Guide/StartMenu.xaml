@@ -29,7 +29,6 @@
             <Button
             Text="TRAVEL"
             TextColor="Green"
-            FontFamily="Verdana"
             Clicked="btnTravelClicked"
             FontAttributes="Bold"
             FontSize="50"
@@ -58,7 +57,8 @@
                     TextColor="Green"
                     FontSize="Large"
                     FontAttributes="Bold"
-                    Margin="20, 0, 0, 5"/>
+                    Margin="20, 0, 0, 5"
+                    BackgroundColor="LightGray"/>
 
                 <Button
                     Grid.Row="0"
@@ -69,12 +69,12 @@
                     TextColor="Green"
                     FontSize="Large"
                     FontAttributes="Bold"
-                    Margin="0, 0, 20, 5"/>
+                    Margin="0, 0, 20, 5"
+                    BackgroundColor="LightGray"/>
             </Grid>
 
             <Button
             Text="OPTIONS"
-            FontFamily="Verdana"
             FontSize="Large"
             TextColor="Green"
             FontAttributes="Bold"

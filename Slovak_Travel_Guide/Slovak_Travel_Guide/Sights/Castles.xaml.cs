@@ -7,21 +7,16 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Slovak_Travel_Guide
+namespace Slovak_Travel_Guide.Sights
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class StartMenu : ContentPage
+    public partial class Castles : ContentPage
     {
-        public StartMenu()
+        public Castles()
         {
             InitializeComponent();
 
             NavigationPage.SetHasNavigationBar(this, false);
-        }
-
-        async void btnTravelClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new SelectPage());
         }
     }
 }
