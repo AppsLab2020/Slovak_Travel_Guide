@@ -5,3 +5,4 @@
 4. Pod buttnom (travel) budú 2 tlačidlá na registrovanie a prihlásenie sa do apky pomocou googlu alebo emailu.
 5. pod dvoma buttonmi (sign in)(log in) bude button options, kde sa bude nastavovať motív apky, svetlý motív a tmavý motív
 
+2. Stranka nám zobrazí sekcie pamiatok, z ktorých si možeme vybrať alebo si vieme hneď nájsť podľa presného názvu pamiatku. So easy :)
