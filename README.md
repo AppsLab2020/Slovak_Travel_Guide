@@ -11,4 +11,5 @@
             a) V bližšom infe o napr. hradoch budú 2 buttony, jeden na GPS a druhý na počasie.
                     i)GPS button - funkcia po kliknutí taká, že nám nastaví navigáciu s aktuálneho miesta do cieľovej destinácie
                     ii) Počasie button - po kliknutí bude ukazovať, aké je na danom mieste počasie
+<h1>Prve demo (15.3.2021)</h1>
 
