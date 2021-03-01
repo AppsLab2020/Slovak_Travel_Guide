@@ -13,8 +13,8 @@
   1. Keď stlačíme button napr. s hradmi tak nás to presunie na stranu, kde budú hrady, budeme si ich môsť rozkliknúť, zistiť nejaké bližšie info o nich
   1. Ak nebudeme chcieť stránku s hradmi všeobecne, tak dole na stránke sa bude nachádzať Entry, do ktorého budeme môcť zadať názov konkrétneho hradu
   1. V bližšom infe o napr. hradoch budú 2 buttony, jeden na GPS a druhý na počasie:
-    - GPS button - funkcia po kliknutí taká, že nám nastaví navigáciu s aktuálneho miesta do cieľovej destinácie
-    - Počasie button - po kliknutí bude ukazovať, aké je na danom mieste počasie
+    * GPS button - funkcia po kliknutí taká, že nám nastaví navigáciu s aktuálneho miesta do cieľovej destinácie
+    * Počasie button - po kliknutí bude ukazovať, aké je na danom mieste počasie
 
 ## Prvé demo (15.3.2021)
 
