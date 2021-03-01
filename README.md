@@ -9,7 +9,7 @@
     a) Min. 2 možnosti ako si vybrať medzi nejakými napr. hradmi, jaskyňami atď...
     b) Keď stlačíme button napr. s hradmi tak nás to presunie na stranu, kde budú hrady, budeme si ich môsť rozkliknúť, zistiť nejaké bližšie info o nich
     c) Ak nebudeme chcieť stránku s hradmi všeobecne, tak dole na stránke sa bude nachádzať Entry, do ktorého budeme môcť zadať názov konkrétneho hradu
-    d) V bližšom infe o napr. hradoch budú 2 buttony, jeden na GPS a druhý na počasie.
-        i)GPS button - funkcia po kliknutí taká, že nám nastaví navigáciu s aktuálneho miesta do cieľovej destinácie
-        ii) Počasie button - po kliknutí bude ukazovať, aké je na danom mieste počasie
+            a) V bližšom infe o napr. hradoch budú 2 buttony, jeden na GPS a druhý na počasie.
+                    i)GPS button - funkcia po kliknutí taká, že nám nastaví navigáciu s aktuálneho miesta do cieľovej destinácie
+                    ii) Počasie button - po kliknutí bude ukazovať, aké je na danom mieste počasie
 
