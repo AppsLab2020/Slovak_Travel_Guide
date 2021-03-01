@@ -1,5 +1,5 @@
 # Slovak_Travel_Guide
-<h1>1) Úvodná strana:</h1>
+#1) Úvodná strana:
       1.Na vrchu strany názov apky.
       1.Button (travel) - tento button nas prenesie na dalsiu stranku, kde si budeme môcť vybrať možnosť, kde chceme ísť atď..
       1.Pod buttnom (travel) budú 2 tlačidlá na registrovanie a prihlásenie sa do apky pomocou googlu alebo emailu.
