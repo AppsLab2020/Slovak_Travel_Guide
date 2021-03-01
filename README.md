@@ -17,4 +17,5 @@
        Počasie button - po kliknutí bude ukazovať, aké je na danom mieste počasie
 
 ## Prvé demo (15.3.2021)
+  1. do prvého dema stihnúť spojazdniť GPSku, aby sme sa vedeli navigovat pomocou tlačidla na miesto, na ktoré chceme ísť
 
