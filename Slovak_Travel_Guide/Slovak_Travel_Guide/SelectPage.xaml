@@ -2,12 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Slovak_Travel_Guide.SelectPage"
-             BackgroundColor="#E0E0E0">
+             BackgroundColor="#B2FF66">
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="10"/>
             <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -32,45 +33,51 @@
             Grid.Column="1"
             Grid.ColumnSpan="2"
             />
-
-        <StackLayout
+        <ImageButton
             Grid.Column="1"
-            Grid.Row="2">
-
-            <Button
-                HeightRequest="150"
-                WidthRequest="100"
-                Clicked="CastlesBtnClicked"
-                Text="CASTLES"
-                TextColor="Green"
-                FontAttributes="Bold"
-                FontSize="Large"/>
-
-        </StackLayout>
-
-        <StackLayout
+            Grid.Row="2"
+            Source="https://www.trencinregion.sk/images/categories/21/hrady_zamky_pamiatky-image-7f1ee41c1d2c2f63c7d061aac5057ff2.jpg"
+            CornerRadius="15"
+            />
+        <ImageButton
+            Grid.Column="1"
+            Grid.Row="3"
+            Source="https://upload.wikimedia.org/wikipedia/commons/a/a9/Domica_Cave_22.jpg"
+            CornerRadius="15"
+            />
+        <ImageButton
+            Grid.Column="1"
+            Grid.Row="4"
+            Source="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Bronx_Zoo_001.jpg/1200px-Bronx_Zoo_001.jpg"
+            CornerRadius="15"
+            />
+        <ImageButton
             Grid.Column="2"
-            Grid.Row="2">
-
-            <Button
-                HeightRequest="150"
-                WidthRequest="100"
-                Clicked="CavesBtnClicked"
-                Text="CAVES"
-                TextColor="Green"
-                FontAttributes="Bold"
-                FontSize="Large"/>
-
-        </StackLayout>
-
-        <StackLayout
-                Grid.Row="5"
-                Grid.Column="1"
-                Grid.ColumnSpan="2">
-
-            <Entry/>
-
-        </StackLayout>
+            Grid.Row="2"
+            Source="https://cestujzamenej.sk/wp-content/uploads/2020/11/FB_titulna-foto_SKANZENY_.jpg"
+            CornerRadius="15"
+            />
+        <ImageButton
+            Grid.Column="2"
+            Grid.Row="3"
+            Source="https://www.topdesat.sk/wp-content/uploads/2017/11/france-264225_1920-e1511816287594.jpg"
+            CornerRadius="15"
+            />
+        <ImageButton
+            Grid.Column="2"
+            Grid.Row="4"
+            Source="https://m.smedata.sk/api-media/media/image/sme/5/59/5912945/5912945_1200x800.jpeg?rev=4"
+            CornerRadius="15"
+            />
+        <Entry
+            x:Name="SelectSight"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Grid.Row="6"
+            TextColor="Green"
+            Placeholder="Zadajte pamiatku!"
+            HorizontalTextAlignment="Center"
+            />
 
 
     </Grid>
