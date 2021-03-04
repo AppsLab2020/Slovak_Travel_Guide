@@ -30,5 +30,21 @@ namespace Slovak_Travel_Guide
             await Navigation.PushAsync(new Caves());
         }
 
+        async void ZoosBtnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Zoos());
+        }
+        async void OldVillagesBtnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new OldVillages());
+        }
+        async void SkiDestinationsBtnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SkiDestinations());
+        }
+        async void MountainsBtnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Mountains());
+        }
     }
 }
