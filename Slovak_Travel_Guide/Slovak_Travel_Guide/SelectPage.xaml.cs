@@ -19,17 +19,14 @@ namespace Slovak_Travel_Guide
 
             NavigationPage.SetHasNavigationBar(this, false);
         }
-
         async void CastlesBtnClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Castles());
         }
-
         async void CavesBtnClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Caves());
         }
-
         async void ZoosBtnClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Zoos());

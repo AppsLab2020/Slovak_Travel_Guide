@@ -14,29 +14,33 @@
             FontAttributes="Bold"
             FontFamily="cursive"
             />
-        
-        <Button
+
+        <StackLayout>
+
+            <Button
             ImageSource="https://pelipecky.sk/wp-content/uploads/2017/06/bojnice-zamok-najkrajsie-miesta-na-slovensku-1000x600.jpg"
             Text="Hrad Bojnice"
             TextColor="Green"
             FontAttributes="Bold"
             FontFamily="cursive"
-            />
+            BackgroundColor="LightGray"/>
+        </StackLayout>
+
         <Button
             ImageSource="https://www.loftpremiumhotel.sk/uploads/nr_photos/Sightseeing_1954.jpg"
             Text="Bratislavsky Hrad"
             TextColor="Green"
             FontAttributes="Bold"
             FontFamily="cursive"
-            />
+            BackgroundColor="LightGray"/>
+        
         <Button
             ImageSource="https://www.dobrodruh.sk/sites/prod/files/styles/catalog_node_min_1200px/public/2018-02/1.JPG?itok=bMlTb57O"
             Text="Hrad Devín"
             TextColor="Green"
             FontAttributes="Bold"
             FontFamily="cursive"
-            />
-
+            BackgroundColor="LightGray"/>
 
     </StackLayout>
     

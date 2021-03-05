@@ -25,7 +25,7 @@
     <EmbeddedResource Update="SelectPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="SkiDestinations.xaml">
+    <EmbeddedResource Update="Sights\SkiDestinations.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="StartMenu.xaml">
