@@ -7,10 +7,29 @@
     <StackLayout>
         
         <Label
-            Text="CAVES"
+            Text="Caves"
             FontSize="50"
             TextColor="Green"
-            HorizontalOptions="Center"/>
+            HorizontalOptions="Center"
+            FontFamily="cursive"/>
+        <ListView>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                <ViewCell>
+                        <Grid
+                            ColumnDefinitions="10, * , *, 10"
+                            RowDefinitions="*,*"
+                           >
+                            <Image
+                                Source="https://travelhacker.blog/wp-content/uploads/2019/02/Jaskyne-Crystal-Caves.jpg"
+                                Grid.Row="1"
+                                Grid.RowSpan="2"
+                                Grid.Column="1"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
         
     </StackLayout>
     
