@@ -18,5 +18,10 @@ namespace Slovak_Travel_Guide.Sights
 
             NavigationPage.SetHasNavigationBar(this, false);
         }
+
+        async void BtnScrollUpClicked(object sender, EventArgs e)
+        {
+            await SVCastles.ScrollToAsync(0, Lblastles.Y, true);
+        }
     }
 }
