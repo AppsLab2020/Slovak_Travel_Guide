@@ -9,46 +9,133 @@
         <ScrollView
             x:Name="SVCastles">
 
-            <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
 
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="20"/>
+                </Grid.ColumnDefinitions>
+                
                 <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
                 Text="Castles"
                 x:Name="Lblastles"
                 FontSize="50"
                 TextColor="Green"
                 HorizontalOptions="Center"
-                FontAttributes="Bold"/>
-
-                <Button
-                ImageSource="https://pelipecky.sk/wp-content/uploads/2017/06/bojnice-zamok-najkrajsie-miesta-na-slovensku-1000x600.jpg"
-                Text="Hrad Bojnice"
-                TextColor="Green"
                 FontAttributes="Bold"
-                BackgroundColor="LightGray"
-                HeightRequest="350"/>
+                FontFamily="cursive"/>
 
+                <Grid
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="50"/>
+                    </Grid.ColumnDefinitions>
+              
+                <Image
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.RowSpan="2"
+                    Source="https://www.kiskatravel.sk/swift_data/source/Blog/Hrady%20a%20Z%C3%A1mky/c_bratislava-castle-2674190_1920.jpg"/>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Text="Bratislavský Hrad"
+                    FontFamily="cursive"
+                    FontAttributes="Bold"
+                    TextColor="Green"
+                    FontSize="30"
+                    Padding="20,0,0,10"/>
+                    
+                            
+                    <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Text="⭐⭐⭐⭐⭐"
+                    TextColor="Gold"
+                    FontAttributes="Bold"
+                    FontSize="30"
+                    Padding="20,0,0,10"/>
+                    
                 <Button
-                ImageSource="https://www.loftpremiumhotel.sk/uploads/nr_photos/Sightseeing_1954.jpg"
-                Text="Bratislavsky Hrad"
-                TextColor="Green"
-                FontAttributes="Bold"
-                FontFamily="cursive"
-                BackgroundColor="LightGray"/>
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text=">"
+                        />
+                    
+                </Grid>
+                
+                <Grid
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
 
-                <Button
-                ImageSource="https://www.dobrodruh.sk/sites/prod/files/styles/catalog_node_min_1200px/public/2018-02/1.JPG?itok=bMlTb57O"
-                Text="Hrad Devín"
-                TextColor="Green"
-                FontAttributes="Bold"
-                FontFamily="cursive"
-                BackgroundColor="LightGray"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                    </Grid.ColumnDefinitions>
 
-                <Button
-                    VerticalOptions="End"
-                    HorizontalOptions="FillAndExpand"
-                    Clicked="BtnScrollUpClicked"/>
+                    <Image
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.RowSpan="2"
+                    Source="https://www.trencinregion.sk/images/categories/21/hrady_zamky_pamiatky-image-7f1ee41c1d2c2f63c7d061aac5057ff2.jpg"/>
+                    <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Text="Trenčiansky Hrad"
+                    FontFamily="cursive"
+                    FontAttributes="Bold"
+                    TextColor="Green"
+                    FontSize="30"/>
+                    <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Text="⭐⭐⭐⭐⭐"
+                    TextColor="Gold"
+                    FontAttributes="Bold"
+                    FontSize="30"/>
 
-            </StackLayout>
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text=">>"/>
+
+                </Grid>
+
+
+
+
+            </Grid>
 
         </ScrollView>
 
