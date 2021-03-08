@@ -24,5 +24,5 @@
   2. funkcny splach screen
 
 
-# Vytvorili *Martinek a trošku pomáhal Jaro. :)
+*Vytvorili Martinek a trošku pomáhal Jaro. :)
 
