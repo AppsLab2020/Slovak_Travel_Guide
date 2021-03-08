@@ -3,34 +3,103 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Slovak_Travel_Guide.Sights.Caves"
              BackgroundColor="#E0E0E0">
-    
-    <StackLayout>
+
+    <ScrollView
+        Orientation="Vertical">
+        <StackLayout>
+
+            <Label
+                VerticalOptions="Start"
+                FontSize="50"
+                Text="Caves"
+                TextColor="Green"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"/>
+            
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="120"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid
+                    Grid.Row="1"
+                    Grid.Column="1">
+                    
+                </Grid>
+
+                <Image
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Aspect="AspectFit"
+                    Source="https://static.thenounproject.com/png/200363-200.png"/>
+
+                <Image
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Aspect="AspectFill"
+                    Source="https://static.thenounproject.com/png/1282444-200.png"/>
+
+                <Image
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Aspect="AspectFill"
+                    Source="https://static.thenounproject.com/png/1465819-200.png"/>
+
+                <Image
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Aspect="AspectFit"
+                    Source="https://d338t8kmirgyke.cloudfront.net/icons/icon_pngs/000/007/625/original/cave.png"/>
+
+                    <Label
+                        Text="jaskyna 1"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        FontSize="30"
+                        TextColor="Black"/>
+
+                <!--<Button
+                            Text="GPS"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            WidthRequest="30"
+                            HeightRequest="30"/>-->  
+
+                    <Label
+                            Text="jaskyna 2"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            FontSize="30"
+                            TextColor="Black"/>
+
+                    <Label
+                        Text="jaskyna 3"
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        FontSize="30"
+                        TextColor="Black"/>
+
+                    <Label
+                        Text="jaskyna 4"
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        FontSize="30"
+                        TextColor="Black"/>
+
+
+            </Grid>
+        </StackLayout>
         
-        <Label
-            Text="Caves"
-            FontSize="50"
-            TextColor="Green"
-            HorizontalOptions="Center"
-            FontFamily="cursive"/>
-        <ListView>
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                <ViewCell>
-                        <Grid
-                            ColumnDefinitions="10, * , *, 10"
-                            RowDefinitions="*,*"
-                           >
-                            <Image
-                                Source="https://travelhacker.blog/wp-content/uploads/2019/02/Jaskyne-Crystal-Caves.jpg"
-                                Grid.Row="1"
-                                Grid.RowSpan="2"
-                                Grid.Column="1"/>
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        
-    </StackLayout>
+    </ScrollView>
     
 </ContentPage>
