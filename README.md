@@ -2,7 +2,7 @@
 
 *Aplikácia slúži na preskumávanie pamiatok na Slovensku.*
 
-## 1) Slashe screen
+## 1) Splash screen
   1. Zobrazí sa nám tzv. Loading screen, kde sa nám zobrazí naše vlastnoručné vyrobené logo 
 
 ## 2) Úvodná strana
@@ -27,5 +27,5 @@
   2. funkcny splach screen
 
 
-*Vytvorili Martinek a trošku pomáhal Jaro. :)*
+*Vytvorili Martinek ale najviac pomáhal Jaro. :)*
 
