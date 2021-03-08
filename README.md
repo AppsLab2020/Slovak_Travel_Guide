@@ -2,14 +2,6 @@
 
 *Aplikácia slúži na preskumávanie pamiatok na Slovensku.*
 
-**V aplikácií sa nám zobrazí zoznam pamiatok. Po vybratí piamatky máme na výber 2 tlačidla.**
-
-## 1, Prvé tlačidlo tzv. GPS BUTTON
-*Tlačidlo nás presmeruje na Google mapy a zadá nám akutálnu polohu + finálnu destináciu.*
-
-## 2, Prvé tlačidlo tzv. CHECK WEATHER
-*Tlačidlo nám ukáže aktuálne počasie v polohe pamiatky.*
-
 ## 1) Úvodná strana
 
   1. Na vrchu strany názov apky.
@@ -30,4 +22,7 @@
 ## Prvé demo (15.3.2021)
   1. do prvého dema stihnúť spojazdniť GPSku, aby sme sa vedeli navigovat pomocou tlačidla na miesto, na ktoré chceme ísť
   2. funkcny splach screen
+
+
+# Vytvorili *Martinek a trošku pomáhal Jaro. :)
 
