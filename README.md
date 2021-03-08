@@ -1,10 +1,22 @@
+# Slovak_Travel_Guide
+
+*Aplikácia slúži na preskumávanie pamiatok na Slovensku.*
+
+**V aplikácií sa nám zobrazí zoznam pamiatok. Po vybratí piamatky máme na výber 2 tlačidla.**
+
+## 1, Prvé tlačidlo tzv. GPS BUTTON
+*Tlačidlo nás presmeruje na Google mapy a zadá nám akutálnu polohu + finálnu destináciu.*
+
+## 2, Prvé tlačidlo tzv. CHECK WEATHER
+*Tlačidlo nám ukáže aktuálne počasie v polohe pamiatky.*
+
 ## 1) Úvodná strana
 
   1. Na vrchu strany názov apky.
   1. Button (travel) - tento button nas prenesie na dalsiu stranku, kde si budeme môcť vybrať možnosť, kde chceme ísť atď..(strana výberu)
   1. Pod buttnom (travel) budú 2 tlačidlá na registrovanie a prihlásenie sa do apky pomocou googlu alebo emailu.
   1. Pod dvoma buttonmi (sign in)(log in) bude button options, kde sa bude nastavovať motív apky, svetlý motív a tmavý motív.
-# Slovak_Travel_Guide
+
   
 ## 2) Strana výberu
 
