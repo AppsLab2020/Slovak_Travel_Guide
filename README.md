@@ -1,4 +1,4 @@
-# Slovak_Travel_Guide
+                                          # Slovak_Travel_Guide
 
 *Aplikácia slúži na preskumávanie pamiatok na Slovensku.*
 
