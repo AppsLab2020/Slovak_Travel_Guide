@@ -24,8 +24,9 @@
                         <ColumnDefinition Width="20"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="100"/>
-                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="40"/>
                     </Grid.RowDefinitions>
 
                     <Image
@@ -35,7 +36,7 @@
                         Source="https://www.terchova.eu/images/stories/velky_rozsutec.jpg"
                         Aspect="AspectFill"/>
                     <Label
-                        Margin="20,0,20,0"
+                        Margin="30,0,20,0"
                         Grid.Row="0"
                         Grid.Column="2"
                         Text="Rozsutec"
@@ -43,31 +44,83 @@
                         FontFamily="cursive"
                         TextColor="Green"/>
                     <Label
+                    Margin="25,0,20,0"
+                    Grid.Column="2"
+                    Grid.Row="1"
                     Text="⭐⭐⭐⭐⭐"
                     TextColor="Gold"
                     FontAttributes="Bold"
-                    FontSize="30"/>
+                    FontSize="25"/>
+                    
                     <behaviors:Expander
                         Grid.Row="1"
-                        Grid.RowSpan="2"
+                        Grid.RowSpan="3"
                         Grid.Column="1"
                         Grid.ColumnSpan="2">
                         <behaviors:Expander.Header>
                             <Label
-                                Margin="0,20,0,0"
+                                FontFamily="cursive"
+                                TextColor="Red"
+                                Margin="0,40,0,0"
                                 Text="Show More"
-                                FontSize="25"
+                                FontSize="20"
                                 HorizontalOptions="End"/>
                         </behaviors:Expander.Header>
                         <StackLayout
                             Grid.Row="0"
-                            Grid.RowSpan="2">
+                            Grid.RowSpan="4">
+                            <Grid
+                            Grid.Row="0"
+                            Grid.RowSpan="3">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button
+                                    x:Name="WeatherBTN"
+                                    HeightRequest="15"
+                                    Grid.Column="0"
+                                    CornerRadius="15"
+                                    Text="Weather"
+                                    BackgroundColor="LightBlue"
+                                    TextColor="Yellow"
+                                    />
+                                <Button
+                                    x:Name="NavigateGPS"
+                                    Grid.Column="1"
+                                    CornerRadius="15"
+                                    HeightRequest="15"
+                                    Text="Navigate"
+                                    Background="Green"
+                                    TextColor="Yellow"
+                                    />
                             <Label
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="2"
                                 Text="safnasjgfhnaosgjjklawesmgfkjlqeamgjkqermgfkjlewqrgioujeqjrgkijwsrijuogwejhkgeriujogjeijugjeiowjgmeipgjkmeirk"/>
+                            </Grid>
                         </StackLayout>
+
                     </behaviors:Expander>
                 </Grid>
 
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="20"/>
