@@ -1,17 +1,120 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:behaviors="http://xamarin.com/schemas/2020/toolkit"
              x:Class="Slovak_Travel_Guide.Mountains"
              BackgroundColor="#E0E0E0">
+
     
+        
     <StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Label
+                    HorizontalOptions="Center"
+                    Text="Mountains"
+                    FontSize="60"
+                    TextColor="Green"
+                    FontFamily="cursive"/>
 
-        <Label
-            Text="MOUNTAINS"
-            FontSize="50"
-            TextColor="Green"
-            HorizontalOptions="Center"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
 
+                    <Image
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Grid.RowSpan="2"
+                        Source="https://www.terchova.eu/images/stories/velky_rozsutec.jpg"
+                        Aspect="AspectFill"/>
+                    <Label
+                        Margin="20,0,20,0"
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="Rozsutec"
+                        FontSize="50"
+                        FontFamily="cursive"
+                        TextColor="Green"/>
+                    <Label
+                    Text="⭐⭐⭐⭐⭐"
+                    TextColor="Gold"
+                    FontAttributes="Bold"
+                    FontSize="30"/>
+                    <behaviors:Expander
+                        Grid.Row="1"
+                        Grid.RowSpan="2"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2">
+                        <behaviors:Expander.Header>
+                            <Label
+                                Margin="0,20,0,0"
+                                Text="Show More"
+                                FontSize="25"
+                                HorizontalOptions="End"/>
+                        </behaviors:Expander.Header>
+                        <StackLayout
+                            Grid.Row="0"
+                            Grid.RowSpan="2">
+                            <Label
+                                Text="safnasjgfhnaosgjjklawesmgfkjlqeamgjkqermgfkjlewqrgioujeqjrgkijwsrijuogwejhkgeriujogjeijugjeiowjgmeipgjkmeirk"/>
+                        </StackLayout>
+                    </behaviors:Expander>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Grid.RowSpan="2"
+                        Source="https://www.terchova.eu/images/stories/velky_rozsutec.jpg"
+                        Aspect="AspectFill"/>
+                    <Label
+                        Margin="20,0,20,0"
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="Rozsutec"
+                        FontSize="50"
+                        FontFamily="cursive"
+                        TextColor="Green"/>
+                    <behaviors:Expander
+                        Grid.Row="1"
+                        Grid.RowSpan="2"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2">
+                        <behaviors:Expander.Header>
+                            <Label
+                                Margin="0,20,0,0"
+                                Text="Show More"
+                                FontSize="25"
+                                HorizontalOptions="End"/>
+                        </behaviors:Expander.Header>
+                        <StackLayout
+                            Grid.Row="0"
+                            Grid.RowSpan="3">
+                            <Label
+                                Text="sadasdasagsddddddddddddddddddddddddddddddddddddd,mfkajsngfosakgkjsamgkjsdmgkjmdfkjgmsdfikjgmadsfiljgmeaqfiokdasfffffffffffffffffffffffffffffdddd"/>
+                        </StackLayout>
+                    </behaviors:Expander>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
     </StackLayout>
-    
 </ContentPage>
