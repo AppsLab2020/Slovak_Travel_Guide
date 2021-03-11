@@ -15,6 +15,9 @@ namespace Slovak_Travel_Guide
         public Mountains()
         {
             InitializeComponent();
+
+            NavigationPage.SetHasNavigationBar(this, false);
+
         }
     }
 }

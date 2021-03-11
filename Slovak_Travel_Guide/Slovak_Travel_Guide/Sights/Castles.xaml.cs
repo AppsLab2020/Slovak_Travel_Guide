@@ -21,7 +21,7 @@ namespace Slovak_Travel_Guide.Sights
 
         async void BtnScrollUpClicked(object sender, EventArgs e)
         {
-            await SVCastles.ScrollToAsync(0, Lblastles.Y, true);
+            await SVCastles.ScrollToAsync(0, LblCastles.Y, true);
         }
     }
 }

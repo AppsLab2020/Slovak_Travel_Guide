@@ -33,7 +33,7 @@
                     Grid.Column="1"
                     Grid.ColumnSpan="2"
                 Text="Castles"
-                x:Name="Lblastles"
+                x:Name="LblCastles"
                 FontSize="50"
                 TextColor="Green"
                 HorizontalOptions="Center"

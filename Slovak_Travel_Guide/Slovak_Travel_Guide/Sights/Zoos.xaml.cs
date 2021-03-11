@@ -15,6 +15,7 @@ namespace Slovak_Travel_Guide
         public Zoos()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

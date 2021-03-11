@@ -15,6 +15,7 @@ namespace Slovak_Travel_Guide
         public OldVillages()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }
