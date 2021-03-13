@@ -80,7 +80,7 @@
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
                                 <Button
-                                    x:Name="WeatherBTN"
+                                    x:Name="WeatherBtnBratislavskyHrad"
                                     HeightRequest="15"
                                     Grid.Column="0"
                                     Grid.Row="1"
@@ -91,7 +91,7 @@
                                     />
                                 <Button
                                     Grid.Row="1"
-                                    x:Name="NavigateGPS"
+                                    Clicked="NavigateGpsBratislavskyHrad"
                                     Grid.Column="1"
                                     CornerRadius="15"
                                     HeightRequest="15"
@@ -120,7 +120,7 @@
                                     Grid.RowSpan="3"
                                     Grid.Column="0"
                                     Grid.ColumnSpan="2"
-                                    Text="Bratislavský hrad (-normovaný názov[3]; iné názvy: (hrad) Bratislava[3]; staršie: Bratislavský zámok[4]; do roku 1919: Prešporek, Prešporok[3], Prešporský zámok[5], Prešporský hrad[6]) je súbor stavieb v historickom areáli, ktorý zaberá vrchol návršia na juhozápadnom ostrohu malokarpatského chrbta na ľavom brehu Dunaja v Bratislave. Hradu dominuje monumentálna stavba bývalého kráľovského paláca tvoriaca neodmysliteľnú panorámu hlavného mesta Slovenska. Svojím zástojom v dejinách Veľkej Moravy, Uhorska, Česko-Slovenska a moderného Slovenska predstavuje Bratislavský hrad významný pamätník spoločensko-historického vývoja v tejto oblasti."
+                                    Text="Bratislavský hrad je súbor stavieb v historickom areáli, ktorý zaberá vrchol návršia na juhozápadnom ostrohu malokarpatského chrbta na ľavom brehu Dunaja v Bratislave. Hradu dominuje monumentálna stavba bývalého kráľovského paláca tvoriaca neodmysliteľnú panorámu hlavného mesta Slovenska. Svojím zástojom v dejinách Veľkej Moravy, Uhorska, Česko-Slovenska a moderného Slovenska predstavuje Bratislavský hrad významný pamätník spoločensko-historického vývoja v tejto oblasti."
                                     TextColor="Black"/>
                                     <Grid>
                                         <Grid.RowDefinitions>
@@ -215,7 +215,7 @@
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
                                 <Button
-                                    x:Name="WeatherBTN"
+                                    x:Name="WeatherBtnOravskyHrad"
                                     HeightRequest="15"
                                     Grid.Column="0"
                                     Grid.Row="1"
@@ -226,13 +226,14 @@
                                     />
                                 <Button
                                     Grid.Row="1"
-                                    x:Name="NavigateGPS"
+                                    Clicked="NavigateGpsOravskyHrad"
                                     Grid.Column="1"
                                     CornerRadius="15"
                                     HeightRequest="15"
                                     Text="Navigate"
                                     Background="Green"
                                     TextColor="Yellow"
+                                    
                                     />
                                 <StackLayout
                                     Grid.Row="2"
@@ -254,7 +255,7 @@
                                     Grid.Row="2"
                                     Grid.Column="0"
                                     Grid.ColumnSpan="2"
-                                    Text="Oravské hradné bralo (súčasť Oravskej vrchoviny), na ktorom sa nad hladinou rieky Oravy a nad obcou Oravský Podzámok vypína Oravský hrad, bol oddávna opevneným hradiskom, chráneným od severu skalným masívom a od juhu polkruhovým zemným valom. Najvyššia časť hradu je vo výške 112 metrov nad hladinou rieky Orava."
+                                    Text="Oravský hrad je jeden z najkrajších hradov na Slovensku nachádzajúci sa v obci Oravský Podzámok. Je to výrazná dominanta oravského regiónu, patrí medzi najvýznamnejšie pamiatky hradného staviteľstva na území Slovenska. Hrad je sprístupnený verejnosti denne od mája do marca. Oravské hradné bralo, ktoré je súčasťou Oravskej vrchoviny, na ktorom sa nad hladinou rieky Oravy a nad obcou Oravský Podzámok vypína Oravský hrad."
                                     TextColor="Black"/>
                                     <Grid>
                                         <Grid.RowDefinitions>
