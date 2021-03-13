@@ -5,138 +5,285 @@
              BackgroundColor="#E0E0E0">
 
     <StackLayout>
-
-        <ScrollView
-            x:Name="SVCastles">
-
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="10"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="10"/>
-                </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="20"/>
-                    <ColumnDefinition Width="100"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="20"/>
-                </Grid.ColumnDefinitions>
-                
+        <ScrollView>
+            <StackLayout>
                 <Label
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    Grid.ColumnSpan="2"
-                Text="Castles"
-                x:Name="LblCastles"
-                FontSize="50"
-                TextColor="Green"
-                HorizontalOptions="Center"
-                FontAttributes="Bold"
-                FontFamily="cursive"/>
+                    HorizontalOptions="Center"
+                    Text="Castles"
+                    FontSize="60"
+                    TextColor="Green"/>
 
-                <Grid
-                    Grid.Row="2"
-                    Grid.Column="1"
-                    Grid.ColumnSpan="2">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    
+                <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="50"/>
-                    </Grid.ColumnDefinitions>
-              
-                <Image
-                    Grid.Column="0"
-                    Grid.Row="0"
-                    Grid.RowSpan="2"
-                    Source="https://www.kiskatravel.sk/swift_data/source/Blog/Hrady%20a%20Z%C3%A1mky/c_bratislava-castle-2674190_1920.jpg"/>
-                <Label
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    Grid.ColumnSpan="2"
-                    Text="Bratislavský Hrad"
-                    FontFamily="cursive"
-                    FontAttributes="Bold"
-                    TextColor="Green"
-                    FontSize="30"
-                    Padding="20,0,0,10"/>
-                    
-                            
-                    <Label
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    Text="⭐⭐⭐⭐⭐"
-                    TextColor="Gold"
-                    FontAttributes="Bold"
-                    FontSize="30"
-                    Padding="20,0,0,10"/>
-                    
-                <Button
-                        Grid.Row="1"
-                        Grid.Column="2"
-                        Text=">"
-                        />
-                    
-                </Grid>
-                
-                <Grid
-                    Grid.Row="3"
-                    Grid.Column="1"
-                    Grid.ColumnSpan="2">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="150"/>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="20"/>
                     </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="5"/>
+                    </Grid.RowDefinitions>
 
                     <Image
-                    Grid.Column="0"
-                    Grid.Row="0"
-                    Grid.RowSpan="2"
-                    Source="https://www.trencinregion.sk/images/categories/21/hrady_zamky_pamiatky-image-7f1ee41c1d2c2f63c7d061aac5057ff2.jpg"/>
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Grid.RowSpan="2"
+                        Source="https://www.visitbratislava.com/wp-content/uploads/2014/10/letecka-vychod-slnka-hrad-800x533.jpg"
+                        Aspect="AspectFill"/>
                     <Label
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    Text="Trenčiansky Hrad"
-                    FontFamily="cursive"
-                    FontAttributes="Bold"
-                    TextColor="Green"
-                    FontSize="30"/>
+                        Margin="30,0,20,0"
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="Bratislavský hrad"
+                        TextColor="Green"
+                        FontSize="25"/>
                     <Label
+                    Margin="25,0,20,0"
+                    Grid.Column="2"
                     Grid.Row="1"
-                    Grid.Column="1"
                     Text="⭐⭐⭐⭐⭐"
                     TextColor="Gold"
                     FontAttributes="Bold"
-                    FontSize="30"/>
+                    FontSize="20"/>
 
-                    
+                    <behaviors:Expander
+                        Grid.Row="1"
+                        Grid.RowSpan="3"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2">
+                        <behaviors:Expander.Header>
+                            <Label
+                                TextColor="Brown"
+                                Margin="0,40,0,0"
+                                Text="Show More"
+                                FontSize="20"
+                                HorizontalOptions="End"/>
+                        </behaviors:Expander.Header>
+                        <StackLayout
+                            Grid.Row="0"
+                            Grid.RowSpan="4">
+                            <Grid
+                            Grid.Row="0"
+                            Grid.RowSpan="3">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="5"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="100"/>
+                                    <RowDefinition Height="100"/>
+                                    <RowDefinition Height="100"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button
+                                    x:Name="WeatherBTN"
+                                    HeightRequest="15"
+                                    Grid.Column="0"
+                                    Grid.Row="1"
+                                    CornerRadius="15"
+                                    Text="Weather"
+                                    BackgroundColor="LightBlue"
+                                    TextColor="Yellow"
+                                    />
+                                <Button
+                                    Grid.Row="1"
+                                    x:Name="NavigateGPS"
+                                    Grid.Column="1"
+                                    CornerRadius="15"
+                                    HeightRequest="15"
+                                    Text="Navigate"
+                                    Background="Green"
+                                    TextColor="Yellow"
+                                    />
+                                <StackLayout
+                                    Grid.Row="2"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="2">
+                                    <Label
+                                Text="Bratislavský hrad"
+                                TextColor="Green"
+                                FontSize="Large"
+                                HorizontalOptions="Center"
+                                FontAttributes="Bold"/>
+                                </StackLayout>
+                                <StackLayout
+                            Grid.Row="3"
+                            Grid.RowSpan="6"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2">
+                                    <Label
+                                    Grid.Row="2"
+                                    Grid.RowSpan="3"
+                                    Grid.Column="0"
+                                    Grid.ColumnSpan="2"
+                                    Text="Bratislavský hrad (-normovaný názov[3]; iné názvy: (hrad) Bratislava[3]; staršie: Bratislavský zámok[4]; do roku 1919: Prešporek, Prešporok[3], Prešporský zámok[5], Prešporský hrad[6]) je súbor stavieb v historickom areáli, ktorý zaberá vrchol návršia na juhozápadnom ostrohu malokarpatského chrbta na ľavom brehu Dunaja v Bratislave. Hradu dominuje monumentálna stavba bývalého kráľovského paláca tvoriaca neodmysliteľnú panorámu hlavného mesta Slovenska. Svojím zástojom v dejinách Veľkej Moravy, Uhorska, Česko-Slovenska a moderného Slovenska predstavuje Bratislavský hrad významný pamätník spoločensko-historického vývoja v tejto oblasti."
+                                    TextColor="Black"/>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="100"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Image
+                                            Grid.Column="0"
+                                            Grid.Row="0"
+                                    Source="https://www.loftpremiumhotel.sk/uploads/nr_photos/Sightseeing_1954.jpg"
+                                            Aspect="AspectFill"/>
+                                        <Image
+                                            Grid.Column="1"
+                                            Grid.Row="0"
+                                    Source="https://turisticky.sk/wp-content/uploads/2020/01/Bratislavsky-hrad_SS_02-scaled.jpg"
+                                            Aspect="AspectFill"/>
+                                    </Grid>
+                                </StackLayout>
+                            </Grid>
+                        </StackLayout>
 
-
+                    </behaviors:Expander>
                 </Grid>
 
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="5"/>
+                    </Grid.RowDefinitions>
 
+                    <Image
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Grid.RowSpan="2"
+                        Source="https://slovenskycestovatel.sk/images/items/193/oravsky-hrad47507501.jpg"
+                        Aspect="AspectFill"/>
+                    <Label
+                        Margin="30,0,20,0"
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="Oravský hrad"
+                        TextColor="Green"
+                        FontSize="25"/>
+                    <Label
+                    Margin="25,0,20,0"
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    Text="⭐⭐⭐⭐⭐"
+                    TextColor="Gold"
+                    FontAttributes="Bold"
+                    FontSize="20"/>
 
+                    <behaviors:Expander
+                        Grid.Row="1"
+                        Grid.RowSpan="3"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2">
+                        <behaviors:Expander.Header>
+                            <Label
+                                TextColor="Brown"
+                                Margin="0,40,0,0"
+                                Text="Show More"
+                                FontSize="20"
+                                HorizontalOptions="End"/>
+                        </behaviors:Expander.Header>
+                        <StackLayout
+                            Grid.Row="0"
+                            Grid.RowSpan="4">
+                            <Grid
+                            Grid.Row="0"
+                            Grid.RowSpan="3">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="5"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="100"/>
+                                    <RowDefinition Height="100"/>
+                                    <RowDefinition Height="100"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button
+                                    x:Name="WeatherBTN"
+                                    HeightRequest="15"
+                                    Grid.Column="0"
+                                    Grid.Row="1"
+                                    CornerRadius="15"
+                                    Text="Weather"
+                                    BackgroundColor="LightBlue"
+                                    TextColor="Yellow"
+                                    />
+                                <Button
+                                    Grid.Row="1"
+                                    x:Name="NavigateGPS"
+                                    Grid.Column="1"
+                                    CornerRadius="15"
+                                    HeightRequest="15"
+                                    Text="Navigate"
+                                    Background="Green"
+                                    TextColor="Yellow"
+                                    />
+                                <StackLayout
+                                    Grid.Row="2"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="2">
+                                    <Label
+                                Text="Oravský hrad"
+                                TextColor="Green"
+                                FontSize="Large"
+                                HorizontalOptions="Center"
+                                FontAttributes="Bold"/>
+                                </StackLayout>
+                                <StackLayout
+                            Grid.Row="3"
+                            Grid.RowSpan="6"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2">
+                                    <Label
+                                    Grid.Row="2"
+                                    Grid.Column="0"
+                                    Grid.ColumnSpan="2"
+                                    Text="Oravské hradné bralo (súčasť Oravskej vrchoviny), na ktorom sa nad hladinou rieky Oravy a nad obcou Oravský Podzámok vypína Oravský hrad, bol oddávna opevneným hradiskom, chráneným od severu skalným masívom a od juhu polkruhovým zemným valom. Najvyššia časť hradu je vo výške 112 metrov nad hladinou rieky Orava."
+                                    TextColor="Black"/>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="100"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Image
+                                            Grid.Column="0"
+                                            Grid.Row="0"
+                                    Source="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Oravsk%C3%BD_hrad_%28celkov%C3%BD_pohled%29.jpg/1200px-Oravsk%C3%BD_hrad_%28celkov%C3%BD_pohled%29.jpg"
+                                            Aspect="AspectFill"/>
+                                        <Image
+                                            Grid.Column="1"
+                                            Grid.Row="0"
+                                    Source="https://slovander.sk/wp-content/uploads/2020/03/lovci-duchov-oravsky-hrad-1170x635.png"
+                                            Aspect="AspectFill"/>
+                                    </Grid>
+                                </StackLayout>
+                            </Grid>
+                        </StackLayout>
 
-            </Grid>
-
+                    </behaviors:Expander>
+                </Grid>
+                
+                
+            </StackLayout>
         </ScrollView>
-
     </StackLayout>
-    
 </ContentPage>
