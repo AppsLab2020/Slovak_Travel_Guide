@@ -20,8 +20,7 @@
             TextColor="Green"
             FontSize="48"
             HorizontalOptions="Center"
-            FontAttributes="Bold"
-            FontFamily="cursive"/>
+            FontAttributes="Bold"/>
 
 
         <StackLayout
@@ -37,8 +36,7 @@
             HeightRequest="100"
             BackgroundColor="LightGray"
             CornerRadius="30"
-            Margin="20, 0, 20, 5"
-            FontFamily="cursive"/>
+            Margin="20, 0, 20, 5"/>
 
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -60,8 +58,7 @@
                     FontSize="Large"
                     FontAttributes="Bold"
                     Margin="20, 0, 0, 5"
-                    BackgroundColor="LightGray"
-                    FontFamily="cursive"/>
+                    BackgroundColor="LightGray"/>
 
                 <Button
                     Grid.Row="0"
@@ -73,8 +70,7 @@
                     FontSize="Large"
                     FontAttributes="Bold"
                     Margin="0, 0, 20, 5"
-                    BackgroundColor="LightGray"
-                    FontFamily="cursive"/>
+                    BackgroundColor="LightGray"/>
             </Grid>
 
             <Button
@@ -86,8 +82,7 @@
             HeightRequest="50"
             BackgroundColor="LightGray"
             CornerRadius="30"
-            Margin="20, 0, 20, 10"
-            FontFamily="cursive"/>
+            Margin="20, 0, 20, 10"/>
 
 
         </StackLayout>

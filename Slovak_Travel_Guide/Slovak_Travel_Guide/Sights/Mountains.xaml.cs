@@ -28,7 +28,7 @@ namespace Slovak_Travel_Guide
             await Map.OpenAsync(latitude, longitude, new MapLaunchOptions
             {
                 Name = "Rozsutec",
-                NavigationMode = NavigationMode.None,
+                NavigationMode = NavigationMode.Driving,
             }) ;
         }
     }
