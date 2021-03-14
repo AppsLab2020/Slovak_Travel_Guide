@@ -24,10 +24,12 @@
        
 ## Snímky z aplikácie
 ![MAIN PAGE](Images/MainPage.png)
+![](Images/SelectPage.png)
+![](Images/CatlesPage_-_1.png)
+![](Images/CastlesPage_-_opened.png)
 ## 1) Demo (15.3.2021)
   1. do prvého dema stihnúť spojazdniť GPSku, aby sme sa vedeli navigovat pomocou tlačidla na miesto, na ktoré chceme ísť
   2. funkcny splach screen
-** MAIN PAGE **
 
 ## 2) Demo (neviem dátum)
    Do druhého dema chcem stihnuť:
