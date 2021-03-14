@@ -1,7 +1,7 @@
-   # Slovak_Travel_Guide
-🧗‍♂️🧗‍♀️
-*Aplikácia slúži na preskumávanie pamiatok na Slovensku.*
-🌄🌄🌄
+   # Slovak_Travel_Guide 🧗‍♂️🧗‍♀️
+
+*Aplikácia slúži na preskumávanie pamiatok na Slovensku. 🌄🌄🌄*
+
 ## 1) Splash screen
   1. Zobrazí sa nám tzv. Loading screen, kde sa nám zobrazí naše vlastnoručné vyrobené logo 
 
@@ -39,5 +39,5 @@
    4. Spraviť SignUp a LogIn pages ❌
 
 
-*Vytvorili Martinek ale najviac pomáhal Jaro. :)* 👬
+*Vytvorili Martinek ale najviac pomáhal Jaro. :)* 
 
