@@ -28,16 +28,16 @@
 ![](Images/CatlesPage_-_1.png)
 ![](Images/CastlesPage_-_opened.png)
 ## 1) Demo (15.3.2021)
-  1. do prvého dema stihnúť spojazdniť GPSku, aby sme sa vedeli navigovat pomocou tlačidla na miesto, na ktoré chceme ísť
-  2. funkcny splach screen
+  1. do prvého dema stihnúť spojazdniť GPSku, aby sme sa vedeli navigovat pomocou tlačidla na miesto, na ktoré chceme ísť ✔
+  2. funkcny splach screen ✔
 
 ## 2) Demo (neviem dátum)
    Do druhého dema chcem stihnuť:
-   1. Prerobiť kód do MVVM
-   2. Spojazdniť "Weather Button", aby sa nám zobrazilo počasie na danom mieste
-   3. Spraviť databázu pomocou SQLite
-   4. Spraviť SignUp a LogIn pages
+   1. Prerobiť kód do MVVM ❌
+   2. Spojazdniť "Weather Button", aby sa nám zobrazilo počasie na danom mieste ❌
+   3. Spraviť databázu pomocou SQLite ❌
+   4. Spraviť SignUp a LogIn pages ❌
 
 
-*Vytvorili Martinek ale najviac pomáhal Jaro. :)*
+*Vytvorili Martinek ale najviac pomáhal Jaro. :)* 🌈
 
