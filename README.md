@@ -23,12 +23,12 @@
        Počasie button - po kliknutí bude ukazovať, aké je na danom mieste počasie
        
 ## Snímky z aplikácie
-
+![MAIN PAGE](/images/mainpage.png)
 ## 1) Demo (15.3.2021)
   1. do prvého dema stihnúť spojazdniť GPSku, aby sme sa vedeli navigovat pomocou tlačidla na miesto, na ktoré chceme ísť
   2. funkcny splach screen
 ** MAIN PAGE **
-![MAIN PAGE](/images/mainpage.png)
+
 ## 2) Demo (neviem dátum)
    Do druhého dema chcem stihnuť:
    1. Prerobiť kód do MVVM
