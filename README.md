@@ -21,10 +21,20 @@
   1. V bližšom infe o napr. hradoch budú 2 buttony, jeden na GPS a druhý na počasie:
        GPS button - funkcia po kliknutí taká, že nám nastaví navigáciu s aktuálneho miesta do cieľovej destinácie
        Počasie button - po kliknutí bude ukazovať, aké je na danom mieste počasie
+       
+## Snímky z aplikácie
 
-## Prvé demo (15.3.2021)
+## 1) Demo (15.3.2021)
   1. do prvého dema stihnúť spojazdniť GPSku, aby sme sa vedeli navigovat pomocou tlačidla na miesto, na ktoré chceme ísť
   2. funkcny splach screen
+** MAIN PAGE **
+![MAIN PAGE](/images/mainpage.png)
+## 2) Demo (neviem dátum)
+   Do druhého dema chcem stihnuť:
+   1. Prerobiť kód do MVVM
+   2. Spojazdniť "Weather Button", aby sa nám zobrazilo počasie na danom mieste
+   3. Spraviť databázu pomocou SQLite
+   4. Spraviť SignUp a LogIn pages
 
 
 *Vytvorili Martinek ale najviac pomáhal Jaro. :)*
