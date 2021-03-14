@@ -39,5 +39,6 @@
    4. Spraviť SignUp a LogIn pages ❌
 
 
-*Vytvorili Martinek ale najviac pomáhal Jaro. :)* 
+*Vytvorili Martinek a Jaro 🤣* 
+
 
