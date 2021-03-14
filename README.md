@@ -23,13 +23,9 @@
        Počasie button - po kliknutí bude ukazovať, aké je na danom mieste počasie
        
 ## Snímky z aplikácie
-**Main Page**
 ![MAIN PAGE](Images/MainPage.png)
-**Select Page**
 ![](Images/SelectPage.png)
-**Select Castles Page**
 ![](Images/CatlesPage_-_1.png)
-**Select Castles Page - Openned**
 ![](Images/CastlesPage_-_opened.png)
 ## 1) Demo (15.3.2021)
   1. do prvého dema stihnúť spojazdniť GPSku, aby sme sa vedeli navigovat pomocou tlačidla na miesto, na ktoré chceme ísť
