@@ -23,5 +23,17 @@ namespace Slovak_Travel_Guide
         {
             await Navigation.PushAsync(new SelectPage());
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            Device.BeginInvokeOnMainThread(async () =>
+            {
+                var exit = await this.DisplayAlert("Confirm Exit", "Do you really want to exit the application?", "Yes", "No").ConfigureAwait(false);
+
+                if (exit)
+                    System.Diagnostics.Process.GetCurrentProcess().CloseMainWindow();
+            });
+            return true;
+        }
     }
 }
