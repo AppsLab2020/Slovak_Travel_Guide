@@ -11,7 +11,8 @@ namespace Slovak_Travel_Guide
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new LoginPage());
+            MainPage = new NavigationPage(new LoginPage()) { BarBackgroundColor = Color.FromHex("#D7812A"), BarTextColor = Color.White, };
+
         }
 
         protected override void OnStart()

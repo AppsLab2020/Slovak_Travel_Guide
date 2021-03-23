@@ -20,4 +20,8 @@
          which is used to tint widgets -->
 		<!--<item name="colorAccent">#FF4081</item>-->
 	</style>
+
+	<style name="MainTheme.Base">
+		<item name="android:statusBarColor">#ffff</item>
+	</style>
 </resources>
