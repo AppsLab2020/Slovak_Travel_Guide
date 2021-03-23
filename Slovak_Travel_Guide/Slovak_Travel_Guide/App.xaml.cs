@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Slovak_Travel_Guide.Registration;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace Slovak_Travel_Guide
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new StartMenu());
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()

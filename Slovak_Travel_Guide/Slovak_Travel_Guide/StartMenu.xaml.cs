@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Slovak_Travel_Guide.Registration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,5 +36,17 @@ namespace Slovak_Travel_Guide
             });
             return true;
         }
+
+        async void SignInBtnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RegistrationPage());
+        }
+        async void LogInBtnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LoginPage());
+        }
+
+
+
     }
 }
