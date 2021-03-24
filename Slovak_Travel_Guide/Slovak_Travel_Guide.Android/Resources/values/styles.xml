@@ -21,7 +21,7 @@
 		<!--<item name="colorAccent">#FF4081</item>-->
 	</style>
 
-	<style name="MainTheme.Base">
+	<!--<style name="MainTheme.Base">
 		<item name="android:statusBarColor">#ffff</item>
-	</style>
+	</style>-->
 </resources>
