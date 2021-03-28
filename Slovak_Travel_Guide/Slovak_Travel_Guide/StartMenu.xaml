@@ -2,40 +2,22 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Slovak_Travel_Guide.StartMenu"
-             BackgroundColor="#E0E0E0">
-    
+             BackgroundColor="#E0E0E0"
+             BackgroundImageSource="@drawable/StartMenuLight">
+
     <StackLayout>
-
-        <Label 
-            Text="SLOVAK TRAVEL"
-            FontSize="48"
-            FontAttributes="Bold"
-            VerticalOptions="Start" 
-            HorizontalOptions="Center" 
-            TextColor="Green"
-            Margin="0, 10, 0, 0"/>
-
-        <Label
-            Text="GUIDE"
-            TextColor="Green"
-            FontSize="48"
-            HorizontalOptions="Center"
-            FontAttributes="Bold"/>
-
 
         <StackLayout
             VerticalOptions="EndAndExpand">
 
-            <Button
-            Text="TRAVEL"
-            TextColor="Green"
+            <ImageButton
+            Aspect="Fill"
+            Source="@drawable/TravelButtonLight"
             Clicked="btnTravelClicked"
-            FontAttributes="Bold"
-            FontSize="50"
             HorizontalOptions="FillAndExpand"
-            HeightRequest="100"
+            HeightRequest="130"
             BackgroundColor="LightGray"
-            CornerRadius="30"
+            CornerRadius="40"
             Margin="20, 0, 20, 5"/>
 
             <Grid>
@@ -48,42 +30,36 @@
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
 
-                <Button 
+                <ImageButton 
+                    Aspect="Fill"
+                    Source="@drawable/SignInButtonLight"
                     Clicked="SignInBtnClicked"
                     Grid.Row="0" 
                     Grid.Column="0"
-                    Text="Sign In"
-                    CornerRadius="30"
+                    CornerRadius="40"
                     HeightRequest="50"
-                    TextColor="Green"
-                    FontSize="Large"
-                    FontAttributes="Bold"
                     Margin="20, 0, 0, 5"
                     BackgroundColor="LightGray"/>
 
-                <Button
+                <ImageButton
+                    Aspect="Fill"
+                    Source="@drawable/LogInButtonLight"
                     Clicked="LogInBtnClicked"
                     Grid.Row="0"
                     Grid.Column="1"
-                    Text="Log In"
-                    CornerRadius="30"
+                    CornerRadius="40"
                     HeightRequest="50"
-                    TextColor="Green"
-                    FontSize="Large"
-                    FontAttributes="Bold"
                     Margin="0, 0, 20, 5"
                     BackgroundColor="LightGray"/>
             </Grid>
 
-            <Button
-            Text="OPTIONS"
-            FontSize="Large"
-            TextColor="Green"
-            FontAttributes="Bold"
+            <ImageButton
+            Aspect="Fill"
+            Source="@drawable/SettingsButtonLight"
             HorizontalOptions="FillAndExpand"
             HeightRequest="50"
             BackgroundColor="LightGray"
-            CornerRadius="30"
+            CornerRadius="40"
             Margin="20, 0, 20, 10"/>
 
 

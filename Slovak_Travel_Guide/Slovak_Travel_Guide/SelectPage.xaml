@@ -33,52 +33,52 @@
             Grid.Column="1"
             Grid.ColumnSpan="2"
             />
-        <ImageButton
+        <Button
             BackgroundColor="LightGray"
             Clicked="CastlesBtnClicked"
             Grid.Column="1"
             Grid.Row="2"
-            Source="https://www.trencinregion.sk/images/categories/21/hrady_zamky_pamiatky-image-7f1ee41c1d2c2f63c7d061aac5057ff2.jpg"
+            Text="HRADY"
             CornerRadius="15"
             />
-        <ImageButton
+        <Button
             BackgroundColor="LightGray"
             Clicked="CavesBtnClicked"
             Grid.Column="1"
             Grid.Row="3"
-            Source="https://upload.wikimedia.org/wikipedia/commons/a/a9/Domica_Cave_22.jpg"
+            Text="JASKYNE"
             CornerRadius="15"
             />
-        <ImageButton
+        <Button
             BackgroundColor="LightGray"
             Clicked="ZoosBtnClicked"
             Grid.Column="1"
             Grid.Row="4"
-            Source="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Bronx_Zoo_001.jpg/1200px-Bronx_Zoo_001.jpg"
+            Text="ZOO"
             CornerRadius="15"
             />
-        <ImageButton
+        <Button
             BackgroundColor="LightGray"
             Clicked="OldVillagesBtnClicked"
             Grid.Column="2"
             Grid.Row="2"
-            Source="https://cestujzamenej.sk/wp-content/uploads/2020/11/FB_titulna-foto_SKANZENY_.jpg"
+            Text="Skanzeny"
             CornerRadius="15"
             />
-        <ImageButton
+        <Button
             BackgroundColor="LightGray"
             Clicked="SkiDestinationsBtnClicked"
             Grid.Column="2"
             Grid.Row="3"
-            Source="https://www.topdesat.sk/wp-content/uploads/2017/11/france-264225_1920-e1511816287594.jpg"
+            Text="LYZIARSKE STREDISKA"
             CornerRadius="15"
             />
-        <ImageButton
+        <Button
             BackgroundColor="LightGray"
             Clicked="MountainsBtnClicked"
             Grid.Column="2"
             Grid.Row="4"
-            Source="https://m.smedata.sk/api-media/media/image/sme/5/59/5912945/5912945_1200x800.jpeg?rev=4"
+            Text="HORY"
             CornerRadius="15"
             />
         <Entry
