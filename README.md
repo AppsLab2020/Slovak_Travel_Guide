@@ -33,7 +33,7 @@
 
 ## 2) Demo (neviem dátum)
    Do druhého dema chcem stihnuť:
-   1. Prerobiť kód do MVVM ❌
+   1. Prerobiť kód do MVVM ✔
    2. Spojazdniť "Weather Button", aby sa nám zobrazilo počasie na danom mieste ❌
    3. Spraviť databázu pomocou SQLite ✔
    4. Spraviť SignUp a LogIn pages ✔
