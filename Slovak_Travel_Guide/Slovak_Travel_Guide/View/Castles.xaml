@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:behaviors="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="Slovak_Travel_Guide.Sights.Castles"
+             BackgroundColor="#E0E0E0"
+             xmlns:vm="clr-namespace:Slovak_Travel_Guide.ViewModel"
+             >
+
+    <ContentPage.BindingContext>
+        <vm:CastlesViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout
+                Grid.Column="1"
+                    Grid.Row="1">
+                <Label 
+                    HorizontalOptions="Center"
+                    Text="Castles"
+                    FontSize="60"/>
+            </StackLayout>
+
+            <CollectionView 
+                ItemsSource="{Binding Castles}"
+                            Grid.Column="1"
+                            Grid.Row="3"
+                            >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid BackgroundColor="LightBlue">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="5"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Image
+                                Source="{Binding MainUrl}"
+                                WidthRequest="90"
+                                HeightRequest="90"
+                                Grid.Column="0"
+                                Grid.Row="1"
+                                Grid.RowSpan="2"
+                                Aspect="AspectFill"/>
+
+                            <StackLayout Orientation="Vertical" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" HorizontalOptions="Center">
+                                <Label Text="{Binding Name}"
+                                       FontSize="25"
+                                       TextColor="Green"
+                                        />
+                            </StackLayout>
+
+
+
+                            <behaviors:Expander Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="2">
+                                <behaviors:Expander.Header>
+                                    <StackLayout>
+                                        <Label
+                                        HorizontalOptions="End"
+                                        FontSize="20"
+                                        Text="Show More"/>
+                                    </StackLayout>
+                                </behaviors:Expander.Header>
+                                <StackLayout>
+                                    <Grid Grid.Row="3">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="60"/>
+                                            <RowDefinition Height="45"/>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Button
+                                        CornerRadius="15"
+                                        Text="Weather"
+                                        Grid.Row="0"
+                                        Grid.Column="0"/>
+
+                                        <Button
+                                        Command="{Binding BtnNavigate}"
+                                        CornerRadius="10"
+                                        Text="Navigate"
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                            />
+
+                                        <Label
+                                        FontSize="35"
+                                        Text="{Binding Name}"
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="2"/>
+                                        <Label
+                                        Grid.Row="2"
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="2"
+                                        Text="{Binding AboutSight}"/>
+                                        <Image
+                                        Aspect="AspectFill"
+                                        Source="{Binding SecondUrl}"
+                                        Grid.Column="0"
+                                        Grid.Row="3"/>
+                                        <Image
+                                        Aspect="AspectFill"
+                                        Source="{Binding ThirdUrl}"
+                                        Grid.Column="1"
+                                        Grid.Row="3"/>
+                                    </Grid>
+                                </StackLayout>
+                            </behaviors:Expander>
+                        </Grid>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </Grid>
+    </ContentPage.Content>
+    
+</ContentPage>
+
+    
+    
+    

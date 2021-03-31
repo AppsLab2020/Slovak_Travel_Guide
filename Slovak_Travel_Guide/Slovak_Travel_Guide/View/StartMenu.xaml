@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="Slovak_Travel_Guide.StartMenu"
              BackgroundColor="#E0E0E0"
              BackgroundImageSource="@drawable/StartMenuLight">
-
+   
     <StackLayout>
 
         <StackLayout
@@ -13,7 +13,7 @@
             <ImageButton
             Aspect="Fill"
             Source="@drawable/TravelButtonLight"
-            Clicked="btnTravelClicked"
+            Command="{Binding btnTravelClicked}"
             HorizontalOptions="FillAndExpand"
             HeightRequest="130"
             BackgroundColor="LightGray"

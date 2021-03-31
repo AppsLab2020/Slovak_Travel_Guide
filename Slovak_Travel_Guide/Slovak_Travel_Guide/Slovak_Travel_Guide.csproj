@@ -21,28 +21,28 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Registration\LoginPage.xaml">
+    <EmbeddedResource Update="View\LoginPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Registration\RegistrationPage.xaml">
+    <EmbeddedResource Update="View\RegistrationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Sights\OldVillages.xaml">
+    <EmbeddedResource Update="View\OldVillages.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Sights\Mountains.xaml">
+    <EmbeddedResource Update="View\Mountains.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="SelectPage.xaml">
+    <EmbeddedResource Update="View\SelectPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Sights\SkiDestinations.xaml">
+    <EmbeddedResource Update="View\SkiDestinations.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="StartMenu.xaml">
+    <EmbeddedResource Update="View\StartMenu.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Sights\Zoos.xaml">
+    <EmbeddedResource Update="View\Zoos.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

@@ -1,4 +1,5 @@
 ﻿using Slovak_Travel_Guide.Registration;
+using Slovak_Travel_Guide.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,12 +19,9 @@ namespace Slovak_Travel_Guide
             InitializeComponent();
 
             NavigationPage.SetHasNavigationBar(this, false);
+            BindingContext = new StartMenuViewModel(Navigation);
         }
 
-        async void btnTravelClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new SelectPage());
-        }
 
         protected override bool OnBackButtonPressed()
         {

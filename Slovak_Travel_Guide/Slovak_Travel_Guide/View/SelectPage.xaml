@@ -35,7 +35,7 @@
             />
         <Button
             BackgroundColor="LightGray"
-            Clicked="CastlesBtnClicked"
+            Command="{Binding CastlesBtnClicked}"
             Grid.Column="1"
             Grid.Row="2"
             Text="HRADY"
@@ -43,7 +43,7 @@
             />
         <Button
             BackgroundColor="LightGray"
-            Clicked="CavesBtnClicked"
+            Command="{Binding CavesBtnClicked}"
             Grid.Column="1"
             Grid.Row="3"
             Text="JASKYNE"
@@ -51,7 +51,7 @@
             />
         <Button
             BackgroundColor="LightGray"
-            Clicked="ZoosBtnClicked"
+            Command="{Binding ZoosBtnClicked}"
             Grid.Column="1"
             Grid.Row="4"
             Text="ZOO"
@@ -59,7 +59,7 @@
             />
         <Button
             BackgroundColor="LightGray"
-            Clicked="OldVillagesBtnClicked"
+            Command="{Binding OldVillagesBtnClicked}"
             Grid.Column="2"
             Grid.Row="2"
             Text="Skanzeny"
@@ -67,7 +67,7 @@
             />
         <Button
             BackgroundColor="LightGray"
-            Clicked="SkiDestinationsBtnClicked"
+            Command="{Binding SkiDestinationsBtnClicked}"
             Grid.Column="2"
             Grid.Row="3"
             Text="LYZIARSKE STREDISKA"
@@ -75,7 +75,7 @@
             />
         <Button
             BackgroundColor="LightGray"
-            Clicked="MountainsBtnClicked"
+            Command="{Binding MountainsBtnClicked}"
             Grid.Column="2"
             Grid.Row="4"
             Text="HORY"
