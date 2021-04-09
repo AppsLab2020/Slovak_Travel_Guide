@@ -4,7 +4,13 @@ using System.Text;
 
 namespace Slovak_Travel_Guide.Model
 {
-    class Caves : Castles
+    class Caves
     {
+        public string Name { get; set; }
+        public string AboutSight { get; set; }
+        public string MainUrl { get; set; }
+        public string SecondUrl { get; set; }
+        public string ThirdUrl { get; set; }
+        public List<double> LatitudeAndLongtitude { get; set; }
     }
 }
