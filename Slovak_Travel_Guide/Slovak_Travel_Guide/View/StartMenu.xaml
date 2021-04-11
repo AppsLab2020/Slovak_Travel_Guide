@@ -33,7 +33,7 @@
                 <ImageButton 
                     Aspect="Fill"
                     Source="@drawable/SignInButtonLight"
-                    Clicked="SignInBtnClicked"
+                    Command="{Binding btnSignUp}"
                     Grid.Row="0" 
                     Grid.Column="0"
                     CornerRadius="40"
@@ -44,7 +44,7 @@
                 <ImageButton
                     Aspect="Fill"
                     Source="@drawable/LogInButtonLight"
-                    Clicked="LogInBtnClicked"
+                    Command="{Binding btnLogIn}"
                     Grid.Row="0"
                     Grid.Column="1"
                     CornerRadius="40"

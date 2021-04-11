@@ -20,10 +20,10 @@
 
                     </Grid.RowDefinitions>
 
-                    <Entry Placeholder="UserName" x:Name="EntryUser" Grid.Row="0"/>
-                    <Entry Placeholder="Password" x:Name="EntryPassword" IsPassword="True" Grid.Row="1"/>
-                    <Button Text="Login" Grid.Row="2" BackgroundColor="#0077BE" TextColor="White" Clicked="LoginBtnClicked"/>
-                    <Button Text="SignUp" Grid.Row="3" Clicked="BackToSignUpPageBtn"/>
+                    <Entry Placeholder="UserName" x:Name="EntryUser" Grid.Row="0" Text="{Binding TakeName, Mode=OneWayToSource}"/>
+                    <Entry Placeholder="Password" x:Name="EntryPassword" IsPassword="True" Grid.Row="1" Text="{Binding TakePassword, Mode=OneWayToSource}"/>
+                    <Button Text="Login" Grid.Row="2" BackgroundColor="#0077BE" TextColor="White" Command="{Binding LoginBtnClicked}"/>
+                    <Button Text="SignUp" Grid.Row="3" Command="{Binding BackToSignUpPageBtn}"/>
 
                 </Grid>
                 

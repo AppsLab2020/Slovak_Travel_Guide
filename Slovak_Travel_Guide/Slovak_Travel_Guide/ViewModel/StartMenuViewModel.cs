@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using Slovak_Travel_Guide.Registration;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -14,8 +15,20 @@ namespace Slovak_Travel_Guide.ViewModel
         {
             this.Navigation = navigation;
             this.btnTravelClicked = new Command(async () => await GoToSelectPage());
+            this.btnSignUp = new Command(async () => await GoToSignUp());
+            this.btnLogIn = new Command(async () => await GoToLogIn());
         }
         public ICommand btnTravelClicked
+        {
+            protected set;
+            get;
+        }
+        public ICommand btnSignUp
+        {
+            protected set;
+            get;
+        }
+        public ICommand btnLogIn
         {
             protected set;
             get;
@@ -24,6 +37,14 @@ namespace Slovak_Travel_Guide.ViewModel
         public async Task GoToSelectPage()
         {
             await Navigation.PushAsync(new SelectPage());
+        }
+        public async Task GoToSignUp()
+        {
+            await Navigation.PushAsync(new RegistrationPage());
+        }
+        public async Task GoToLogIn()
+        {
+            await Navigation.PushAsync(new LoginPage());
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

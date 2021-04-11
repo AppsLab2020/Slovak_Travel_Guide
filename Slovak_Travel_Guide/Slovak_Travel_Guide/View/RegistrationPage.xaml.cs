@@ -4,6 +4,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using SQLite;
 using Slovak_Travel_Guide.Table;
+using Slovak_Travel_Guide.ViewModel;
 
 namespace Slovak_Travel_Guide.Registration
 {
@@ -13,6 +14,8 @@ namespace Slovak_Travel_Guide.Registration
         public RegistrationPage()
         {
             InitializeComponent();
+
+            BindingContext = new RegistrationPageViewModel();
         }
 
         private void RegisterButtonClicked(object sender, EventArgs e)

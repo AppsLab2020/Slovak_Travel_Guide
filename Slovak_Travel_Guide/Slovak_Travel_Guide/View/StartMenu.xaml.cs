@@ -19,6 +19,7 @@ namespace Slovak_Travel_Guide
             InitializeComponent();
 
             NavigationPage.SetHasNavigationBar(this, false);
+
             BindingContext = new StartMenuViewModel(Navigation);
         }
 
@@ -34,17 +35,5 @@ namespace Slovak_Travel_Guide
             });
             return true;
         }
-
-        async void SignInBtnClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new RegistrationPage());
-        }
-        async void LogInBtnClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new LoginPage());
-        }
-
-
-
     }
 }

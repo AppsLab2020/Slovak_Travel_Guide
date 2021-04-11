@@ -25,23 +25,23 @@
                     </Grid.RowDefinitions>
 
                     <StackLayout Grid.Row="0">
-                        <Entry Placeholder="UserName" FontSize="16" x:Name="EntryUserName"/>
+                        <Entry Placeholder="UserName" FontSize="16" x:Name="EntryUserName" Text="{Binding TakeUserName, Mode=OneWayToSource}"/>
                     </StackLayout>
                     
                     <StackLayout Grid.Row="1">
-                        <Entry Placeholder="Password" IsPassword="True" FontSize="16" x:Name="EntryUserPassword"/>
+                        <Entry Placeholder="Password" IsPassword="True" FontSize="16" x:Name="EntryUserPassword" Text="{Binding TakeUserPassword, Mode=OneWayToSource}"/>
                     </StackLayout>
                     
                     <StackLayout Grid.Row="2">
-                        <Entry Placeholder="E-Mail" FontSize="16" x:Name="EntryUserEmail"/>
+                        <Entry Placeholder="E-Mail" FontSize="16" x:Name="EntryUserEmail" Text="{Binding TakeEmail, Mode=OneWayToSource}"/>
                     </StackLayout>
                     
                     <StackLayout Grid.Row="3">
-                        <Entry Placeholder="PhoneNumber" FontSize="16" x:Name="EntryUserPhoneNumber"/>
+                        <Entry Placeholder="PhoneNumber" FontSize="16" x:Name="EntryUserPhoneNumber" Text="{Binding TakePhoneNumber, Mode=OneWayToSource}"/>
                     </StackLayout>
 
                     <StackLayout Grid.Row="4">
-                        <Button Text="Register" HorizontalOptions="CenterAndExpand" WidthRequest="100" TextColor="White" BackgroundColor="Blue" Clicked="RegisterButtonClicked"/>
+                        <Button Text="Register" HorizontalOptions="CenterAndExpand" WidthRequest="100" TextColor="White" BackgroundColor="Blue" Command="{Binding RegisterButton}"/>
                     </StackLayout>
                 </Grid>
                 
