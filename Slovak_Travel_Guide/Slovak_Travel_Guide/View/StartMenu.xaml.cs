@@ -22,7 +22,6 @@ namespace Slovak_Travel_Guide
             BindingContext = new StartMenuViewModel(Navigation);
         }
 
-
         protected override bool OnBackButtonPressed()
         {
             Device.BeginInvokeOnMainThread(async () =>

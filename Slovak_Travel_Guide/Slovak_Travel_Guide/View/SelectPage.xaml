@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="Slovak_Travel_Guide.SelectPage"
-             BackgroundColor="#E0E0E0">
+             BackgroundColor="#E0E0E0"
+             BackgroundImageSource="@drawable/BackGroundLight">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -34,6 +36,7 @@
             Grid.ColumnSpan="2"
             />
         <Button
+            xct:TouchEffect.NativeAnimation="True"
             BackgroundColor="LightGray"
             Command="{Binding CastlesBtnClicked}"
             Grid.Column="1"
@@ -42,6 +45,7 @@
             CornerRadius="15"
             />
         <Button
+            xct:TouchEffect.NativeAnimation="True"
             BackgroundColor="LightGray"
             Command="{Binding CavesBtnClicked}"
             Grid.Column="1"
@@ -50,6 +54,7 @@
             CornerRadius="15"
             />
         <Button
+            xct:TouchEffect.NativeAnimation="True"
             BackgroundColor="LightGray"
             Command="{Binding ZoosBtnClicked}"
             Grid.Column="1"
@@ -58,6 +63,7 @@
             CornerRadius="15"
             />
         <Button
+            xct:TouchEffect.NativeAnimation="True"
             BackgroundColor="LightGray"
             Command="{Binding OldVillagesBtnClicked}"
             Grid.Column="2"
@@ -66,6 +72,7 @@
             CornerRadius="15"
             />
         <Button
+            xct:TouchEffect.NativeAnimation="True"
             BackgroundColor="LightGray"
             Command="{Binding SkiDestinationsBtnClicked}"
             Grid.Column="2"
@@ -74,6 +81,7 @@
             CornerRadius="15"
             />
         <Button
+            xct:TouchEffect.NativeAnimation="True"
             BackgroundColor="LightGray"
             Command="{Binding MountainsBtnClicked}"
             Grid.Column="2"

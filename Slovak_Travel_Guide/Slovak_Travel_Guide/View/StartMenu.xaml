@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="Slovak_Travel_Guide.StartMenu"
              BackgroundColor="#E0E0E0"
              BackgroundImageSource="@drawable/StartMenuLight">
@@ -11,14 +12,16 @@
             VerticalOptions="EndAndExpand">
 
             <ImageButton
-            Aspect="Fill"
-            Source="@drawable/TravelButtonLight"
-            Command="{Binding btnTravelClicked}"
-            HorizontalOptions="FillAndExpand"
-            HeightRequest="130"
-            BackgroundColor="LightGray"
-            CornerRadius="40"
-            Margin="20, 0, 20, 5"/>
+                xct:TouchEffect.NativeAnimation="True"
+                x:Name="Travel"
+                Aspect="Fill"
+                Source="@drawable/TravelButtonLight"
+                Command="{Binding btnTravelClicked}"
+                HorizontalOptions="FillAndExpand"
+                HeightRequest="130"
+                BackgroundColor="Transparent"
+                CornerRadius="40"
+                Margin="20, 0, 20, 5"/>
 
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -31,36 +34,42 @@
                 </Grid.RowDefinitions>
 
                 <ImageButton 
+                    xct:TouchEffect.NativeAnimation="True"
+                    x:Name="SignIn"
                     Aspect="Fill"
                     Source="@drawable/SignInButtonLight"
                     Clicked="SignInBtnClicked"
                     Grid.Row="0" 
                     Grid.Column="0"
                     CornerRadius="40"
-                    HeightRequest="50"
+                    HeightRequest="55"
                     Margin="20, 0, 0, 5"
-                    BackgroundColor="LightGray"/>
+                    BackgroundColor="Transparent"/>
 
                 <ImageButton
+                    xct:TouchEffect.NativeAnimation="True"
+                    x:Name="LogIn"
                     Aspect="Fill"
                     Source="@drawable/LogInButtonLight"
                     Clicked="LogInBtnClicked"
                     Grid.Row="0"
                     Grid.Column="1"
                     CornerRadius="40"
-                    HeightRequest="50"
+                    HeightRequest="55"
                     Margin="0, 0, 20, 5"
-                    BackgroundColor="LightGray"/>
+                    BackgroundColor="Transparent"/>
             </Grid>
 
             <ImageButton
-            Aspect="Fill"
-            Source="@drawable/SettingsButtonLight"
-            HorizontalOptions="FillAndExpand"
-            HeightRequest="50"
-            BackgroundColor="LightGray"
-            CornerRadius="40"
-            Margin="20, 0, 20, 10"/>
+                xct:TouchEffect.NativeAnimation="True"
+                x:Name="Settings"
+                Aspect="Fill"
+                Source="@drawable/SettingsButtonLight"
+                HorizontalOptions="FillAndExpand"
+                HeightRequest="55"
+                BackgroundColor="Transparent"
+                CornerRadius="40"
+                Margin="20, 0, 20, 10"/>
 
 
         </StackLayout>
