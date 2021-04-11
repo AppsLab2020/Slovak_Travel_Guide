@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Slovak_Travel_Guide.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,10 @@ namespace Slovak_Travel_Guide
         public SkiDestinations()
         {
             InitializeComponent();
+
             NavigationPage.SetHasNavigationBar(this, false);
+
+            BindingContext = new SkiDestinationsViewModel();
         }
     }
 }

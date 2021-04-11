@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Slovak_Travel_Guide.Model
 {
-    class Mountains
+    class CavesModel
     {
         public string Name { get; set; }
         public string AboutSight { get; set; }

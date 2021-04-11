@@ -5,47 +5,49 @@ namespace Slovak_Travel_Guide.Service
 {
     class SightsService
     {
-        public List<Castles> GetListCastles()
+        public List<CastlesModel> GetListCastles()
         {
-            return new List<Castles>
+            return new List<CastlesModel>
             {
-                new Castles(){MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg", AboutSight="Jop more pjekny to je id tam a neotravuj",Name="Bratislavsky hrad", SecondUrl="https://turisticky.sk/wp-content/uploads/2020/01/Bratislavsky-hrad_SS_02-scaled.jpg", ThirdUrl="https://turisticky.sk/wp-content/uploads/2020/01/Bratislavsky-hrad_SS_02-scaled.jpg", LatitudeAndLongtitude=new List<double>{48.142248, 17.0996481}, }
+                new CastlesModel(){MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg", AboutSight="Jop more pjekny to je id tam a neotravuj",Name="Bratislavsky hrad", SecondUrl="https://turisticky.sk/wp-content/uploads/2020/01/Bratislavsky-hrad_SS_02-scaled.jpg", ThirdUrl="https://turisticky.sk/wp-content/uploads/2020/01/Bratislavsky-hrad_SS_02-scaled.jpg", LatitudeAndLongtitude=new List<double>{48.142248, 17.0996481}, }
 
             };
         }
-        public List<Caves> GetListCaves()
+        public List<CavesModel> GetListCaves()
         {
-            return new List<Caves>
+            return new List<CavesModel>
             {
-                new Caves(){MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg", AboutSight="Jop more pjekny to je id tam a neotravuj",Name="Bratislavsky hrad", SecondUrl="https://turisticky.sk/wp-content/uploads/2020/01/Bratislavsky-hrad_SS_02-scaled.jpg", ThirdUrl="https://turisticky.sk/wp-content/uploads/2020/01/Bratislavsky-hrad_SS_02-scaled.jpg", LatitudeAndLongtitude=new List<double>{48.142248, 17.0996481}, }
+                new CavesModel(){MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg", AboutSight="Jop more pjekny to je id tam a neotravuj",Name="Bratislavsky hrad", SecondUrl="https://turisticky.sk/wp-content/uploads/2020/01/Bratislavsky-hrad_SS_02-scaled.jpg", ThirdUrl="https://turisticky.sk/wp-content/uploads/2020/01/Bratislavsky-hrad_SS_02-scaled.jpg", LatitudeAndLongtitude=new List<double>{48.142248, 17.0996481}, }
             };
         }
-        public List<Mountains> GetListMountains()
+        public List<MountainsModel> GetListMountains()
         {
-            return new List<Mountains>
+            return new List<MountainsModel>
             {
-                new Mountains(){}
+                new MountainsModel(){MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg", AboutSight="Jop more pjekny to je id tam a neotravuj",Name="Bratislavsky hrad", SecondUrl="https://turisticky.sk/wp-content/uploads/2020/01/Bratislavsky-hrad_SS_02-scaled.jpg", ThirdUrl="https://turisticky.sk/wp-content/uploads/2020/01/Bratislavsky-hrad_SS_02-scaled.jpg", LatitudeAndLongtitude=new List<double>{48.142248, 17.0996481}, }
+
             };
         }
-        public List<OldVillages> GetListOldVillages()
+        public List<OldVillagesModel> GetListOldVillages()
         {
-            return new List<OldVillages>
+            return new List<OldVillagesModel>
             {
-                new OldVillages(){ }
+                new OldVillagesModel(){MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg", AboutSight="Jop more pjekny to je id tam a neotravuj",Name="Bratislavsky hrad", SecondUrl="https://turisticky.sk/wp-content/uploads/2020/01/Bratislavsky-hrad_SS_02-scaled.jpg", ThirdUrl="https://turisticky.sk/wp-content/uploads/2020/01/Bratislavsky-hrad_SS_02-scaled.jpg", LatitudeAndLongtitude=new List<double>{48.142248, 17.0996481}, }
+
             };
         }
-        public List<SkiDestinations> GetListSkiDestinations()
+        public List<SkiDestinationsModel> GetListSkiDestinations()
         {
-            return new List<SkiDestinations>
+            return new List<SkiDestinationsModel>
             {
-                new SkiDestinations(){}
+                new SkiDestinationsModel(){MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg", AboutSight="Jop more pjekny to je id tam a neotravuj",Name="Bratislavsky hrad", SecondUrl="https://turisticky.sk/wp-content/uploads/2020/01/Bratislavsky-hrad_SS_02-scaled.jpg", ThirdUrl="https://turisticky.sk/wp-content/uploads/2020/01/Bratislavsky-hrad_SS_02-scaled.jpg", LatitudeAndLongtitude=new List<double>{48.142248, 17.0996481},}
             };
         }
-        public List<Zoos> GetListZoos()
+        public List<ZoosModel> GetListZoos()
         {
-            return new List<Zoos>
+            return new List<ZoosModel>
             {
-                new Zoos(){}
+                new ZoosModel(){MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg", AboutSight="Jop more pjekny to je id tam a neotravuj",Name="Bratislavsky hrad", SecondUrl="https://turisticky.sk/wp-content/uploads/2020/01/Bratislavsky-hrad_SS_02-scaled.jpg", ThirdUrl="https://turisticky.sk/wp-content/uploads/2020/01/Bratislavsky-hrad_SS_02-scaled.jpg", LatitudeAndLongtitude=new List<double>{48.142248, 17.0996481},}
             };
         }
             

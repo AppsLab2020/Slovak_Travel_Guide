@@ -1,4 +1,5 @@
-﻿using Slovak_Travel_Guide.Service;
+﻿using Slovak_Travel_Guide.Model;
+using Slovak_Travel_Guide.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,26 +14,19 @@ namespace Slovak_Travel_Guide.ViewModel
 {
     class MountainsViewModel : INotifyPropertyChanged
     {
-        public List<Mountains> Mountains { get; set; }
-        public ICommand BtnNavigate
-        {
-            protected set;
-            get;
-        }
+        public List<MountainsModel> Mountains { get; set; }
+        public Command<List<double>> BtnNavigate => new Command<List<double>>(NavigateToSight);
 
         public MountainsViewModel()
         {
             Mountains = new SightsService().GetListMountains();
-            this.BtnNavigate = new Command(async () => await NavigateToSight());
+            Console.WriteLine();
         }
-        public async Task NavigateToSight()
-        {
-            double latitude = 48.142248;
-            double longitude = 17.0996481;
 
-            await Map.OpenAsync(latitude, longitude, new MapLaunchOptions
+        public async void NavigateToSight(List<double> LatitudeAndLongtitude)
+        {
+            await Map.OpenAsync(LatitudeAndLongtitude[0], LatitudeAndLongtitude[1], new MapLaunchOptions
             {
-                Name = "Bratislavsky Hrad",
                 NavigationMode = NavigationMode.Driving,
             });
         }

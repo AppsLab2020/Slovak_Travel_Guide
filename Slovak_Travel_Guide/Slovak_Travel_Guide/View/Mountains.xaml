@@ -1,139 +1,141 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:behaviors="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="Slovak_Travel_Guide.Mountains"
-             BackgroundColor="#E0E0E0">
-
+             BackgroundColor="#E0E0E0"
+             xmlns:behaviors="http://xamarin.com/schemas/2020/toolkit"
+             x:Name="MyPage">
     
-        
-    <StackLayout>
-        <ScrollView>
-            <StackLayout>
-                <Label
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout
+                Grid.Column="1"
+                    Grid.Row="1">
+                <Label 
                     HorizontalOptions="Center"
-                    Text="Mountains"
-                    FontSize="60"
-                    TextColor="Green"/>
+                    Text="Castles"
+                    FontSize="60"/>
+            </StackLayout>
 
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="20"/>
-                        <ColumnDefinition Width="150"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="20"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="60"/>
-                        <RowDefinition Height="60"/>
-                        <RowDefinition Height="5"/>
-                    </Grid.RowDefinitions>
+            <CollectionView 
+                ItemsSource="{Binding Mountains}"
+                            Grid.Column="1"
+                            Grid.Row="3"
+                            >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid BackgroundColor="LightBlue">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="5"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
 
-                    <Image
-                        Grid.Column="1"
-                        Grid.Row="0"
-                        Grid.RowSpan="2"
-                        Source="https://www.terchova.eu/images/stories/velky_rozsutec.jpg"
-                        Aspect="AspectFill"/>
-                    <Label
-                        Margin="30,0,20,0"
-                        Grid.Row="0"
-                        Grid.Column="2"
-                        Text="Rozsutec"
-                        FontSize="30"
-                        TextColor="Green"/>
-                    <Label
-                    Margin="25,0,20,0"
-                    Grid.Column="2"
-                    Grid.Row="1"
-                    Text="⭐⭐⭐⭐⭐"
-                    TextColor="Gold"
-                    FontAttributes="Bold"
-                    FontSize="20"/>
-
-                    <behaviors:Expander
-                        Grid.Row="1"
-                        Grid.RowSpan="3"
-                        Grid.Column="1"
-                        Grid.ColumnSpan="2">
-                        <behaviors:Expander.Header>
-                            <Label
-                                TextColor="Red"
-                                Margin="0,40,0,0"
-                                Text="Show More"
-                                FontSize="20"
-                                HorizontalOptions="End"/>
-                        </behaviors:Expander.Header>
-                        <StackLayout
-                            Grid.Row="0"
-                            Grid.RowSpan="4">
-                            <Grid
-                            Grid.Row="0"
-                            Grid.RowSpan="3">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="50"/>
-                                    <RowDefinition Height="50"/>
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Button
-                                    HeightRequest="15"
-                                    Grid.Column="0"
-                                    CornerRadius="15"
-                                    Text="Weather"
-                                    BackgroundColor="LightBlue"
-                                    TextColor="Yellow"
-                                    />
-                                <Button
-                                    Clicked="BtnNavigateClicked"
-                                    Grid.Column="1"
-                                    CornerRadius="15"
-                                    HeightRequest="15"
-                                    Text="Navigate"
-                                    Background="Green"
-                                    TextColor="Yellow"
-                                    />
-                                <StackLayout
-                                    Grid.Row="1"
+                            <Image
+                                Source="{Binding MainUrl}"
+                                WidthRequest="90"
+                                HeightRequest="90"
                                 Grid.Column="0"
-                                Grid.ColumnSpan="2">
-                                    <Label
-                                Text="Rozsutec"
-                                TextColor="Green"
-                                FontSize="Large"
-                                HorizontalOptions="Center"/>
-                                </StackLayout>
-                                <StackLayout
-                            Grid.Row="2"
-                            Grid.Column="0"
-                            Grid.ColumnSpan="2">
-                                    <Label
-                                    Grid.Row="2"
-                                    Grid.Column="0"
-                                    Grid.ColumnSpan="2"
-                                    Text="Rozsutec je pekny xDozsutec je pekny xozsutec je pekny xozsutec je pekny xozsutec je pekny xozsutec je pekny xozsutec je pekny xRozsutec je pekny xDozsutec je pekny xozsutec je pekny xozsutec je pekny xozsutec je pekny xozsutec je pekny xozsutec je pekny xRozsutec je pekny xDozsutec je pekny xozsutec je pekny xozsutec je pekny xozsutec je pekny xozsutec je pekny xozsutec je pekny x"
-                                    TextColor="Green"/>
-                                    <Grid>
+                                Grid.Row="1"
+                                Grid.RowSpan="2"
+                                Aspect="AspectFill"/>
+
+                            <StackLayout Orientation="Vertical" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" HorizontalOptions="Center">
+                                <Label Text="{Binding Name}"
+                                       FontSize="25"
+                                       TextColor="Green"
+                                        />
+                            </StackLayout>
+
+
+
+                            <behaviors:Expander Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="2">
+                                <behaviors:Expander.Header>
+                                    <StackLayout>
+                                        <Label
+                                        HorizontalOptions="End"
+                                        FontSize="20"
+                                        Text="Show More"/>
+                                    </StackLayout>
+                                </behaviors:Expander.Header>
+                                <StackLayout>
+                                    <Grid Grid.Row="3">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="60"/>
+                                            <RowDefinition Height="45"/>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
+
+                                        <Button
+                                        CornerRadius="15"
+                                        Text="Weather"
+                                        Grid.Row="0"
+                                        Grid.Column="0"/>
+
+                                        <Button
+                                        Command="{Binding BtnNavigate}"
+                                        CommandParameter="{Binding LatitudeAndLongtitude}"
+                                        CornerRadius="10"
+                                        Text="Navigate"
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                            />
+
+                                        <Label
+                                        FontSize="35"
+                                        Text="{Binding Name}"
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="2"/>
+                                        <Label
+                                        Grid.Row="2"
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="2"
+                                        Text="{Binding AboutSight}"/>
                                         <Image
-                                    Grid.Column="0"
-                                    Source="https://kamnahory.sk/images/stories/mala_fatra/800x600/Velky_Rozsutec_front.jpg"/>
+                                        Aspect="AspectFill"
+                                        Source="{Binding SecondUrl}"
+                                        Grid.Column="0"
+                                        Grid.Row="3"/>
                                         <Image
-                                    Grid.Column="1"
-                                    Source="https://kamnahory.sk/images/stories/mala_fatra/800x600/Velky_Rozsutec_front.jpg"/>
+                                        Aspect="AspectFill"
+                                        Source="{Binding ThirdUrl}"
+                                        Grid.Column="1"
+                                        Grid.Row="3"/>
                                     </Grid>
                                 </StackLayout>
-                            </Grid>
-                        </StackLayout>
+                            </behaviors:Expander>
+                        </Grid>
 
-                    </behaviors:Expander>
-                </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
-            </StackLayout>
-        </ScrollView>
-    </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+
 </ContentPage>
+    
+        
+   
