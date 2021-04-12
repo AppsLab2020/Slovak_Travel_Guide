@@ -15,31 +15,8 @@ namespace Slovak_Travel_Guide.Registration
         {
             InitializeComponent();
 
-            BindingContext = new RegistrationPageViewModel();
+            BindingContext = new RegistrationPageViewModel(Navigation);
         }
 
-        private void RegisterButtonClicked(object sender, EventArgs e)
-        {
-            var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDatabase.db");
-            var db = new SQLiteConnection(dbpath);
-            db.CreateTable<RegUserTable>();
-
-            var item = new RegUserTable()
-            {
-                UserName = EntryUserName.Text,
-                Password = EntryUserPassword.Text,
-                Email = EntryUserEmail.Text,
-                PhoneNumber = EntryUserPhoneNumber.Text
-            };
-
-            db.Insert(item);
-            Device.BeginInvokeOnMainThread(async () =>
-            {
-                var result = await this.DisplayAlert("Congratulation", "User Registration Succesfull", "Yes", "Cancel");
-
-                if (result)
-                    await Navigation.PushAsync(new LoginPage());
-            });
-        }
     }
 }
