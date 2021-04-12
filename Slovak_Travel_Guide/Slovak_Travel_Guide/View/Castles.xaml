@@ -72,6 +72,7 @@
                                 <behaviors:Expander.Header>
                                     <StackLayout>
                                         <Label
+                                        xct:TouchEffect.NativeAnimation="True"
                                         TextColor="Green"
                                         HorizontalOptions="End"
                                         FontSize="20"
