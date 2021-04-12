@@ -17,10 +17,11 @@ namespace Slovak_Travel_Guide.ViewModel
         public ICommand LoginBtnClicked { protected set; get; }
         public ICommand BackToSignUpPageBtn { protected set; get; }
 
-        public LoginPageViewModel()
+        public LoginPageViewModel(INavigation navigation)
         {
+            Navigation = navigation;
             this.BackToSignUpPageBtn = new Command(async () => await GoToSignUp());
-            this.LoginBtnClicked = new Command(LoginBtn);
+            this.LoginBtnClicked = new Command(async () => await LoginBtn());
         }
 
         public async Task GoToSignUp()
@@ -28,7 +29,7 @@ namespace Slovak_Travel_Guide.ViewModel
             await Navigation.PushAsync(new RegistrationPage());
         }
 
-        public async void LoginBtn()
+        public async Task LoginBtn()
         {
             var UserName = TakeName;
             var UserPassword = TakePassword;
@@ -44,15 +45,15 @@ namespace Slovak_Travel_Guide.ViewModel
             {
                 Device.BeginInvokeOnMainThread(async () =>
                 {
-                   // var result = await this.DisplayAlert("Error", "Failed User Name or Password", "Yes", "Cancel");
+                   var result = await App.Current.MainPage.DisplayAlert("Error", "Failed User Name or Password", "Yes", "Cancel");
 
-                    //if (result)
+                    if (result)
+                        await Navigation.PushAsync(new StartMenu());
+
+                    else
+                    {
                         await Navigation.PushAsync(new LoginPage());
-
-                   // else
-                    //{
-                    //    await Navigation.PushAsync(new LoginPage());
-                    //}
+                    }
                 });
             }
         }
