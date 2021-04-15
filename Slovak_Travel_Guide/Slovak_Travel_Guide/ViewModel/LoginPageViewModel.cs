@@ -16,12 +16,16 @@ namespace Slovak_Travel_Guide.ViewModel
         public INavigation Navigation { get; set; }
         public ICommand LoginBtnClicked { protected set; get; }
         public ICommand BackToSignUpPageBtn { protected set; get; }
+        public string UrlSignUp { get; set; }
+        public string UsersIcon { get; set; }
 
         public LoginPageViewModel(INavigation navigation)
         {
             Navigation = navigation;
             this.BackToSignUpPageBtn = new Command(async () => await GoToSignUp());
             this.LoginBtnClicked = new Command(async () => await LoginBtn());
+            UrlSignUp = "https://borlabs.io/wp-content/uploads/2019/09/blog-wp-login.png";
+            UsersIcon = "https://www.pikpng.com/pngl/m/16-168124_png-file-svg-font-awesome-users-icon-clipart.png";
         }
 
         public async Task GoToSignUp()
@@ -48,8 +52,9 @@ namespace Slovak_Travel_Guide.ViewModel
                    var result = await App.Current.MainPage.DisplayAlert("Error", "Failed User Name or Password", "Yes", "Cancel");
 
                     if (result)
+                    { 
                         await Navigation.PushAsync(new StartMenu());
-
+                    }
                     else
                     {
                         await Navigation.PushAsync(new LoginPage());

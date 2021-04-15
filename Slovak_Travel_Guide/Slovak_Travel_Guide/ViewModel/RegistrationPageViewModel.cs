@@ -53,6 +53,31 @@ namespace Slovak_Travel_Guide.ViewModel
             };
             db.Insert(item);
             db.Close();
+
+            double num1 = 0;
+            bool IsStringNumber = double.TryParse(item.PhoneNumber, out num1);
+
+            if (item.UserName == null || item.Password == null || item.Email == null || item.PhoneNumber == null)
+            {
+               await App.Current.MainPage.DisplayAlert("Error", "Something wrong", "Ok");
+               await Navigation.PushAsync(new RegistrationPage());
+
+            }
+
+            else if  (IsStringNumber == false)
+            {
+                await App.Current.MainPage.DisplayAlert("Error", "Format of number is incorrect ", "ok");
+                await Navigation.PushAsync(new RegistrationPage());
+            }
+
+            else if(!(TakeEmail.Contains("@gmail.com") || TakeEmail.Contains("@azet.sk") || TakeEmail.Contains("@astlas.cz")))
+            {
+                await App.Current.MainPage.DisplayAlert("Error", "Email is probably incorrect", "ok");
+                await Navigation.PushAsync(new RegistrationPage());
+            }
+
+            else
+            { 
             Device.BeginInvokeOnMainThread(async () =>
             {
                 var result = await App.Current.MainPage.DisplayAlert("Congratulation", "User Registration Succesfull", "Yes", "Cancel");
@@ -60,6 +85,7 @@ namespace Slovak_Travel_Guide.ViewModel
                 if (result)
                     await Navigation.PushAsync(new LoginPage());
             });
+            }
         }
     }
 }
