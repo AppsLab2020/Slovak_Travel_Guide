@@ -10,12 +10,11 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="10"/>
             <RowDefinition Height="40"/>
+            <RowDefinition Height="90"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="10"/>
+            <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -31,7 +30,7 @@
             HorizontalTextAlignment="Center"
             FontAttributes="Bold"
             TextColor="Green"
-            Grid.Row="1"
+            Grid.Row="2"
             Grid.Column="1"
             Grid.ColumnSpan="2"
             />
@@ -40,7 +39,7 @@
             BackgroundColor="LightGray"
             Command="{Binding CastlesBtnClicked}"
             Grid.Column="1"
-            Grid.Row="2"
+            Grid.Row="3"
             Text="HRADY"
             CornerRadius="15"
             />
@@ -49,7 +48,7 @@
             BackgroundColor="LightGray"
             Command="{Binding CavesBtnClicked}"
             Grid.Column="1"
-            Grid.Row="3"
+            Grid.Row="4"
             Text="JASKYNE"
             CornerRadius="15"
             />
@@ -58,7 +57,7 @@
             BackgroundColor="LightGray"
             Command="{Binding ZoosBtnClicked}"
             Grid.Column="1"
-            Grid.Row="4"
+            Grid.Row="5"
             Text="ZOO"
             CornerRadius="15"
             />
@@ -67,7 +66,7 @@
             BackgroundColor="LightGray"
             Command="{Binding OldVillagesBtnClicked}"
             Grid.Column="2"
-            Grid.Row="2"
+            Grid.Row="3"
             Text="Skanzeny"
             CornerRadius="15"
             />
@@ -76,7 +75,7 @@
             BackgroundColor="LightGray"
             Command="{Binding SkiDestinationsBtnClicked}"
             Grid.Column="2"
-            Grid.Row="3"
+            Grid.Row="4"
             Text="LYZIARSKE STREDISKA"
             CornerRadius="15"
             />
@@ -85,20 +84,10 @@
             BackgroundColor="LightGray"
             Command="{Binding MountainsBtnClicked}"
             Grid.Column="2"
-            Grid.Row="4"
+            Grid.Row="5"
             Text="HORY"
             CornerRadius="15"
             />
-        <Entry
-            x:Name="SelectSight"
-            Grid.Column="1"
-            Grid.ColumnSpan="2"
-            Grid.Row="6"
-            TextColor="Green"
-            Placeholder="Zadajte pamiatku"
-            HorizontalTextAlignment="Center"
-            />
-
 
     </Grid>
 

@@ -27,7 +27,7 @@ namespace Slovak_Travel_Guide
         {
             Device.BeginInvokeOnMainThread(async () =>
             {
-                var exit = await this.DisplayAlert("Confirm Exit", "Do you really want to exit the application?", "Yes", "No").ConfigureAwait(false);
+                var exit = await App.Current.MainPage.DisplayAlert("Confirm Exit", "Do you really want to exit the application?", "Yes", "No").ConfigureAwait(false);
 
                 if (exit)
                     System.Diagnostics.Process.GetCurrentProcess().CloseMainWindow();
