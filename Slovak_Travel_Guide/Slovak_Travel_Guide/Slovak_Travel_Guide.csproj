@@ -11,6 +11,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="images\darkTheme\BackGroundDark.png" />
+    <None Remove="images\lightTheme\LogInButtonLight.png" />
+    <None Remove="images\lightTheme\NavigateButtonLight.png" />
+    <None Remove="images\lightTheme\SettingsButtonLight.png" />
+    <None Remove="images\lightTheme\SignInButtonLight.png" />
+    <None Remove="images\lightTheme\TravelButtonLight.png" />
+    <None Remove="images\lightTheme\WeatherButtonLight.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="images\darkTheme\BackGroundDark.png" />
+    <EmbeddedResource Include="images\lightTheme\LogInButtonLight.png" />
+    <EmbeddedResource Include="images\lightTheme\NavigateButtonLight.png" />
+    <EmbeddedResource Include="images\lightTheme\SettingsButtonLight.png" />
+    <EmbeddedResource Include="images\lightTheme\SignInButtonLight.png" />
+    <EmbeddedResource Include="images\lightTheme\TravelButtonLight.png" />
+    <EmbeddedResource Include="images\lightTheme\WeatherButtonLight.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.4" />
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
@@ -34,6 +54,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\SelectPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\SettingsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\SkiDestinations.xaml">

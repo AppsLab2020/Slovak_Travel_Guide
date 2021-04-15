@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:local="clr-namespace:Slovak_Travel_Guide"
              x:Class="Slovak_Travel_Guide.StartMenu"
              BackgroundColor="#E0E0E0">
-            <!--BackgroundImageSource="@drawable/StartMenuLight"-->
 
     <StackLayout
         VerticalOptions="End"
@@ -37,7 +37,7 @@
                 Grid.ColumnSpan="2"
                 xct:TouchEffect.NativeAnimation="True"
                 x:Name="Travel"
-                Source="@drawable/TravelButtonLight"
+                Source="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.TravelButtonLight.png}"
                 Command="{Binding btnTravelClicked}"
                 BackgroundColor="Transparent"
                 CornerRadius="40"/>
@@ -60,7 +60,7 @@
                         Grid.Row="0"
                         xct:TouchEffect.NativeAnimation="True"
                         x:Name="SignIn"
-                        Source="@drawable/SignInButtonLight"
+                        Source="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.SignInButtonLight.png}"
                         Command="{Binding btnSignUp}"
                         CornerRadius="40"
                         BackgroundColor="Transparent"/>
@@ -70,12 +70,12 @@
                         Grid.Row="0"
                         xct:TouchEffect.NativeAnimation="True"
                         x:Name="LogIn"
-                        Source="@drawable/LogInButtonLight"
+                        Source="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.LogInButtonLight.png}"
                         Command="{Binding btnLogIn}"
                         CornerRadius="40"
                         BackgroundColor="Transparent"/>
                 </Grid>
-                
+
 
                 <ImageButton
                 Grid.Row="2"
@@ -83,8 +83,9 @@
                 Grid.ColumnSpan="2"
                 xct:TouchEffect.NativeAnimation="True"
                 x:Name="Settings"
-                Source="@drawable/SettingsButtonLight"
+                Source="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.SettingsButtonLight.png}"
                 BackgroundColor="Transparent"
+                Command="{Binding btnSettings}"
                 CornerRadius="40"/>
 
             </Grid>
