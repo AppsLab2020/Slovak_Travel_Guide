@@ -15,7 +15,7 @@
             
             <Label
                 Text="Slovak Travel Guide"
-                VerticalOptions="StartAndExpand"
+                VerticalOptions="Start"
                 HorizontalOptions="CenterAndExpand"/>
 
             <Grid>
@@ -51,8 +51,8 @@
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="187"/>
-                        <ColumnDefinition Width="187"/>
+                        <ColumnDefinition Width="190"/>
+                        <ColumnDefinition Width="190"/>
                     </Grid.ColumnDefinitions>
 
                     <ImageButton
