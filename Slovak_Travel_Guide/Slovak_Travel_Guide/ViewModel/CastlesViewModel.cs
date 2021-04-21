@@ -2,6 +2,7 @@
 using Slovak_Travel_Guide.Model;
 using Slovak_Travel_Guide.Service;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace Slovak_Travel_Guide.ViewModel
 {
     class CastlesViewModel : INotifyPropertyChanged
     {
-        public List<CastlesModel> Castles { get; set; }
+        public ObservableCollection<CastlesModel> Castles { get; set; }
         public ICommand BtnNavigate
         {
             protected set;
