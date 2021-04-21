@@ -18,6 +18,12 @@
     <None Remove="images\lightTheme\SignInButtonLight.png" />
     <None Remove="images\lightTheme\TravelButtonLight.png" />
     <None Remove="images\lightTheme\WeatherButtonLight.png" />
+    <None Remove="images\sightPictures\CastlePicture.png" />
+    <None Remove="images\sightPictures\CavePicture.png" />
+    <None Remove="images\sightPictures\MountainsPicture.png" />
+    <None Remove="images\sightPictures\SkiDestinationPicture.png" />
+    <None Remove="images\sightPictures\VillagePicture.png" />
+    <None Remove="images\sightPictures\ZooPicture.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,6 +34,12 @@
     <EmbeddedResource Include="images\lightTheme\SignInButtonLight.png" />
     <EmbeddedResource Include="images\lightTheme\TravelButtonLight.png" />
     <EmbeddedResource Include="images\lightTheme\WeatherButtonLight.png" />
+    <EmbeddedResource Include="images\sightPictures\CastlePicture.png" />
+    <EmbeddedResource Include="images\sightPictures\CavePicture.png" />
+    <EmbeddedResource Include="images\sightPictures\MountainsPicture.png" />
+    <EmbeddedResource Include="images\sightPictures\SkiDestinationPicture.png" />
+    <EmbeddedResource Include="images\sightPictures\VillagePicture.png" />
+    <EmbeddedResource Include="images\sightPictures\ZooPicture.png" />
   </ItemGroup>
 
   <ItemGroup>
