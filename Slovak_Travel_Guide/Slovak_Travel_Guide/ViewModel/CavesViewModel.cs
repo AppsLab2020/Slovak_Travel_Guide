@@ -2,8 +2,12 @@
 using Slovak_Travel_Guide.Service;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -11,18 +15,53 @@ namespace Slovak_Travel_Guide.ViewModel
 {
     class CavesViewModel : INotifyPropertyChanged
     {
-        public List<CavesModel> Caves { get; set; }
-        public Command<List<double>> BtnNavigate => new Command<List<double>>(NavigateToSight);
-
+        public ObservableCollection<CavesModel> Caves { get; set; }
+        public ICommand BtnNavigate { get; set; }
+        public  ICommand SelectionChangedCommand { get; set; }
+        private CavesModel selectionChangedCommandParameter { get; set; }
+        private CavesModel _oldCave;
         public CavesViewModel()
         {
             Caves = new SightsService().GetListCaves();
+            BtnNavigate = new Command(NavigateToSight);
+            SelectionChangedCommand = new Command<object>(SelectionChanged);
             Console.WriteLine();
         }
 
-        public async void NavigateToSight(List<double> LatitudeAndLongtitude)
+        private void SelectionChanged(object obj)
         {
-            await Map.OpenAsync(LatitudeAndLongtitude[0], LatitudeAndLongtitude[1], new MapLaunchOptions
+            selectionChangedCommandParameter = obj as CavesModel;
+        }
+
+        public void HideOrShowCaves(CavesModel cave)
+        {
+            if(_oldCave == cave)
+            {
+                cave.IsVisible = !cave.IsVisible;
+                UpdateCave(cave);
+            }
+            else
+            {
+                if(_oldCave != null)
+                {
+                    _oldCave.IsVisible = false;
+                    UpdateCave(_oldCave);
+                }
+                cave.IsVisible = true;
+                UpdateCave(cave);
+            }
+            _oldCave = cave;
+        }
+        private void UpdateCave(CavesModel cave)
+        {
+            var index = Caves.IndexOf(cave);
+            Caves.Remove(cave);
+            Caves.Insert(index, cave);
+        }
+
+        public async void NavigateToSight()
+        {
+            await Map.OpenAsync(selectionChangedCommandParameter.Latitude, selectionChangedCommandParameter.Longtitude, new MapLaunchOptions
             {
                 NavigationMode = NavigationMode.Driving,
             });

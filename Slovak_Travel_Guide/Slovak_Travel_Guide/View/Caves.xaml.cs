@@ -1,4 +1,5 @@
 ﻿
+using Slovak_Travel_Guide.Model;
 using Slovak_Travel_Guide.ViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -15,6 +16,14 @@ namespace Slovak_Travel_Guide.Sights
             NavigationPage.SetHasNavigationBar(this, false);
 
             BindingContext = new CavesViewModel();
+        }
+       private void ListView_OnItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var vm = BindingContext as CavesViewModel;
+
+            var cave = e.Item as CavesModel;
+
+            vm.HideOrShowCaves(cave);
         }
     }
 }
