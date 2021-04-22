@@ -9,9 +9,8 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="10"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="90"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -19,74 +18,80 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="5"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="5"/>
         </Grid.ColumnDefinitions>
 
         <Label
-            Text="Select Sight"
-            FontSize="26"
+            Text="SELECT SIGHT"
+            FontSize="50"
             HorizontalTextAlignment="Center"
             FontAttributes="Bold"
-            TextColor="Green"
-            Grid.Row="2"
+            TextColor="#1AAF00"
+            Grid.Row="1"
             Grid.Column="1"
             Grid.ColumnSpan="2"
             />
+        
         <ImageButton
             BackgroundColor="Transparent"
             Source="{local:ImageResource Slovak_Travel_Guide.images.sightPictures.CastlePicture.png}"
             xct:TouchEffect.NativeAnimation="True"
             Command="{Binding CastlesBtnClicked}"
             Grid.Column="1"
-            Grid.Row="3"
+            Grid.Row="2"
             CornerRadius="15"
             />
+        
         <ImageButton
             Source="{local:ImageResource Slovak_Travel_Guide.images.sightPictures.CavePicture.png}"
             xct:TouchEffect.NativeAnimation="True"
             BackgroundColor="Transparent"
             Command="{Binding CavesBtnClicked}"
             Grid.Column="1"
-            Grid.Row="4"
+            Grid.Row="3"
             CornerRadius="15"
             />
+        
         <ImageButton
             Source="{local:ImageResource Slovak_Travel_Guide.images.sightPictures.ZooPicture.png}"
             xct:TouchEffect.NativeAnimation="True"
             BackgroundColor="Transparent"
             Command="{Binding ZoosBtnClicked}"
             Grid.Column="1"
-            Grid.Row="5"
+            Grid.Row="4"
             CornerRadius="15"
             />
+        
         <ImageButton
             Source="{local:ImageResource Slovak_Travel_Guide.images.sightPictures.VillagePicture.png}"
             xct:TouchEffect.NativeAnimation="True"
             BackgroundColor="Transparent"
             Command="{Binding OldVillagesBtnClicked}"
             Grid.Column="2"
-            Grid.Row="3"
+            Grid.Row="2"
             CornerRadius="15"
             />
+        
         <ImageButton
             Source="{local:ImageResource Slovak_Travel_Guide.images.sightPictures.SkiDestinationPicture.png}"
             xct:TouchEffect.NativeAnimation="True"
             BackgroundColor="Transparent"
             Command="{Binding SkiDestinationsBtnClicked}"
             Grid.Column="2"
-            Grid.Row="4"
+            Grid.Row="3"
             CornerRadius="15"
             />
+        
         <ImageButton
             Source="{local:ImageResource Slovak_Travel_Guide.images.sightPictures.MountainsPicture.png}"
             xct:TouchEffect.NativeAnimation="True"
             BackgroundColor="Transparent"
             Command="{Binding MountainsBtnClicked}"
             Grid.Column="2"
-            Grid.Row="5"
+            Grid.Row="4"
             CornerRadius="15"
             />
 

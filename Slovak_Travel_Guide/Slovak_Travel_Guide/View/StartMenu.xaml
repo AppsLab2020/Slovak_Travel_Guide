@@ -7,31 +7,27 @@
              BackgroundColor="#E0E0E0">
 
     <StackLayout
-        VerticalOptions="End"
-        Margin="0, 0, 0, 10">
+            Margin="5, 5, 5, 10"
+            VerticalOptions="End">
 
-        <StackLayout
-            Margin="5, 5, 5, 0">
-            
-            <Label
-                Text="Slovak Travel Guide"
-                VerticalOptions="Start"
-                HorizontalOptions="CenterAndExpand"/>
+        <Grid
+                VerticalOptions="End">
 
-            <Grid>
-                
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/> <!--0 Travel Button-->
-                    <RowDefinition Height="Auto"/> <!--1 Row for Log In and Sign in Buttons-->
-                    <RowDefinition Height="Auto"/> <!--2 Row for Settings button-->
-                </Grid.RowDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <!--0 Travel Button-->
+                <RowDefinition Height="Auto"/>
+                <!--1 Row for Log In and Sign in Buttons-->
+                <RowDefinition Height="Auto"/>
+                <!--2 Row for Settings button-->
+            </Grid.RowDefinitions>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-                <ImageButton
+            <ImageButton
                 Grid.Column="0"
                 Grid.Row="0"
                 Grid.ColumnSpan="2"
@@ -42,42 +38,42 @@
                 BackgroundColor="Transparent"
                 CornerRadius="40"/>
 
-                <Grid
-                    Grid.Row="1"
-                    Grid.ColumnSpan="2">
-                    
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
+            <Grid
+                Grid.Row="1"
+                Grid.ColumnSpan="2">
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="190"/>
-                        <ColumnDefinition Width="190"/>
-                    </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
 
-                    <ImageButton
-                        Grid.Column="0"
-                        Grid.Row="0"
-                        xct:TouchEffect.NativeAnimation="True"
-                        x:Name="SignIn"
-                        Source="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.SignInButtonLight.png}"
-                        Command="{Binding btnSignUp}"
-                        CornerRadius="40"
-                        BackgroundColor="Transparent"/>
-
-                    <ImageButton
-                        Grid.Column="1"
-                        Grid.Row="0"
-                        xct:TouchEffect.NativeAnimation="True"
-                        x:Name="LogIn"
-                        Source="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.LogInButtonLight.png}"
-                        Command="{Binding btnLogIn}"
-                        CornerRadius="40"
-                        BackgroundColor="Transparent"/>
-                </Grid>
-
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="190"/>
+                    <ColumnDefinition Width="190"/>
+                </Grid.ColumnDefinitions>
 
                 <ImageButton
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    xct:TouchEffect.NativeAnimation="True"
+                    x:Name="SignIn"
+                    Source="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.SignInButtonLight.png}"
+                    Command="{Binding btnSignUp}"
+                    CornerRadius="40"
+                    BackgroundColor="Transparent"/>
+
+                <ImageButton
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    xct:TouchEffect.NativeAnimation="True"
+                    x:Name="LogIn"
+                    Source="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.LogInButtonLight.png}"
+                    Command="{Binding btnLogIn}"
+                    CornerRadius="40"
+                    BackgroundColor="Transparent"/>
+            </Grid>
+
+
+            <ImageButton
                 Grid.Row="2"
                 Grid.Column="0"
                 Grid.ColumnSpan="2"
@@ -88,10 +84,8 @@
                 Command="{Binding btnSettings}"
                 CornerRadius="40"/>
 
-            </Grid>
+        </Grid>
 
-        </StackLayout>
-        
     </StackLayout>
-    
+
 </ContentPage>
