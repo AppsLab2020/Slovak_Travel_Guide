@@ -30,7 +30,7 @@
                                 </Grid.ColumnDefinitions>
 
                                 <StackLayout Grid.Row="0" Grid.Column="1">
-                                    <Label Text="{Binding Name}" FontSize="30" TextColor="Green" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                    <Label Margin="0,30,0,0"  Text="{Binding Name}" FontSize="30" TextColor="Green" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                                 </StackLayout>
 
                                 <Image Grid.Row="0" Grid.Column="0" Source="{Binding MainUrl}" Aspect="AspectFill"/>
@@ -44,9 +44,9 @@
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                <Button Grid.Row="0" Grid.Column="0"  />
-                                <Button Grid.Row="0" Grid.Column="1"  />
-                                <Button Grid.Row="0" Grid.Column="2"  />
+                                <Button Grid.Row="0" Grid.Column="0" Text="GPS" Command="{Binding Source={x:Reference CavesPage}, Path=BindingContext.BtnNavigate}" />
+                                <Button Grid.Row="0" Grid.Column="1" Text="Weather" />
+                                <Button Grid.Row="0" Grid.Column="2" Text="WebSite" />
                                 </Grid>
                             </Grid>
                            </StackLayout>
