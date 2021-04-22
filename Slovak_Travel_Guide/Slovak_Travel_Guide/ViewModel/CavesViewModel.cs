@@ -24,13 +24,12 @@ namespace Slovak_Travel_Guide.ViewModel
         {
             Caves = new SightsService().GetListCaves();
             BtnNavigate = new Command(NavigateToSight);
-            SelectionChangedCommand = new Command<object>(SelectionChanged);
             Console.WriteLine();
         }
 
-        private void SelectionChanged(object obj)
+        public void FillCommandGPS(CavesModel cave)
         {
-            selectionChangedCommandParameter = obj as CavesModel;
+            selectionChangedCommandParameter = cave;
         }
 
         public void HideOrShowCaves(CavesModel cave)

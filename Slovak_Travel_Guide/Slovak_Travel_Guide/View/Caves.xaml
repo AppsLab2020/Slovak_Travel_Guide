@@ -4,7 +4,7 @@
              x:Class="Slovak_Travel_Guide.Sights.Caves"
              xmlns:local="clr-namespace:Slovak_Travel_Guide"
              BackgroundImageSource="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.BackGroundLight.png}"
-             x:Name="MyPage">
+             x:Name="CavesPage">
     <StackLayout>
         <Label Text="Caves" FontSize="60" TextColor="Green" HorizontalOptions="Center" Margin="0,20"/>
     
@@ -18,62 +18,38 @@
             <DataTemplate>
                 <ViewCell>
                         <StackLayout>
-                    <Grid >
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="80"/>
-                            <RowDefinition Height="60"/>
-                                </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-                            <StackLayout Grid.Row="0" Grid.RowSpan="2" Grid.Column="1">
-                            <Label Text="{Binding Name}" FontSize="30" TextColor="Green" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                            </StackLayout>
-
-                            <StackLayout Grid.Row="0" Grid.RowSpan="2" Grid.Column="0">
-                            <Image Source="{Binding MainUrl}" Aspect="Fill"/>
-                            </StackLayout>
-                        
-                            </Grid>
-
-                            <Grid IsVisible="{Binding IsVisible}">
+                            <Grid>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="140"/>
                                     <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="5"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <StackLayout Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1">
-                                    <Label Text="{Binding Name}" FontSize="45" TextColor="Green" HorizontalTextAlignment="Center"/>
+                                <StackLayout Grid.Row="0" Grid.Column="1">
+                                    <Label Text="{Binding Name}" FontSize="30" TextColor="Green" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                                 </StackLayout>
 
-                                <StackLayout Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2">
-                                    <Label Text="{Binding AboutSight}" FontSize="16"/>
-                                </StackLayout>
+                                <Image Grid.Row="0" Grid.Column="0" Source="{Binding MainUrl}" Aspect="AspectFill"/>
 
-                                <StackLayout Grid.Column="0" Grid.Row="3">
-                                    <Image Source="{Binding SecondUrl}"/>
-                                </StackLayout>
-
-                                <StackLayout Grid.Column="1" Grid.Row="3">
-                                    <Image Source="{Binding ThirdUrl}"/>
-                                </StackLayout>
+                                <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" IsVisible="{Binding IsVisible}">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="60"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                <Button Grid.Row="0" Grid.Column="0"  />
+                                <Button Grid.Row="0" Grid.Column="1"  />
+                                <Button Grid.Row="0" Grid.Column="2"  />
+                                </Grid>
                             </Grid>
-
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="20"/>
-                                </Grid.RowDefinitions>
-                                <Label Grid.Row="0"/>
-                            </Grid>
-                        </StackLayout>
+                           </StackLayout>
                     </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>

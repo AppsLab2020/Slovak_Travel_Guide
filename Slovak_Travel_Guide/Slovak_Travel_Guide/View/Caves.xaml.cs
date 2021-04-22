@@ -24,6 +24,7 @@ namespace Slovak_Travel_Guide.Sights
             var cave = e.Item as CavesModel;
 
             vm.HideOrShowCaves(cave);
+            vm.FillCommandGPS(cave);
         }
     }
 }
