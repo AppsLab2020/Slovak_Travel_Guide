@@ -12,10 +12,14 @@
 
   <ItemGroup>
     <None Remove="images\darkTheme\BackGroundDark.png" />
+    <None Remove="images\lightTheme\BackGroundLight.png" />
+    <None Remove="images\lightTheme\BackGroundLight2.png" />
+    <None Remove="images\lightTheme\InfoButton.png" />
     <None Remove="images\lightTheme\LogInButtonLight.png" />
     <None Remove="images\lightTheme\NavigateButtonLight.png" />
     <None Remove="images\lightTheme\SettingsButtonLight.png" />
     <None Remove="images\lightTheme\SignInButtonLight.png" />
+    <None Remove="images\lightTheme\SlovakTravelGuide.png" />
     <None Remove="images\lightTheme\TravelButtonLight.png" />
     <None Remove="images\lightTheme\WeatherButtonLight.png" />
     <None Remove="images\sightPictures\CastlePicture.png" />
@@ -28,10 +32,14 @@
 
   <ItemGroup>
     <EmbeddedResource Include="images\darkTheme\BackGroundDark.png" />
+    <EmbeddedResource Include="images\lightTheme\BackGroundLight.png" />
+    <EmbeddedResource Include="images\lightTheme\BackGroundLight2.png" />
+    <EmbeddedResource Include="images\lightTheme\InfoButton.png" />
     <EmbeddedResource Include="images\lightTheme\LogInButtonLight.png" />
     <EmbeddedResource Include="images\lightTheme\NavigateButtonLight.png" />
     <EmbeddedResource Include="images\lightTheme\SettingsButtonLight.png" />
     <EmbeddedResource Include="images\lightTheme\SignInButtonLight.png" />
+    <EmbeddedResource Include="images\lightTheme\SlovakTravelGuide.png" />
     <EmbeddedResource Include="images\lightTheme\TravelButtonLight.png" />
     <EmbeddedResource Include="images\lightTheme\WeatherButtonLight.png" />
     <EmbeddedResource Include="images\sightPictures\CastlePicture.png" />

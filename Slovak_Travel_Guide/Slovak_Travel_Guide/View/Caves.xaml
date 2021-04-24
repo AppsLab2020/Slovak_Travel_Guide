@@ -2,11 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Slovak_Travel_Guide.Sights.Caves"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:local="clr-namespace:Slovak_Travel_Guide"
              BackgroundImageSource="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.BackGroundLight.png}"
              x:Name="CavesPage">
     <StackLayout>
-        <Label Text="Caves" FontSize="60" TextColor="Green" HorizontalOptions="Center" Margin="0,20"/>
+        <Label Text="Caves" FontSize="60" TextColor="#1AAF00" HorizontalOptions="Center" Margin="0,20" FontAttributes="Bold"/>
     
     <ListView
         ItemsSource="{Binding Caves}"
@@ -30,7 +31,7 @@
                                 </Grid.ColumnDefinitions>
 
                                 <StackLayout Grid.Row="0" Grid.Column="1">
-                                    <Label Margin="0,30,0,0"  Text="{Binding Name}" FontSize="30" TextColor="Green" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                    <Label Margin="0,30,0,0"  Text="{Binding Name}" FontSize="30" TextColor="#1AAF00" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
                                 </StackLayout>
 
                                 <Image Grid.Row="0" Grid.Column="0" Source="{Binding MainUrl}" Aspect="AspectFill"/>
@@ -44,9 +45,29 @@
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                <Button Grid.Row="0" Grid.Column="0" Text="GPS" Command="{Binding Source={x:Reference CavesPage}, Path=BindingContext.BtnNavigate}" />
-                                <Button Grid.Row="0" Grid.Column="1" Text="Weather" />
-                                <Button Grid.Row="0" Grid.Column="2" Text="WebSite" />
+                                    <ImageButton 
+                                        Grid.Row="0" 
+                                        Grid.Column="0" 
+                                        Source="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.NavigateButtonLight.png}" 
+                                        Command="{Binding Source={x:Reference CavesPage}, Path=BindingContext.BtnNavigate}" 
+                                        BackgroundColor="Transparent"
+                                        xct:TouchEffect.NativeAnimation="True"
+                                        CornerRadius="40"/>
+                                    <ImageButton 
+                                        Grid.Row="0" 
+                                        Source="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.WeatherButtonLight.png}" 
+                                        Grid.Column="1"
+                                        BackgroundColor="Transparent"
+                                        xct:TouchEffect.NativeAnimation="True"
+                                        CornerRadius="40"/>
+                                    <ImageButton 
+                                        Grid.Row="0" 
+                                        Source="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.InfoButton.png}" 
+                                        Grid.Column="2"
+                                        BackgroundColor="Transparent"
+                                        xct:TouchEffect.NativeAnimation="True"
+                                        CornerRadius="40"
+                                        Clicked="BtnInfoClicked"/>
                                 </Grid>
                             </Grid>
                            </StackLayout>
