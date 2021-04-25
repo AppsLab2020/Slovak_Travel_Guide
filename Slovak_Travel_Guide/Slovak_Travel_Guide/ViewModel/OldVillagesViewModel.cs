@@ -2,9 +2,11 @@
 using Slovak_Travel_Guide.Service;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -12,21 +14,58 @@ namespace Slovak_Travel_Guide.ViewModel
 {
     class OldVillagesViewModel : INotifyPropertyChanged
     {
-        public List<OldVillagesModel> OldVillages { get; set; }
-        public Command<List<double>> BtnNavigate => new Command<List<double>>(NavigateToSight);
+        public ObservableCollection<OldVillagesModel> OldVillages { get; set; }
+        public ICommand BtnNavigate { get; set; }
+        public ICommand SelectionChangedCommand { get; set; }
+        public ICommand BtnInfo { get; set; }
+        private OldVillagesModel selectionChangedCommandParameter { get; set; }
+        private OldVillagesModel _oldOldVillage;
 
         public OldVillagesViewModel()
         {
             OldVillages = new SightsService().GetListOldVillages();
-            Console.WriteLine();
+            BtnNavigate = new Command(NavigateToSight);
+            BtnInfo = new Command(GoToWebSite);
         }
-
-        public async void NavigateToSight(List<double> LatitudeAndLongtitude)
+        public void FillCommandGPS(OldVillagesModel oldVillage)
         {
-            await Map.OpenAsync(LatitudeAndLongtitude[0], LatitudeAndLongtitude[1], new MapLaunchOptions
+            selectionChangedCommandParameter = oldVillage;
+        }
+        public void HideOrShowOldVillages(OldVillagesModel oldVillage)
+        {
+            if (_oldOldVillage == oldVillage)
+            {
+                oldVillage.IsVisible = !oldVillage.IsVisible;
+                UpdateOldVillage(oldVillage);
+            }
+            else
+            {
+                if (_oldOldVillage != null)
+                {
+                    _oldOldVillage.IsVisible = false;
+                    UpdateOldVillage(_oldOldVillage);
+                }
+                oldVillage.IsVisible = true;
+                UpdateOldVillage(oldVillage);
+            }
+            _oldOldVillage = oldVillage;
+        }
+        private void UpdateOldVillage(OldVillagesModel oldVillage)
+        {
+            var index = OldVillages.IndexOf(oldVillage);
+            OldVillages.Remove(oldVillage);
+            OldVillages.Insert(index, oldVillage);
+        }
+        public async void NavigateToSight()
+        {
+            await Map.OpenAsync(selectionChangedCommandParameter.Latitude, selectionChangedCommandParameter.Longtitude, new MapLaunchOptions
             {
                 NavigationMode = NavigationMode.Driving,
             });
+        }
+        public async void GoToWebSite()
+        {
+            Device.OpenUri(new Uri(selectionChangedCommandParameter.WebSite));
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

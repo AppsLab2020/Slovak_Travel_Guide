@@ -1,4 +1,5 @@
-﻿using Slovak_Travel_Guide.ViewModel;
+﻿using Slovak_Travel_Guide.Model;
+using Slovak_Travel_Guide.ViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +16,16 @@ namespace Slovak_Travel_Guide
 
             BindingContext = new MountainsViewModel();
 
+        }
+
+        private void ListView_OnItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var vm = BindingContext as MountainsViewModel;
+
+            var mountains = e.Item as MountainsModel;
+
+            vm.HideOrShowMountain(mountains);
+            vm.FillCommandGPS(mountains);
         }
 
     }

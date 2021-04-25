@@ -2,137 +2,79 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Slovak_Travel_Guide.Zoos"
-             BackgroundColor="#E0E0E0"
-             xmlns:behaviors="http://xamarin.com/schemas/2020/toolkit"
-             x:Name="MyPage">
-    
-    <ContentPage.Content>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="10"/>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="10"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="10"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="10"/>
-            </Grid.ColumnDefinitions>
-            <StackLayout
-                Grid.Column="1"
-                    Grid.Row="1">
-                <Label 
-                    HorizontalOptions="Center"
-                    Text="Castles"
-                    FontSize="60"/>
-            </StackLayout>
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:local="clr-namespace:Slovak_Travel_Guide"
+             BackgroundImageSource="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.BackGroundLight.png}"
+             x:Name="ZoosPage">
 
-            <CollectionView 
-                ItemsSource="{Binding Zoos}"
-                            Grid.Column="1"
-                            Grid.Row="3"
-                            >
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid BackgroundColor="LightBlue">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="5"/>
-                                <RowDefinition Height="100"/>
-                                <RowDefinition Height="20"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
+    <StackLayout>
+        <Label Text="Caves" FontSize="60" TextColor="#1AAF00" HorizontalOptions="Center" Margin="0,20" FontAttributes="Bold"/>
 
-                            <Image
-                                Source="{Binding MainUrl}"
-                                WidthRequest="90"
-                                HeightRequest="90"
-                                Grid.Column="0"
-                                Grid.Row="1"
-                                Grid.RowSpan="2"
-                                Aspect="AspectFill"/>
+        <ListView
+        ItemsSource="{Binding Zoos}"
+        HasUnevenRows="True"
+        Margin="20,20,20,20"
+        ItemTapped="ListView_OnItemTapped"
+        >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="140"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="5"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
 
-                            <StackLayout Orientation="Vertical" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" HorizontalOptions="Center">
-                                <Label Text="{Binding Name}"
-                                       FontSize="25"
-                                       TextColor="Green"
-                                        />
-                            </StackLayout>
-
-
-
-                            <behaviors:Expander Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="2">
-                                <behaviors:Expander.Header>
-                                    <StackLayout>
-                                        <Label
-                                        HorizontalOptions="End"
-                                        FontSize="20"
-                                        Text="Show More"/>
-                                    </StackLayout>
-                                </behaviors:Expander.Header>
-                                <StackLayout>
-                                    <Grid Grid.Row="3">
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="60"/>
-                                            <RowDefinition Height="45"/>
-                                            <RowDefinition Height="auto"/>
-                                            <RowDefinition Height="auto"/>
-                                        </Grid.RowDefinitions>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="*"/>
-                                            <ColumnDefinition Width="*"/>
-                                        </Grid.ColumnDefinitions>
-
-                                        <Button
-                                        CornerRadius="15"
-                                        Text="Weather"
-                                        Grid.Row="0"
-                                        Grid.Column="0"/>
-
-                                        <Button
-                                        Command="{Binding BtnNavigate}"
-                                        CommandParameter="{Binding LatitudeAndLongtitude}"
-                                        CornerRadius="10"
-                                        Text="Navigate"
-                                        Grid.Row="0"
-                                        Grid.Column="1"
-                                            />
-
-                                        <Label
-                                        FontSize="35"
-                                        Text="{Binding Name}"
-                                        Grid.Row="1"
-                                        Grid.Column="0"
-                                        Grid.ColumnSpan="2"/>
-                                        <Label
-                                        Grid.Row="2"
-                                        Grid.Column="0"
-                                        Grid.ColumnSpan="2"
-                                        Text="{Binding AboutSight}"/>
-                                        <Image
-                                        Aspect="AspectFill"
-                                        Source="{Binding SecondUrl}"
-                                        Grid.Column="0"
-                                        Grid.Row="3"/>
-                                        <Image
-                                        Aspect="AspectFill"
-                                        Source="{Binding ThirdUrl}"
-                                        Grid.Column="1"
-                                        Grid.Row="3"/>
-                                    </Grid>
+                                <StackLayout Grid.Row="0" Grid.Column="1">
+                                    <Label Margin="0,30,0,0"  Text="{Binding Name}" FontSize="30" TextColor="#1AAF00" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
                                 </StackLayout>
-                            </behaviors:Expander>
-                        </Grid>
 
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+                                <Image Grid.Row="0" Grid.Column="0" Source="{Binding MainUrl}" Aspect="AspectFill"/>
 
-        </Grid>
-    </ContentPage.Content>
-
+                                <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" IsVisible="{Binding IsVisible}">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="60"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <ImageButton 
+                                        Grid.Row="0" 
+                                        Grid.Column="0" 
+                                        Source="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.NavigateButtonLight.png}" 
+                                        Command="{Binding Source={x:Reference ZoosPage}, Path=BindingContext.BtnNavigate}" 
+                                        BackgroundColor="Transparent"
+                                        xct:TouchEffect.NativeAnimation="True"
+                                        CornerRadius="40"/>
+                                    <ImageButton 
+                                        Grid.Row="0" 
+                                        Source="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.WeatherButtonLight.png}" 
+                                        Grid.Column="1"
+                                        BackgroundColor="Transparent"
+                                        xct:TouchEffect.NativeAnimation="True"
+                                        CornerRadius="40"/>
+                                    <ImageButton 
+                                        Grid.Row="0" 
+                                        Source="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.InfoButton.png}" 
+                                        Grid.Column="2"
+                                        BackgroundColor="Transparent"
+                                        xct:TouchEffect.NativeAnimation="True"
+                                        CornerRadius="40"
+                                        Command="{Binding Source={x:Reference ZoosPage}, Path=BindingContext.BtnInfo }"/>
+                                </Grid>
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>

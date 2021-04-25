@@ -1,4 +1,5 @@
-﻿using Slovak_Travel_Guide.ViewModel;
+﻿using Slovak_Travel_Guide.Model;
+using Slovak_Travel_Guide.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,15 @@ namespace Slovak_Travel_Guide
             NavigationPage.SetHasNavigationBar(this, false);
 
             BindingContext = new ZoosViewModel();
+        }
+        private void ListView_OnItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var vm = BindingContext as ZoosViewModel;
+
+            var zoo = e.Item as ZoosModel;
+
+            vm.HideOrShowZoos(zoo);
+            vm.FillCommandGPS(zoo);
         }
     }
 }

@@ -2,6 +2,7 @@
 using Slovak_Travel_Guide.Service;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -14,21 +15,60 @@ namespace Slovak_Travel_Guide.ViewModel
 {
     class MountainsViewModel : INotifyPropertyChanged
     {
-        public List<MountainsModel> Mountains { get; set; }
-        public Command<List<double>> BtnNavigate => new Command<List<double>>(NavigateToSight);
-
+        public ObservableCollection<MountainsModel> Mountains { get; set; }
+        public ICommand BtnNavigate { get; set; }
+        public ICommand SelectionChangedCommand { get; set; }
+        public ICommand BtnInfo { get; set; }
+        private MountainsModel selectionChangedCommandParameter { get; set; }
+        private MountainsModel _oldMountains;
         public MountainsViewModel()
         {
             Mountains = new SightsService().GetListMountains();
-            Console.WriteLine();
+            BtnNavigate = new Command(NavigateToSight);
+            BtnInfo = new Command(GoToWebSite);
         }
 
-        public async void NavigateToSight(List<double> LatitudeAndLongtitude)
+        public void FillCommandGPS(MountainsModel mountain)
         {
-            await Map.OpenAsync(LatitudeAndLongtitude[0], LatitudeAndLongtitude[1], new MapLaunchOptions
+            selectionChangedCommandParameter = mountain;
+        }
+
+        public void HideOrShowMountain(MountainsModel mountain)
+        {
+            if (_oldMountains == mountain)
+            {
+                mountain.IsVisible = !mountain.IsVisible;
+                UpdateMountain(mountain);
+            }
+            else
+            {
+                if (_oldMountains != null)
+                {
+                    _oldMountains.IsVisible = false;
+                    UpdateMountain(_oldMountains);
+                }
+                mountain.IsVisible = true;
+                UpdateMountain(mountain);
+            }
+            _oldMountains = mountain;
+        }
+        private void UpdateMountain(MountainsModel mountain)
+        {
+            var index = Mountains.IndexOf(mountain);
+            Mountains.Remove(mountain);
+            Mountains.Insert(index, mountain);
+        }
+
+        public async void NavigateToSight()
+        {
+            await Map.OpenAsync(selectionChangedCommandParameter.Latitude, selectionChangedCommandParameter.Longtitude, new MapLaunchOptions
             {
                 NavigationMode = NavigationMode.Driving,
             });
+        }
+        public async void GoToWebSite()
+        {
+            Device.OpenUri(new Uri(selectionChangedCommandParameter.WebSite));
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

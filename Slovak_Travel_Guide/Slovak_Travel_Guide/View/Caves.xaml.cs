@@ -27,12 +27,5 @@ namespace Slovak_Travel_Guide.Sights
             vm.HideOrShowCaves(cave);
             vm.FillCommandGPS(cave);
        }
-
-        [Obsolete]
-        private void BtnInfoClicked(object sender, EventArgs e)
-        {
-            var url = "https://sk.wikipedia.org/wiki/Bratislavsk%C3%BD_hrad";
-            Device.OpenUri(new Uri(url));
-        }
     }
 }

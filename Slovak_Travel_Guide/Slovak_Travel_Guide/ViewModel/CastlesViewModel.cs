@@ -1,6 +1,7 @@
 ﻿
 using Slovak_Travel_Guide.Model;
 using Slovak_Travel_Guide.Service;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -15,29 +16,65 @@ namespace Slovak_Travel_Guide.ViewModel
     class CastlesViewModel : INotifyPropertyChanged
     {
         public ObservableCollection<CastlesModel> Castles { get; set; }
-        public ICommand BtnNavigate
-        {
-            protected set;
-            get;
-        }
-
+        public ICommand BtnNavigate { get; set; }
+        public ICommand SelectionChangedCommand { get; set; }
+        public ICommand BtnInfo { get; set; }
+        public ICommand BtnWeather { get; set; }
+        private CastlesModel selectionChangedCommandParameter { get; set; }
+        private CastlesModel _oldCastle;
         public CastlesViewModel()
         {
             Castles = new SightsService().GetListCastles();
-            this.BtnNavigate = new Command(async () => await NavigateToSight());
+            BtnNavigate = new Command(NavigateToSight);
+            BtnInfo = new Command(GoToWebSite);
+            BtnWeather = new Command(ShowWeather);
         }
 
-
-        public async Task NavigateToSight()
+        public void FillCommandGPS(CastlesModel castle)
         {
-            double latitude = 48.142248;
-            double longitude = 17.0996481;
+            selectionChangedCommandParameter = castle;
+        }
 
-            await Map.OpenAsync(latitude, longitude, new MapLaunchOptions
+        public void HideOrShowCastles(CastlesModel castle)
+        {
+            if (_oldCastle == castle)
             {
-                Name = "Bratislavsky Hrad",
+                castle.IsVisible = !castle.IsVisible;
+                UpdateCastles(castle);
+            }
+            else
+            {
+                if (_oldCastle != null)
+                {
+                    _oldCastle.IsVisible = false;
+                    UpdateCastles(_oldCastle);
+                }
+                castle.IsVisible = true;
+                UpdateCastles(castle);
+            }
+            _oldCastle = castle;
+        }
+        private void UpdateCastles(CastlesModel castle)
+        {
+            var index = Castles.IndexOf(castle);
+            Castles.Remove(castle);
+            Castles.Insert(index, castle);
+        }
+
+        public async void NavigateToSight()
+        {
+            await Map.OpenAsync(selectionChangedCommandParameter.Latitude, selectionChangedCommandParameter.Longtitude, new MapLaunchOptions
+            {
                 NavigationMode = NavigationMode.Driving,
             });
+        }
+        public async void GoToWebSite()
+        {
+            Device.OpenUri(new Uri(selectionChangedCommandParameter.WebSite));
+        }
+        public async void ShowWeather()
+        {
+            App.Current.MainPage.DisplayAlert("Weather", "Noooooo, pjekný počasíčko dnes máme. Utekaj to rýchlo využiť!", "Okáčko");
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

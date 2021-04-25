@@ -18,20 +18,22 @@ namespace Slovak_Travel_Guide.ViewModel
         public ObservableCollection<CavesModel> Caves { get; set; }
         public ICommand BtnNavigate { get; set; }
         public  ICommand SelectionChangedCommand { get; set; }
+        public ICommand BtnInfo { get; set; }
+        public ICommand BtnWeather { get; set; }
         private CavesModel selectionChangedCommandParameter { get; set; }
         private CavesModel _oldCave;
+
         public CavesViewModel()
         {
             Caves = new SightsService().GetListCaves();
             BtnNavigate = new Command(NavigateToSight);
-            Console.WriteLine();
+            BtnInfo = new Command(GoToWebSite);
+            BtnWeather = new Command(ShowWeather);
         }
-
         public void FillCommandGPS(CavesModel cave)
         {
             selectionChangedCommandParameter = cave;
         }
-
         public void HideOrShowCaves(CavesModel cave)
         {
             if(_oldCave == cave)
@@ -57,13 +59,20 @@ namespace Slovak_Travel_Guide.ViewModel
             Caves.Remove(cave);
             Caves.Insert(index, cave);
         }
-
         public async void NavigateToSight()
         {
             await Map.OpenAsync(selectionChangedCommandParameter.Latitude, selectionChangedCommandParameter.Longtitude, new MapLaunchOptions
             {
                 NavigationMode = NavigationMode.Driving,
             });
+        }
+        public async void GoToWebSite()
+        {
+            Device.OpenUri(new Uri(selectionChangedCommandParameter.WebSite));
+        }
+        public async void ShowWeather()
+        {
+            App.Current.MainPage.DisplayAlert("Weather", "Noooooo, pjekný počasíčko dnes máme. Utekaj to rýchlo využiť!", "Okáčko");
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -7,10 +7,10 @@ namespace Slovak_Travel_Guide.Model
     class OldVillagesModel
     {
         public string Name { get; set; }
-        public string AboutSight { get; set; }
         public string MainUrl { get; set; }
-        public string SecondUrl { get; set; }
-        public string ThirdUrl { get; set; }
-        public List<double> LatitudeAndLongtitude { get; set; }
+        public double Latitude { get; set; }
+        public double Longtitude { get; set; }
+        public bool IsVisible { get; set; }
+        public string WebSite { get; set; }
     }
 }
