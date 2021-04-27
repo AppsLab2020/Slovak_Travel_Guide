@@ -14,6 +14,8 @@ namespace Slovak_Travel_Guide.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            Window.AddFlags(WindowManagerFlags.LayoutNoLimits);
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 

@@ -1,5 +1,6 @@
 ﻿using Slovak_Travel_Guide.Model;
 using Slovak_Travel_Guide.Service;
+using Slovak_Travel_Guide.View;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -16,19 +17,20 @@ namespace Slovak_Travel_Guide.ViewModel
     class CavesViewModel : INotifyPropertyChanged
     {
         public ObservableCollection<CavesModel> Caves { get; set; }
+        public INavigation Navigation { get; set; }
         public ICommand BtnNavigate { get; set; }
-        public  ICommand SelectionChangedCommand { get; set; }
         public ICommand BtnInfo { get; set; }
         public ICommand BtnWeather { get; set; }
         private CavesModel selectionChangedCommandParameter { get; set; }
         private CavesModel _oldCave;
 
-        public CavesViewModel()
+        public CavesViewModel(INavigation navigation)
         {
             Caves = new SightsService().GetListCaves();
             BtnNavigate = new Command(NavigateToSight);
             BtnInfo = new Command(GoToWebSite);
-            BtnWeather = new Command(ShowWeather);
+            BtnWeather = new Command(async () => await ShowWeather());
+            Navigation = navigation;
         }
         public void FillCommandGPS(CavesModel cave)
         {
@@ -70,9 +72,9 @@ namespace Slovak_Travel_Guide.ViewModel
         {
             Device.OpenUri(new Uri(selectionChangedCommandParameter.WebSite));
         }
-        public async void ShowWeather()
+        public async Task ShowWeather()
         {
-            App.Current.MainPage.DisplayAlert("Weather", "Noooooo, pjekný počasíčko dnes máme. Utekaj to rýchlo využiť!", "Okáčko");
+            await Navigation.PushAsync(new Weather());
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
