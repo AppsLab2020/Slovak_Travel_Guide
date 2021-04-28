@@ -35,6 +35,7 @@ namespace Slovak_Travel_Guide.ViewModel
         public void FillCommandGPS(CavesModel cave)
         {
             selectionChangedCommandParameter = cave;
+
         }
         public void HideOrShowCaves(CavesModel cave)
         {
@@ -74,7 +75,7 @@ namespace Slovak_Travel_Guide.ViewModel
         }
         public async Task ShowWeather()
         {
-            await Navigation.PushAsync(new Weather());
+            await Navigation.PushAsync(new Weather(selectionChangedCommandParameter.Latitude, selectionChangedCommandParameter.Longtitude));
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -10,6 +10,5 @@ namespace Slovak_Travel_Guide.Model
         public int Pressure { get; set; }
         public int Humidity { get; set; }
         public string ImageUrl { get; set; }
-        public string Name { get; set; }
     }
 }

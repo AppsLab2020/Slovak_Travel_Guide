@@ -36,10 +36,9 @@ namespace Slovak_Travel_Guide.Service
                 return new WeatherInfo
                 {
                     Temperature = (int)jsonDocument.RootElement.GetProperty("main").GetProperty("temp").GetDouble(),
-                    Humidity = (int)jsonDocument.RootElement.GetProperty("main").GetProperty("temp").GetDouble(),
-                    Pressure = (int)jsonDocument.RootElement.GetProperty("main").GetProperty("temp").GetDouble(),
+                    Humidity = (int)jsonDocument.RootElement.GetProperty("main").GetProperty("humidity").GetDouble(),
+                    Pressure = (int)jsonDocument.RootElement.GetProperty("main").GetProperty("pressure").GetDouble(),
                     ImageUrl = CreateImageUrl(jsonDocument.RootElement.GetProperty("weather").EnumerateArray().First().GetProperty("icon").GetString()),
-                    Name = (string)jsonDocument.RootElement.GetProperty("main").GetProperty("temp").GetString()
                 };
             }
         }

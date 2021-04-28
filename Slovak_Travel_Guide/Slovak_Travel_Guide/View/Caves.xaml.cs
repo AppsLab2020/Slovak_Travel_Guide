@@ -27,15 +27,7 @@ namespace Slovak_Travel_Guide.Sights
             vm.HideOrShowCaves(cave);
             vm.FillCommandGPS(cave);
 
-            FillWeatherCommand(cave);
-
        }
-        private void FillWeatherCommand(CavesModel cave)
-        {
-            var vm = BindingContext as WeatherViewModel;
-
-            vm.FillCommandParameterForWeather(cave.Latitude, cave.Longtitude);
-        }
        
     }
 }
