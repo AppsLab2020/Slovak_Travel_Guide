@@ -24,6 +24,14 @@ namespace Slovak_Travel_Guide.View
             vm.FillCommandParameterForWeather(latitude, longitude);
 
         }
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            var vm = BindingContext as WeatherViewModel;
+
+            await vm.RefreshWeatherData();
+        }
 
     }
 }
