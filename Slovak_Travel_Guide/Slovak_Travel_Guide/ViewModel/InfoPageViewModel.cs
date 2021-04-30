@@ -20,21 +20,13 @@ namespace Slovak_Travel_Guide.ViewModel
         public ICommand PreviousPage;
         public INavigation Navigation;
 
-        InfoPageViewModel(INavigation navigation)
+        public InfoPageViewModel(INavigation navigation, string webSite)
         {
             Navigation = navigation;
             ShowWebSite = new Command(GoToWebSite);
-        }
-        public void FillCommandParameters(string url1, string url2, string url3, string url4, string webSite, string aboutSight, string name)
-        {
-            Url1 = url1;
-            Url2 = url2;
-            Url3 = url3;
-            Url4 = url4;
             WebSite = webSite;
-            AboutSight = aboutSight;
-            Name = name;
         }
+
         public async void GoToWebSite()
         {
             Device.OpenUri(new Uri(WebSite));
