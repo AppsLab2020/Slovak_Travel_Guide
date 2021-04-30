@@ -24,12 +24,13 @@
         
         <Label x:Name="humidityLabel" Text="{Binding Humidity}" TextColor="White" FontSize="60"
                HorizontalOptions="Center" VerticalOptions="Start" />
-        
+
         <Image x:Name="image" Source="{Binding WeatherUrl}" HeightRequest="60" WidthRequest="60"
                HorizontalOptions="Center" VerticalOptions="Start"/>
-        
-        
-        
+        <Button Command="{Binding PreviousPage}"/>
+
+
+
     </StackLayout>
 
 </ContentPage>

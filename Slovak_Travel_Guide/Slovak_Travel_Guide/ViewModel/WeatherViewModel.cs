@@ -18,7 +18,7 @@ namespace Slovak_Travel_Guide.ViewModel
         private double Latitude { get; set; }
         private double Longitude { get; set; }
         public INavigation Navigation { get;set; }
-        public ICommand BtnNavigateToBack { get; set; }
+        public ICommand PreviousPage { get; set; }
         public string LastUpdate { get; set; }
         public string Temperature { get; set; }
         public string Pressure { get; set; }
@@ -31,7 +31,7 @@ namespace Slovak_Travel_Guide.ViewModel
             Navigation = navigation;
             weatherInfoProvider = new WeatherInfoProvider();
             preferencesHelper = new PreferencesHelper();
-            BtnNavigateToBack = new Command(async () => await NavigateToBack());
+            PreviousPage = new Command(async () => await NavigateToBack());
 
         }
         public async Task NavigateToBack()
