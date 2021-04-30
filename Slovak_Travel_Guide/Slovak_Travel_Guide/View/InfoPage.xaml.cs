@@ -19,10 +19,5 @@ namespace Slovak_Travel_Guide.View
 
             BindingContext = new InfoPageViewModel(Navigation);
         }
-
-        private void wWeb_Navigated(object sender, WebNavigatedEventArgs e)
-        {
-
-        }
     }
 }
