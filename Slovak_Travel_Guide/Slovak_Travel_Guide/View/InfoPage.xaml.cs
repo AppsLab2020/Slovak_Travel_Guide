@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Slovak_Travel_Guide.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,16 @@ namespace Slovak_Travel_Guide.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class InfoPage : ContentPage
     {
-        public InfoPage()
+        public InfoPage(string name, string url1, string url2, string url3, string url4)
         {
             InitializeComponent();
+
+            BindingContext = new InfoPageViewModel(Navigation);
+        }
+
+        private void wWeb_Navigated(object sender, WebNavigatedEventArgs e)
+        {
+
         }
     }
 }

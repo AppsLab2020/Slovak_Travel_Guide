@@ -1,11 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Slovak_Travel_Guide.View.InfoPage">
+             x:Class="Slovak_Travel_Guide.View.InfoPage"
+             BackgroundColor="White">
 
     <ScrollView>
         <StackLayout>
-            
+            <WebView
+                Source="https://sk.wikipedia.org/wiki/Bratislavsk%C3%BD_hrad"
+                HeightRequest="1000"/>
         </StackLayout>
     </ScrollView>
     

@@ -20,7 +20,7 @@ namespace Slovak_Travel_Guide.ViewModel
         public ICommand PreviousPage;
         public INavigation Navigation;
 
-        InfoPageViewModel(INavigation navigation)
+        public InfoPageViewModel(INavigation navigation)
         {
             Navigation = navigation;
             ShowWebSite = new Command(GoToWebSite);
