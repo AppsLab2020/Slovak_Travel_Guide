@@ -32,6 +32,14 @@ namespace Slovak_Travel_Guide.View
 
             await vm.RefreshWeatherData();
         }
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            var vm = BindingContext as WeatherViewModel;
+
+            await vm.RefreshWeatherData();
+        }
 
     }
 }
