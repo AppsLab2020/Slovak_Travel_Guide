@@ -13,11 +13,11 @@ namespace Slovak_Travel_Guide.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class InfoPage : ContentPage
     {
-        public InfoPage(string name, string url1, string url2, string url3, string url4)
+        public InfoPage(string webSite)
         {
             InitializeComponent();
 
-            BindingContext = new InfoPageViewModel(Navigation);
+            BindingContext = new InfoPageViewModel(Navigation, webSite);
         }
     }
 }

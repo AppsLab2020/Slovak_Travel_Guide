@@ -71,7 +71,7 @@ namespace Slovak_Travel_Guide.ViewModel
         }
         public async void GoToInfoPage()
         {
-            Navigation.PushAsync(new InfoPage(selectionChangedCommandParameter.Name, selectionChangedCommandParameter.Url1, selectionChangedCommandParameter.Url2, selectionChangedCommandParameter.Url3, selectionChangedCommandParameter.Url4));
+            Navigation.PushAsync(new InfoPage(selectionChangedCommandParameter.WebSite));
         }
         public async Task ShowWeather()
         {

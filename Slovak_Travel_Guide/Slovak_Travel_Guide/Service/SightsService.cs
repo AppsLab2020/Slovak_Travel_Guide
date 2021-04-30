@@ -19,7 +19,9 @@ namespace Slovak_Travel_Guide.Service
         {
             return new ObservableCollection<CavesModel>
             {
-                new CavesModel(){MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",Name="Bratislavský hrad", Latitude=48.142248, Longtitude=17.0996481, IsVisible=false, WebSite="https://sk.wikipedia.org/wiki/Bratislavsk%C3%BD_hrad", Url1="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Bratislava_Castle_with_Danube.jpeg/270px-Bratislava_Castle_with_Danube.jpeg", Url2="https://cloudia.hnonline.sk/r740x/dc3f3a1a9f05f8605f5304ea033d4b87", Url3="https://img.ephoto.sk/images/content/articles/e9508f2a323cd05945456e1bc726a5d7e0655322.jpg", Url4="https://static.markiza.sk/a501/image/file/21/0994/Ae1n.bratislavsky_hrad_v_zime_.jpg",},
+                new CavesModel(){MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",Name="Bratislavský hrad", Latitude=48.142248, Longtitude=17.0996481, IsVisible=false, WebSite="https://sk.wikipedia.org/wiki/Bratislavsk%C3%BD_hrad", },
+                new CavesModel(){MainUrl="https://upload.wikimedia.org/wikipedia/commons/3/3f/Demenovska_jaskyna_slobody-smaragdove_jazierko.jpg",Name="Demänovská jaskyňa", Latitude=48.971600, Longtitude=19.580730, IsVisible=false, WebSite="https://sk.wikipedia.org/wiki/Dem%C3%A4novsk%C3%A1_jasky%C5%88a_slobody", },
+
             };
         }
         public ObservableCollection<MountainsModel> GetListMountains()

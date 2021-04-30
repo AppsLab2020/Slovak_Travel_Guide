@@ -4,12 +4,13 @@
              x:Class="Slovak_Travel_Guide.View.InfoPage"
              BackgroundColor="White">
 
-    <StackLayout>
+    <StackLayout
+        Orientation="Vertical">
 
         <WebView
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"
-                Source="https://sk.wikipedia.org/wiki/Bratislavsk%C3%BD_hrad"/>
+                Source="{Binding WebSite}"/>
 
     </StackLayout>
 
