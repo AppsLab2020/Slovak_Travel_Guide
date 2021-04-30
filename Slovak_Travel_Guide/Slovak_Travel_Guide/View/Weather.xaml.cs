@@ -17,15 +17,13 @@ namespace Slovak_Travel_Guide.View
         {
             InitializeComponent();
 
-            BindingContext = new WeatherViewModel(Navigation);
+            BindingContext = new WeatherViewModel(latitude, longitude);
 
-            var vm = BindingContext as WeatherViewModel;
-
-            vm.FillCommandParameterForWeather(latitude, longitude);
         }
 
         protected async override void OnAppearing()
         {
+
             base.OnAppearing();
 
             var vm = BindingContext as WeatherViewModel;

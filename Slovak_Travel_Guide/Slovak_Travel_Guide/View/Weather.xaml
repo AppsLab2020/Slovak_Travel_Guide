@@ -1,36 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodel="clr-namespace:Slovak_Travel_Guide.ViewModel" 
+             x:DataType="viewmodel:WeatherViewModel"
              x:Class="Slovak_Travel_Guide.View.Weather"
-             BackgroundColor="Black"
              x:Name="WeatherPage">
     
-    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
-
-        <Label Text="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.LastUpdate}" TextColor="White" FontSize="20" Opacity="0.6"
-               HorizontalOptions="Center" VerticalOptions="Start" Margin="0,20,0,0"/>
-
-        <Label  Text="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.Temperature}" TextColor="White" FontSize="120"
-               HorizontalOptions="Center" VerticalOptions="Start" />
-        
-        <Label Text="PRESSURE" TextColor="White" FontSize="20" Opacity="0.6"
-               HorizontalOptions="Center" VerticalOptions="Start" Margin="0,20,0,0"/>
-
-        <Label x:Name="pressureLabel" Text="{Binding Pressure}" TextColor="White" FontSize="40"
-               HorizontalOptions="Center" VerticalOptions="Start" />
-        
-        <Label Text="HUMIDITY" TextColor="White" FontSize="20" Opacity="0.6"
-               HorizontalOptions="Center" VerticalOptions="Start" Margin="0,20,0,0"/>
-        
-        <Label x:Name="humidityLabel" Text="{Binding Humidity}" TextColor="White" FontSize="60"
-               HorizontalOptions="Center" VerticalOptions="Start" />
-
-        <Image x:Name="image" Source="{Binding WeatherUrl}" HeightRequest="60" WidthRequest="60"
-               HorizontalOptions="Center" VerticalOptions="Start"/>
-        <Button Command="{Binding PreviousPage}"/>
-
-
-
+    <StackLayout>
+        <Label Text="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.LastUpdateLabel}" TextColor="Black"/>
+        <Label Text="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.TemperatureLabel}"/>
+        <Label Text="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.HumidityLabel}"/>
+        <Label Text="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.PressureLabel}"/>
+        <Image Source="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.WeatherUrlLabel}"/>
+        <Button Text="Reset" Command="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.Reset}"/>
     </StackLayout>
 
 </ContentPage>

@@ -1,6 +1,7 @@
 ﻿using Slovak_Travel_Guide.Model;
 using Slovak_Travel_Guide.Service;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
@@ -17,27 +18,72 @@ namespace Slovak_Travel_Guide.ViewModel
         PreferencesHelper preferencesHelper;
         private double Latitude { get; set; }
         private double Longitude { get; set; }
-        public INavigation Navigation { get;set; }
-        public string LastUpdate { get; set; }
-        public string Temperature { get; set; }
-        public string Pressure { get; set; }
-        public string Humidity { get; set; }
-        public string WeatherUrl { get; set; }
-
-
-        public WeatherViewModel(INavigation navigation)
+        public string LastUpdateLabel 
+        { 
+            get => lastUpadteLabel; 
+            private set
+            {
+                if (Equals(lastUpadteLabel, value)) return;
+                lastUpadteLabel = value;
+                OnPropertyChanges();
+            }
+        }
+        private string lastUpadteLabel;
+        public string TemperatureLabel
         {
-            Navigation = navigation;
+            get => temperatureLabel;
+            private set
+            {
+                if (Equals(temperatureLabel, value)) return;
+                temperatureLabel = value;
+                OnPropertyChanges();
+            }
+        }
+        public string temperatureLabel;
+        public string PressureLabel
+        {
+            get => pressureLabel;
+            private set
+            {
+                if (Equals(pressureLabel, value)) return;
+                pressureLabel = value;
+                OnPropertyChanges();
+            }
+        }
+        public string pressureLabel;
+        public string HumidityLabel
+        {
+            get => huminidityLabel;
+            private set
+            {
+                if (Equals(huminidityLabel, value)) return;
+                huminidityLabel = value;
+                OnPropertyChanges();
+            }
+        }
+        public string huminidityLabel;
+        public string WeatherUrlLabel
+        {
+            get => weatherUrlLabel;
+            private set
+            {
+                if (Equals(weatherUrlLabel, value)) return;
+                weatherUrlLabel = value;
+                OnPropertyChanges();
+            }
+        }
+        public string weatherUrlLabel;
+        public ICommand Reset { get; }
+        public WeatherViewModel(double latitude, double longitude)
+        {
             weatherInfoProvider = new WeatherInfoProvider();
             preferencesHelper = new PreferencesHelper();
-
-        }
-        public void FillCommandParameterForWeather(double latitude, double longitude)
-        {
+            Reset = new Command(async () => await RefreshWeatherData());
             Latitude = latitude;
             Longitude = longitude;
         }
-        
+
+
         public async Task RefreshWeatherData()
         {
             await UpdateWeatherData(Latitude, Longitude);
@@ -67,11 +113,12 @@ namespace Slovak_Travel_Guide.ViewModel
         }
         private void UpdateUIWithNewInfo(WeatherInfo weatherInfo)
         {
-            Temperature = weatherInfo.Temperature.ToString() + "°";
-            Pressure = weatherInfo.Pressure.ToString() + " hPa";
-            Humidity = weatherInfo.Humidity.ToString() + " %";
-            LastUpdate = $"Last update: {preferencesHelper.GetLastUpdate().ToString("HH:mm")}";
-            WeatherUrl = weatherInfo.ImageUrl;
+            TemperatureLabel = weatherInfo.Temperature.ToString() + "°";
+            PressureLabel = weatherInfo.Pressure.ToString() + " hPa";
+            HumidityLabel = weatherInfo.Humidity.ToString() + " %";
+            LastUpdateLabel = $"Last update: {preferencesHelper.GetLastUpdate().ToString("HH:mm")}";
+            WeatherUrlLabel = weatherInfo.ImageUrl;
+
         }
         private bool SavedDataIsCurrent()
         {
@@ -79,11 +126,11 @@ namespace Slovak_Travel_Guide.ViewModel
         }
         private void ResetUI()
         {
-            Temperature = "-°";
-            Pressure = "- hPa";
-            Humidity = "- %";
-            LastUpdate = "Last update: -";
-            WeatherUrl = null;
+            TemperatureLabel = "-°";
+            PressureLabel = "- hPa";
+            HumidityLabel = "- %";
+            LastUpdateLabel = "Last update: -";
+            WeatherUrlLabel = null;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
