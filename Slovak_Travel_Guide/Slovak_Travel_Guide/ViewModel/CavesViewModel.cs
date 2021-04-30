@@ -28,7 +28,7 @@ namespace Slovak_Travel_Guide.ViewModel
         {
             Caves = new SightsService().GetListCaves();
             BtnNavigate = new Command(NavigateToSight);
-            BtnInfo = new Command(GoToWebSite);
+            BtnInfo = new Command(GoToInfoPage);
             BtnWeather = new Command(async () => await ShowWeather());
             Navigation = navigation;
         }
@@ -69,9 +69,9 @@ namespace Slovak_Travel_Guide.ViewModel
                 NavigationMode = NavigationMode.Driving,
             });
         }
-        public async void GoToWebSite()
+        public async void GoToInfoPage()
         {
-            Device.OpenUri(new Uri(selectionChangedCommandParameter.WebSite));
+            Navigation.PushAsync(new InfoPage());
         }
         public async Task ShowWeather()
         {
