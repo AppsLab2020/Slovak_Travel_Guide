@@ -4,10 +4,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using Slovak_Travel_Guide.View;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace Slovak_Travel_Guide.ViewModel
 {
-    class InfoPageViewModel
+    class InfoPageViewModel : INotifyPropertyChanged
     {
         public string Url1 { get; set; }
         public string Url2 { get; set; }
@@ -34,8 +37,14 @@ namespace Slovak_Travel_Guide.ViewModel
 
         public async void GoToWebSite()
         {
-            Device.OpenUri(new Uri(WebSite));
+           await Navigation.PushAsync(new View.WebView(WebSite));
         }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanges([CallerMemberName] string PropertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(PropertyName));
+        }
     }
 }

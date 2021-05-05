@@ -73,14 +73,16 @@ namespace Slovak_Travel_Guide.ViewModel
             }
         }
         public string weatherUrlLabel;
+        public string Name { get; set; }
         public ICommand Reset { get; }
-        public WeatherViewModel(double latitude, double longitude)
+        public WeatherViewModel(double latitude, double longitude, string name)
         {
             weatherInfoProvider = new WeatherInfoProvider();
             preferencesHelper = new PreferencesHelper();
             Reset = new Command(async () => await RefreshWeatherData());
             Latitude = latitude;
             Longitude = longitude;
+            Name = name;
         }
 
 

@@ -82,7 +82,7 @@ namespace Slovak_Travel_Guide.ViewModel
         }
         public async Task ShowWeather()
         {
-            await Navigation.PushAsync(new Weather(selectionChangedCommandParameter.Latitude, selectionChangedCommandParameter.Longtitude));
+            await Navigation.PushAsync(new Weather(selectionChangedCommandParameter.Latitude, selectionChangedCommandParameter.Longtitude, selectionChangedCommandParameter.Name));
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

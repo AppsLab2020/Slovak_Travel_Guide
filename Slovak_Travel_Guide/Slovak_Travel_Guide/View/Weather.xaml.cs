@@ -13,11 +13,11 @@ namespace Slovak_Travel_Guide.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Weather : ContentPage
     {
-        public Weather(double latitude, double longitude)
+        public Weather(double latitude, double longitude, string name)
         {
             InitializeComponent();
 
-            BindingContext = new WeatherViewModel(latitude, longitude);
+            BindingContext = new WeatherViewModel(latitude, longitude, name);
 
         }
 

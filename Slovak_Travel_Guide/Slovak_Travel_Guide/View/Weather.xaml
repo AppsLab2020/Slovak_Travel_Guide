@@ -9,7 +9,7 @@
              xmlns:local="clr-namespace:Slovak_Travel_Guide"
              BackgroundImageSource="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.BackGroundLight.png}">
 
-    <Grid>
+    <Grid Padding="5,10,5,5">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/> <!--label-->
@@ -25,6 +25,19 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+
+        <StackLayout
+            Grid.Row="0"
+            Grid.Column="0" 
+            Grid.ColumnSpan="2">
+        <Label 
+            Text="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.Name}"
+            TextColor="Green"
+            FontSize="40"
+            FontAttributes="Bold"
+            HorizontalTextAlignment="Center"
+            />
+        </StackLayout>
 
         <Image
             Grid.Row="1"
@@ -48,7 +61,7 @@
             Grid.Column="1"
             HorizontalOptions="Center">
             <Label
-                Text="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.LastUpdateLabel}"
+                Text="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.TemperatureLabel}"
                 TextColor="Green"
                 FontSize="35"
                 FontAttributes="Bold"/>
