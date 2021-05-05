@@ -3,15 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Slovak_Travel_Guide.View.InfoPage"
              BackgroundColor="White">
+    
+    <ScrollView>
+ 
+        <Grid>
+            <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="15"/>
+        </Grid.ColumnDefinitions>
 
-    <StackLayout
-        Orientation="Vertical">
+        <StackLayout Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
+            <Label Text="{Binding Name}" HorizontalOptions="Center" FontSize="40" FontAttributes="Bold" TextColor="Green"/>
+        </StackLayout>
 
-        <WebView
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="FillAndExpand"
-                Source="{Binding WebSite}"/>
+        <StackLayout Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
+            <Label Text="{Binding AboutSight}" FontSize="16" TextColor="LightGreen" HorizontalTextAlignment="Center"/>
+        </StackLayout>
+            
+        <Image Source="{Binding Url1}" Grid.Row="4" Grid.Column="1" Aspect="AspectFill" />
+        <Image Source="{Binding Url2}" Grid.Row="4" Grid.Column="2" Aspect="AspectFill"/>
+        <Image Source="{Binding Url3}" Grid.Row="5" Grid.Column="1" Aspect="AspectFill"/>
+        <Image Source="{Binding Url4}" Grid.Row="5" Grid.Column="2" Aspect="AspectFill"/>
 
-    </StackLayout>
+        <ImageButton Source="https://cdn0.iconfinder.com/data/icons/web-browser-11/64/web_browser-22-512.png" Command="{Binding ShowWebSite}" Grid.Row="6"  Grid.Column="1" Grid.ColumnSpan="2" CornerRadius="30"/>
+
+    </Grid>
+
+    </ScrollView>
 
 </ContentPage>
