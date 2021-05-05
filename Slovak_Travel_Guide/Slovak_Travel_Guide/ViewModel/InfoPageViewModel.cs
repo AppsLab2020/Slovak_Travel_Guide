@@ -16,15 +16,20 @@ namespace Slovak_Travel_Guide.ViewModel
         public string Name { get; set; }
         public string AboutSight { get; set; }
         public string WebSite { get; set; }
-        public ICommand ShowWebSite;
-        public ICommand PreviousPage;
+        public ICommand ShowWebSite { get; }
         public INavigation Navigation;
 
-        public InfoPageViewModel(INavigation navigation, string webSite)
+        public InfoPageViewModel(INavigation navigation, string webSite, string aboutSight, string name, string url1, string url2, string url3, string url4)
         {
             Navigation = navigation;
             ShowWebSite = new Command(GoToWebSite);
             WebSite = webSite;
+            AboutSight = aboutSight;
+            Name = name;
+            Url1 = url1;
+            Url2 = url2;
+            Url3 = url3;
+            Url4 = url4;
         }
 
         public async void GoToWebSite()
