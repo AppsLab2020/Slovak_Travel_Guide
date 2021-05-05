@@ -116,7 +116,7 @@ namespace Slovak_Travel_Guide.ViewModel
             TemperatureLabel = weatherInfo.Temperature.ToString() + "°";
             PressureLabel = weatherInfo.Pressure.ToString() + " hPa";
             HumidityLabel = weatherInfo.Humidity.ToString() + " %";
-            LastUpdateLabel = $"Last update: {preferencesHelper.GetLastUpdate().ToString("HH:mm")}";
+            LastUpdateLabel = $"{preferencesHelper.GetLastUpdate().ToString("HH:mm")}";
             WeatherUrlLabel = weatherInfo.ImageUrl;
 
         }
@@ -129,7 +129,7 @@ namespace Slovak_Travel_Guide.ViewModel
             TemperatureLabel = "-°";
             PressureLabel = "- hPa";
             HumidityLabel = "- %";
-            LastUpdateLabel = "Last update: -";
+            LastUpdateLabel = "-";
             WeatherUrlLabel = null;
         }
 

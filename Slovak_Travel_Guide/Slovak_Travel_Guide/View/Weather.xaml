@@ -4,15 +4,134 @@
              xmlns:viewmodel="clr-namespace:Slovak_Travel_Guide.ViewModel" 
              x:DataType="viewmodel:WeatherViewModel"
              x:Class="Slovak_Travel_Guide.View.Weather"
-             x:Name="WeatherPage">
-    
-    <StackLayout>
-        <Label Text="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.LastUpdateLabel}" TextColor="Black"/>
-        <Label Text="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.TemperatureLabel}"/>
-        <Label Text="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.HumidityLabel}"/>
-        <Label Text="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.PressureLabel}"/>
-        <Image Source="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.WeatherUrlLabel}"/>
-        <Button Text="Reset" Command="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.Reset}"/>
-    </StackLayout>
+             x:Name="WeatherPage"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:local="clr-namespace:Slovak_Travel_Guide"
+             BackgroundImageSource="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.BackGroundLight.png}">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/> <!--label-->
+            <RowDefinition Height="*"/> <!--image-->
+            <RowDefinition Height="80"/> <!--image-->
+            <RowDefinition Height="80"/> <!--image-->
+            <RowDefinition Height="80"/> <!--image-->
+            <RowDefinition Height="80"/> <!--image-->
+            <RowDefinition Height="65"/> <!--image-->
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Source="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.WeatherUrlLabel}"/>
+
+        <StackLayout
+            Grid.Row="2"
+            Grid.Column="1"
+            HorizontalOptions="Center">
+            <Label
+                Text="Temperature"
+                TextColor="Green"
+                FontSize="25"
+                FontAttributes="Bold"/>
+        </StackLayout>
+
+        <StackLayout
+            Grid.Row="3"
+            Grid.Column="1"
+            HorizontalOptions="Center">
+            <Label
+                Text="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.LastUpdateLabel}"
+                TextColor="Green"
+                FontSize="35"
+                FontAttributes="Bold"/>
+
+        </StackLayout>
+
+        <StackLayout
+            Grid.Column="0"
+            Grid.Row="2">
+            <Label
+                Text="Humidity"
+                FontSize="25"
+                TextColor="Green"
+                HorizontalOptions="Center"
+                FontAttributes="Bold"/>
+        </StackLayout>
+        
+        
+        <StackLayout
+            Grid.Row="3"
+            Grid.Column="0">
+            <Label
+                HorizontalOptions="Center"
+                Text="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.HumidityLabel}"
+                TextColor="Green"
+                FontSize="35"
+                FontAttributes="Bold"/>
+        </StackLayout>
+
+        <StackLayout
+            Grid.Row="4"
+            Grid.Column="0">
+            <Label
+                Text="Last Update"
+                FontSize="25"
+                TextColor="Green"
+                HorizontalOptions="Center"
+                FontAttributes="Bold"/>
+
+        </StackLayout>
+        
+        <StackLayout
+            Grid.Row="5"
+            Grid.Column="0">
+            <Label
+                HorizontalOptions="Center"
+                Text="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.LastUpdateLabel}" 
+                TextColor="Green"
+                FontSize="35"
+                FontAttributes="Bold"/>
+        </StackLayout>
+
+        <StackLayout
+            Grid.Row="4"
+            Grid.Column="1">
+            <Label
+                HorizontalOptions="Center"
+                Text="Pressure"
+                TextColor="Green"
+                FontSize="25"
+                FontAttributes="Bold"/>
+        </StackLayout>
+        
+        <StackLayout
+            Grid.Row="5"
+             Grid.Column="1">
+            <Label
+                HorizontalOptions="Center"
+                Text="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.PressureLabel}"
+                FontSize="35"
+                TextColor="Green"
+                FontAttributes="Bold"/>
+        </StackLayout>
+        
+        <Button 
+            Grid.Row="6"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Text="Reset" 
+            Command="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.Reset}"
+            xct:TouchEffect.NativeAnimation="True"
+            BackgroundColor="LightGray"/>
+        
+    </Grid>
 
 </ContentPage>
