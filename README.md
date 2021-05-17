@@ -41,7 +41,7 @@
 ## Posledné demo
    Funkčná celá appka❌
    1. Hotový celý design❌
-   2. Funkčné buttony❌
+   2. Funkčné buttony✔
    3. Pridať nejaké výhody pre ľudí, ktorí sa zaregistrujú❌
    4. Light/Dark mode❌
    5. Nastaviť na splashscreen našu vlasntú grafiku❌
