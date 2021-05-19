@@ -12,5 +12,10 @@ namespace Slovak_Travel_Guide.Model
         public double Longtitude { get; set; }
         public bool IsVisible { get; set; }
         public string WebSite { get; set; }
+        public string AboutSight { get; set; }
+        public string Url1 { get; set; }
+        public string Url2 { get; set; }
+        public string Url3 { get; set; }
+        public string Url4 { get; set; }
     }
 }
