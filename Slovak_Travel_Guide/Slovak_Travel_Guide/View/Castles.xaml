@@ -50,7 +50,7 @@
                                         Grid.Row="0" 
                                         Grid.Column="0" 
                                         Source="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.NavigateButtonLight.png}" 
-                                        Command="{Binding Source={x:Reference CastlesPage}, Path=BindingContext.BtnNavigate}" 
+                                        Command="{Binding Source={x:Reference CavesPage}, Path=BindingContext.BtnNavigate}" 
                                         BackgroundColor="Transparent"
                                         xct:TouchEffect.NativeAnimation="True"
                                         CornerRadius="40"/>
@@ -61,7 +61,7 @@
                                         BackgroundColor="Transparent"
                                         xct:TouchEffect.NativeAnimation="True"
                                         CornerRadius="40"
-                                        Command="{Binding Source={x:Reference CastlesPage}, Path=BindingContext.BtnWeather}"/>
+                                        Command="{Binding Source={x:Reference CavesPage}, Path=BindingContext.BtnWeather}"/>
                                     <ImageButton 
                                         Grid.Row="0" 
                                         Source="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.InfoButton.png}" 
@@ -69,7 +69,7 @@
                                         BackgroundColor="Transparent"
                                         xct:TouchEffect.NativeAnimation="True"
                                         CornerRadius="40"
-                                        Command="{Binding Source={x:Reference CastlesPage}, Path=BindingContext.BtnInfo }"/>
+                                        Command="{Binding Source={x:Reference CavesPage}, Path=BindingContext.BtnInfo }"/>
                                 </Grid>
                             </Grid>
                         </StackLayout>

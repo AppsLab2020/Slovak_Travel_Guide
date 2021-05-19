@@ -1,5 +1,6 @@
 ﻿using Slovak_Travel_Guide.Model;
 using Slovak_Travel_Guide.Service;
+using Slovak_Travel_Guide.View;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -15,17 +16,20 @@ namespace Slovak_Travel_Guide.ViewModel
 {
     class MountainsViewModel : INotifyPropertyChanged
     {
+        public INavigation Navigation { get; set; }
         public ObservableCollection<MountainsModel> Mountains { get; set; }
         public ICommand BtnNavigate { get; set; }
-        public ICommand SelectionChangedCommand { get; set; }
+        public ICommand BtnWeather { get; set; }
         public ICommand BtnInfo { get; set; }
         private MountainsModel selectionChangedCommandParameter { get; set; }
         private MountainsModel _oldMountains;
-        public MountainsViewModel()
+        public MountainsViewModel(INavigation navigation)
         {
+            Navigation = navigation;
             Mountains = new SightsService().GetListMountains();
             BtnNavigate = new Command(NavigateToSight);
             BtnInfo = new Command(GoToWebSite);
+            BtnWeather = new Command(async () => await ShowWeather());
         }
 
         public void FillCommandGPS(MountainsModel mountain)
@@ -68,7 +72,18 @@ namespace Slovak_Travel_Guide.ViewModel
         }
         public async void GoToWebSite()
         {
-            Device.OpenUri(new Uri(selectionChangedCommandParameter.WebSite));
+            Navigation.PushAsync(new InfoPage(
+               selectionChangedCommandParameter.WebSite,
+               selectionChangedCommandParameter.AboutSight,
+               selectionChangedCommandParameter.Name,
+               selectionChangedCommandParameter.Url1,
+               selectionChangedCommandParameter.Url2,
+               selectionChangedCommandParameter.Url3,
+               selectionChangedCommandParameter.Url4));
+        }
+        public async Task ShowWeather()
+        {
+            await Navigation.PushAsync(new Weather(selectionChangedCommandParameter.Latitude, selectionChangedCommandParameter.Longtitude, selectionChangedCommandParameter.Name));
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
