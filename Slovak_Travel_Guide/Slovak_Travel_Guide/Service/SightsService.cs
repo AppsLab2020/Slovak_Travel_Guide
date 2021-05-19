@@ -10,21 +10,119 @@ namespace Slovak_Travel_Guide.Service
         {
             return new ObservableCollection<CastlesModel>
             {
-                new CastlesModel(){MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",Name="Bratislavský hrad", Latitude=48.142248, Longtitude=17.0996481, IsVisible=false, WebSite="https://sk.wikipedia.org/wiki/Bratislavsk%C3%BD_hrad" },
-                new CastlesModel(){MainUrl="https://slovenskycestovatel.sk/images/items/193/oravsky-hrad47507501.jpg", Name="Oravský hrad", Latitude=49.2737007, Longtitude=19.3521274591451, IsVisible=false, WebSite="https://sk.wikipedia.org/wiki/Oravsk%C3%BD_hrad" },
-                new CastlesModel(){MainUrl="https://www.trencinregion.sk/images/listings/37/trenciansky_hrad-6adf3ccbeb02e1fa984b6ba53e30dbf0.jpg", Name="Trenčiansky hrad", Latitude=48.8942001, Longtitude=18.044716600000015, IsVisible=false, WebSite="https://sk.wikipedia.org/wiki/Tren%C4%8Diansky_hrad"},
-                new CastlesModel(){MainUrl="https://www.terasybojnice.sk/wp-content/uploads/2020/08/dreamstime_186283861-zamoj-bojnice.jpg", Name="Bojnícky zámok", Latitude=48.391050, Longtitude=17.798090, IsVisible=false, WebSite="https://sk.wikipedia.org/wiki/Bojnick%C3%BD_z%C3%A1mok"},
-                new CastlesModel(){MainUrl="https://www.zilinak.sk/assets/images/za/posts/img-1/1588527483-video-najnovsie-zabery-z-vysky-na-hrad-strecno-a-rozhladnu-spicak.jpg", Name="Hrad Strečno", Latitude=49.183500, Longtitude=18.863380, IsVisible=false, WebSite="https://sk.wikipedia.org/wiki/Stre%C4%8Dno_(hrad)"},
-                new CastlesModel(){MainUrl="https://mrtns.eu/tovar/_l/606/l606033.jpg?v=1607139091", Name="Spišský Hrad", Latitude=49.000771, Longtitude=20.753990, IsVisible=false, WebSite="https://sk.wikipedia.org/wiki/Spi%C5%A1sk%C3%BD_hrad"}
+                new CastlesModel(){
+                    MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
+                    Name="Bratislavský hrad", 
+                    Latitude=48.142248, 
+                    Longtitude=17.0996481, 
+                    IsVisible=false, 
+                    WebSite="https://sk.wikipedia.org/wiki/Bratislavsk%C3%BD_hrad" },
+
+                new CastlesModel(){
+                    MainUrl="https://slovenskycestovatel.sk/images/items/193/oravsky-hrad47507501.jpg", 
+                    Name="Oravský hrad", 
+                    Latitude=49.2737007, 
+                    Longtitude=19.3521274591451, 
+                    IsVisible=false, 
+                    WebSite="https://sk.wikipedia.org/wiki/Oravsk%C3%BD_hrad" },
+
+                new CastlesModel(){
+                    MainUrl="https://www.trencinregion.sk/images/listings/37/trenciansky_hrad-6adf3ccbeb02e1fa984b6ba53e30dbf0.jpg", 
+                    Name="Trenčiansky hrad", 
+                    Latitude=48.8942001, 
+                    Longtitude=18.044716600000015, 
+                    IsVisible=false, 
+                    WebSite="https://sk.wikipedia.org/wiki/Tren%C4%8Diansky_hrad"},
+
+                new CastlesModel(){
+                    MainUrl="https://www.terasybojnice.sk/wp-content/uploads/2020/08/dreamstime_186283861-zamoj-bojnice.jpg", 
+                    Name="Bojnícky zámok", 
+                    Latitude=48.391050, 
+                    Longtitude=17.798090, 
+                    IsVisible=false, 
+                    WebSite="https://sk.wikipedia.org/wiki/Bojnick%C3%BD_z%C3%A1mok"},
+
+                new CastlesModel(){
+                    MainUrl="https://www.zilinak.sk/assets/images/za/posts/img-1/1588527483-video-najnovsie-zabery-z-vysky-na-hrad-strecno-a-rozhladnu-spicak.jpg", 
+                    Name="Hrad Strečno", 
+                    Latitude=49.183500, 
+                    Longtitude=18.863380, 
+                    IsVisible=false, 
+                    WebSite="https://sk.wikipedia.org/wiki/Stre%C4%8Dno_(hrad)"},
+
+                new CastlesModel(){
+                    MainUrl="https://mrtns.eu/tovar/_l/606/l606033.jpg?v=1607139091", 
+                    Name="Spišský Hrad", 
+                    Latitude=49.000771, 
+                    Longtitude=20.753990, 
+                    IsVisible=false, 
+                    WebSite="https://sk.wikipedia.org/wiki/Spi%C5%A1sk%C3%BD_hrad"}
             };
         }
         public ObservableCollection<CavesModel> GetListCaves()
         {
             return new ObservableCollection<CavesModel>
             {
-                new CavesModel(){MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",Name="Bratislavský hrad", Latitude=48.142248, Longtitude=17.0996481, IsVisible=false, WebSite="https://sk.wikipedia.org/wiki/Bratislavsk%C3%BD_hrad", AboutSight="je to fajny, utekaj tam a uzi si to. A NEZABUDNI SI KUPIT NASU APPKU!!!", Url1="https://www.visitbratislava.com/wp-content/uploads/2014/10/letecka-vychod-slnka-hrad-800x533.jpg", Url2="https://staticcdn.sk/images/photoarchive/sized/700/2016/12/30/Bratislavsky-hrad-4-.jpg", Url3="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg", Url4="https://onlyslovakia.com/wp-content/uploads/bratislava_castle_.hmfxo_.jpg" },
-                new CavesModel(){MainUrl="https://upload.wikimedia.org/wikipedia/commons/3/3f/Demenovska_jaskyna_slobody-smaragdove_jazierko.jpg",Name="Demänovská jaskyňa", Latitude=48.971600, Longtitude=19.580730, IsVisible=false, WebSite="https://sk.wikipedia.org/wiki/Dem%C3%A4novsk%C3%A1_jasky%C5%88a_slobody", },
+                new CavesModel(){
+                    MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
+                    Name="Bratislavský hrad", 
+                    Latitude=48.142248, 
+                    Longtitude=17.0996481, 
+                    IsVisible=false, 
+                    WebSite="https://sk.wikipedia.org/wiki/Bratislavsk%C3%BD_hrad", 
+                    AboutSight="je to fajny, utekaj tam a uzi si to. A NEZABUDNI SI KUPIT NASU APPKU!!!", 
+                    Url1="https://www.visitbratislava.com/wp-content/uploads/2014/10/letecka-vychod-slnka-hrad-800x533.jpg", 
+                    Url2="https://staticcdn.sk/images/photoarchive/sized/700/2016/12/30/Bratislavsky-hrad-4-.jpg", 
+                    Url3="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg", 
+                    Url4="https://onlyslovakia.com/wp-content/uploads/bratislava_castle_.hmfxo_.jpg" },
 
+                new CavesModel(){
+                    MainUrl="https://upload.wikimedia.org/wikipedia/commons/3/3f/Demenovska_jaskyna_slobody-smaragdove_jazierko.jpg",
+                    Name="Demänovská jaskyňa", 
+                    Latitude=48.971600, 
+                    Longtitude=19.580730, 
+                    IsVisible=false, 
+                    WebSite="https://sk.wikipedia.org/wiki/Dem%C3%A4novsk%C3%A1_jasky%C5%88a_slobody", },
+
+                new CavesModel(){
+                    MainUrl="https://upload.wikimedia.org/wikipedia/commons/3/3f/Demenovska_jaskyna_slobody-smaragdove_jazierko.jpg",
+                    Name="Demänovská jaskyňa",
+                    Latitude=48.971600,
+                    Longtitude=19.580730,
+                    IsVisible=false,
+                    WebSite="https://sk.wikipedia.org/wiki/Dem%C3%A4novsk%C3%A1_jasky%C5%88a_slobody", },
+
+                new CavesModel(){
+                    MainUrl="https://upload.wikimedia.org/wikipedia/commons/3/3f/Demenovska_jaskyna_slobody-smaragdove_jazierko.jpg",
+                    Name="Demänovská jaskyňa",
+                    Latitude=48.971600,
+                    Longtitude=19.580730,
+                    IsVisible=false,
+                    WebSite="https://sk.wikipedia.org/wiki/Dem%C3%A4novsk%C3%A1_jasky%C5%88a_slobody", },
+
+                new CavesModel(){
+                    MainUrl="https://upload.wikimedia.org/wikipedia/commons/3/3f/Demenovska_jaskyna_slobody-smaragdove_jazierko.jpg",
+                    Name="Demänovská jaskyňa",
+                    Latitude=48.971600,
+                    Longtitude=19.580730,
+                    IsVisible=false,
+                    WebSite="https://sk.wikipedia.org/wiki/Dem%C3%A4novsk%C3%A1_jasky%C5%88a_slobody", },
+
+                new CavesModel(){
+                    MainUrl="https://lh3.googleusercontent.com/proxy/7jzbNsrmJ9P6JGL4Qx3Nzrtnf8C4J7ACGHmhZjbyEk2hub_ApC5kgJAbI1c0624ZHhN5KyIYIUln-5DRGpdN4-zIuI9xakhx-emo2U7zS_Lu",
+                    Name="Demänovská ľadová jaskyňa",
+                    Latitude=48.876030,
+                    Longtitude=20.296630,
+                    IsVisible=false,
+                    WebSite="https://sk.wikipedia.org/wiki/Dem%C3%A4novsk%C3%A1_%C4%BEadov%C3%A1_jasky%C5%88a", },
+
+                new CavesModel(){
+                    MainUrl="https://4.bp.blogspot.com/-4cP2BUBtdWw/VSuM0gOgqlI/AAAAAAAAZ2Q/T5l4ReRYTa0/s1600/tn_DSCF1778ok.jpg",
+                    Name="Perlová Jaskyňa",
+                    Latitude=48.868690,
+                    Longtitude=20.965200,
+                    IsVisible=false,
+                    WebSite="https://sk.wikipedia.org/wiki/Perlov%C3%A1_jasky%C5%88a", },
             };
         }
         public ObservableCollection<MountainsModel> GetListMountains()
