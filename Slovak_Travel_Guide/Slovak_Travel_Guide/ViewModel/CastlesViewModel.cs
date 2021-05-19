@@ -1,6 +1,7 @@
 ﻿
 using Slovak_Travel_Guide.Model;
 using Slovak_Travel_Guide.Service;
+using Slovak_Travel_Guide.View;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
