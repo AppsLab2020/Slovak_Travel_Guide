@@ -19,6 +19,8 @@ namespace Slovak_Travel_Guide.View
 
             BindingContext = new WeatherViewModel(latitude, longitude, name);
 
+            ((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.LightGreen;
+            ((NavigationPage)Application.Current.MainPage).BarTextColor = Color.Green;
         }
 
         protected async override void OnAppearing()
