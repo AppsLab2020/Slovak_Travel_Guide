@@ -1,11 +1,13 @@
 ﻿using Slovak_Travel_Guide.Model;
 using Slovak_Travel_Guide.Service;
+using Slovak_Travel_Guide.View;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -14,18 +16,21 @@ namespace Slovak_Travel_Guide.ViewModel
 {
     class OldVillagesViewModel : INotifyPropertyChanged
     {
+        INavigation Navigation { get; set; }
         public ObservableCollection<OldVillagesModel> OldVillages { get; set; }
         public ICommand BtnNavigate { get; set; }
-        public ICommand SelectionChangedCommand { get; set; }
+        public ICommand BtnWeather { get; set; }
         public ICommand BtnInfo { get; set; }
         private OldVillagesModel selectionChangedCommandParameter { get; set; }
         private OldVillagesModel _oldOldVillage;
 
-        public OldVillagesViewModel()
+        public OldVillagesViewModel(INavigation navigation)
         {
+            Navigation = navigation;
             OldVillages = new SightsService().GetListOldVillages();
             BtnNavigate = new Command(NavigateToSight);
             BtnInfo = new Command(GoToWebSite);
+            BtnWeather = new Command(async () => await ShowWeather());
         }
         public void FillCommandGPS(OldVillagesModel oldVillage)
         {
@@ -65,7 +70,18 @@ namespace Slovak_Travel_Guide.ViewModel
         }
         public async void GoToWebSite()
         {
-            Device.OpenUri(new Uri(selectionChangedCommandParameter.WebSite));
+            Navigation.PushAsync(new InfoPage(
+                selectionChangedCommandParameter.WebSite,
+                selectionChangedCommandParameter.AboutSight,
+                selectionChangedCommandParameter.Name,
+                selectionChangedCommandParameter.Url1,
+                selectionChangedCommandParameter.Url2,
+                selectionChangedCommandParameter.Url3,
+                selectionChangedCommandParameter.Url4));
+        }
+        public async Task ShowWeather()
+        {
+            await Navigation.PushAsync(new Weather(selectionChangedCommandParameter.Latitude, selectionChangedCommandParameter.Longtitude, selectionChangedCommandParameter.Name));
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

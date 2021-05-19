@@ -14,7 +14,7 @@ namespace Slovak_Travel_Guide
 
             NavigationPage.SetHasNavigationBar(this, false);
 
-            BindingContext = new MountainsViewModel();
+            BindingContext = new MountainsViewModel(Navigation);
 
         }
 

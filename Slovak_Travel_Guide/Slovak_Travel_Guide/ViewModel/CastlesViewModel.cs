@@ -1,6 +1,7 @@
 ﻿
 using Slovak_Travel_Guide.Model;
 using Slovak_Travel_Guide.Service;
+using Slovak_Travel_Guide.View;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -15,19 +16,20 @@ namespace Slovak_Travel_Guide.ViewModel
 {
     class CastlesViewModel : INotifyPropertyChanged
     {
+        INavigation Navigation { get; set; }
         public ObservableCollection<CastlesModel> Castles { get; set; }
         public ICommand BtnNavigate { get; set; }
-        public ICommand SelectionChangedCommand { get; set; }
         public ICommand BtnInfo { get; set; }
         public ICommand BtnWeather { get; set; }
         private CastlesModel selectionChangedCommandParameter { get; set; }
         private CastlesModel _oldCastle;
-        public CastlesViewModel()
+        public CastlesViewModel(INavigation navigation)
         {
+            Navigation = navigation;
             Castles = new SightsService().GetListCastles();
             BtnNavigate = new Command(NavigateToSight);
             BtnInfo = new Command(GoToWebSite);
-            BtnWeather = new Command(ShowWeather);
+            BtnWeather = new Command(async() => await ShowWeather());
         }
 
         public void FillCommandGPS(CastlesModel castle)
@@ -70,11 +72,18 @@ namespace Slovak_Travel_Guide.ViewModel
         }
         public async void GoToWebSite()
         {
-            Device.OpenUri(new Uri(selectionChangedCommandParameter.WebSite));
+            Navigation.PushAsync(new InfoPage(
+                            selectionChangedCommandParameter.WebSite,
+                            selectionChangedCommandParameter.AboutSight,
+                            selectionChangedCommandParameter.Name,
+                            selectionChangedCommandParameter.Url1,
+                            selectionChangedCommandParameter.Url2,
+                            selectionChangedCommandParameter.Url3,
+                            selectionChangedCommandParameter.Url4));
         }
-        public async void ShowWeather()
+        public async Task ShowWeather()
         {
-            App.Current.MainPage.DisplayAlert("Weather", "Noooooo, pjekný počasíčko dnes máme. Utekaj to rýchlo využiť!", "Okáčko");
+            await Navigation.PushAsync(new Weather(selectionChangedCommandParameter.Latitude, selectionChangedCommandParameter.Longtitude, selectionChangedCommandParameter.Name));
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

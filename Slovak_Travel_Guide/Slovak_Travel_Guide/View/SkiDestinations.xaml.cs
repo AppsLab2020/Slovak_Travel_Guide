@@ -20,7 +20,7 @@ namespace Slovak_Travel_Guide
 
             NavigationPage.SetHasNavigationBar(this, false);
 
-            BindingContext = new SkiDestinationsViewModel();
+            BindingContext = new SkiDestinationsViewModel(Navigation);
         }
         private void ListView_OnItemTapped(object sender, ItemTappedEventArgs e)
         {
