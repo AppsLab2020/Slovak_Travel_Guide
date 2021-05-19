@@ -11,8 +11,11 @@ namespace Slovak_Travel_Guide.Service
             return new ObservableCollection<CastlesModel>
             {
                 new CastlesModel(){MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",Name="Bratislavský hrad", Latitude=48.142248, Longtitude=17.0996481, IsVisible=false, WebSite="https://sk.wikipedia.org/wiki/Bratislavsk%C3%BD_hrad" },
-                new CastlesModel(){MainUrl ="https://slovenskycestovatel.sk/images/items/193/oravsky-hrad47507501.jpg", Name="Oravský hrad", Latitude=49.2737007, Longtitude=19.3521274591451, IsVisible=false, WebSite="https://sk.wikipedia.org/wiki/Oravsk%C3%BD_hrad" },
-                new CastlesModel(){MainUrl="https://www.trencinregion.sk/images/listings/37/trenciansky_hrad-6adf3ccbeb02e1fa984b6ba53e30dbf0.jpg", Name="Trenčiansky hrad", Latitude=48.8942001, Longtitude=18.044716600000015, IsVisible=false, WebSite="https://sk.wikipedia.org/wiki/Tren%C4%8Diansky_hrad"}
+                new CastlesModel(){MainUrl="https://slovenskycestovatel.sk/images/items/193/oravsky-hrad47507501.jpg", Name="Oravský hrad", Latitude=49.2737007, Longtitude=19.3521274591451, IsVisible=false, WebSite="https://sk.wikipedia.org/wiki/Oravsk%C3%BD_hrad" },
+                new CastlesModel(){MainUrl="https://www.trencinregion.sk/images/listings/37/trenciansky_hrad-6adf3ccbeb02e1fa984b6ba53e30dbf0.jpg", Name="Trenčiansky hrad", Latitude=48.8942001, Longtitude=18.044716600000015, IsVisible=false, WebSite="https://sk.wikipedia.org/wiki/Tren%C4%8Diansky_hrad"},
+                new CastlesModel(){MainUrl="https://www.terasybojnice.sk/wp-content/uploads/2020/08/dreamstime_186283861-zamoj-bojnice.jpg", Name="Bojnícky zámok", Latitude=48.391050, Longtitude=17.798090, IsVisible=false, WebSite="https://sk.wikipedia.org/wiki/Bojnick%C3%BD_z%C3%A1mok"},
+                new CastlesModel(){MainUrl="https://www.zilinak.sk/assets/images/za/posts/img-1/1588527483-video-najnovsie-zabery-z-vysky-na-hrad-strecno-a-rozhladnu-spicak.jpg", Name="Hrad Strečno", Latitude=49.183500, Longtitude=18.863380, IsVisible=false, WebSite="https://sk.wikipedia.org/wiki/Stre%C4%8Dno_(hrad)"},
+                new CastlesModel(){MainUrl="https://mrtns.eu/tovar/_l/606/l606033.jpg?v=1607139091", Name="Spišský Hrad", Latitude=49.000771, Longtitude=20.753990, IsVisible=false, WebSite="https://sk.wikipedia.org/wiki/Spi%C5%A1sk%C3%BD_hrad"}
             };
         }
         public ObservableCollection<CavesModel> GetListCaves()
