@@ -22,11 +22,9 @@ namespace Slovak_Travel_Guide.View
             BindingContext = new WebViewViewModel(WebSite);
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanges([CallerMemberName] string PropertyName = null)
+        private void WebView_Navigated(object sender, WebNavigatedEventArgs e)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(PropertyName));
+
         }
     }
 }

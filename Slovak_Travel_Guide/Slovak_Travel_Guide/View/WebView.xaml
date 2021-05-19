@@ -2,10 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Slovak_Travel_Guide.View.WebView"
+             xmlns:local="clr-namespace:Slovak_Travel_Guide"
              x:Name="WebViewPage">
     <StackLayout>
         <WebView
-            Source="{Binding WebSite}"/>
+            Source="{Binding Source={x:Reference WebViewPage}, Path=BindingContext.WebSite}" HeightRequest="1000" x:Name="wWeb " Navigated="WebView_Navigated"/>
     </StackLayout>
        
 </ContentPage>
