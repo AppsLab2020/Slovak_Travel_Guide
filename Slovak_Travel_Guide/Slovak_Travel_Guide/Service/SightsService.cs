@@ -63,18 +63,6 @@ namespace Slovak_Travel_Guide.Service
         {
             return new ObservableCollection<CavesModel>
             {
-                new CavesModel(){
-                    MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
-                    Name="Bratislavský hrad", 
-                    Latitude=48.142248, 
-                    Longtitude=17.0996481, 
-                    IsVisible=false, 
-                    WebSite="https://sk.wikipedia.org/wiki/Bratislavsk%C3%BD_hrad", 
-                    AboutSight="je to fajny, utekaj tam a uzi si to. A NEZABUDNI SI KUPIT NASU APPKU!!!", 
-                    Url1="https://www.visitbratislava.com/wp-content/uploads/2014/10/letecka-vychod-slnka-hrad-800x533.jpg", 
-                    Url2="https://staticcdn.sk/images/photoarchive/sized/700/2016/12/30/Bratislavsky-hrad-4-.jpg", 
-                    Url3="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg", 
-                    Url4="https://onlyslovakia.com/wp-content/uploads/bratislava_castle_.hmfxo_.jpg" },
 
                 new CavesModel(){
                     MainUrl="https://upload.wikimedia.org/wikipedia/commons/3/3f/Demenovska_jaskyna_slobody-smaragdove_jazierko.jpg",
@@ -85,31 +73,31 @@ namespace Slovak_Travel_Guide.Service
                     WebSite="https://sk.wikipedia.org/wiki/Dem%C3%A4novsk%C3%A1_jasky%C5%88a_slobody", },
 
                 new CavesModel(){
-                    MainUrl="https://upload.wikimedia.org/wikipedia/commons/3/3f/Demenovska_jaskyna_slobody-smaragdove_jazierko.jpg",
-                    Name="Demänovská jaskyňa",
-                    Latitude=48.971600,
-                    Longtitude=19.580730,
+                    MainUrl="https://kamnavyletsk.b-cdn.net/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdG92IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--862ad2ee27760d93c5e2f8f2a2afd579d937826d/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9MWm05eWJXRjBJZ2xxY0dWbk9oQmhkWFJ2WDI5eWFXVnVkRlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT2daRlZEb0xjbVZ6YVhwbFNTSU5OVFkwZURNeU1GNEdPd2hVT2dsamNtOXdTU0lRTlRZMGVETXlNQ3N3S3pBR093aFUiLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--bf55f18c70caf8845c0152dc19a4f2ea0a4c3289/blob?locale=sk",
+                    Name="Mučínska jaskyňa",
+                    Latitude=48.876030,
+                    Longtitude=20.296630,
                     IsVisible=false,
                     WebSite="https://sk.wikipedia.org/wiki/Dem%C3%A4novsk%C3%A1_jasky%C5%88a_slobody", },
 
                 new CavesModel(){
-                    MainUrl="https://upload.wikimedia.org/wikipedia/commons/3/3f/Demenovska_jaskyna_slobody-smaragdove_jazierko.jpg",
-                    Name="Demänovská jaskyňa",
-                    Latitude=48.971600,
-                    Longtitude=19.580730,
+                    MainUrl="https://www.tikroznava.sk/wp-content/uploads/2018/10/silickaladnica-2.jpg",
+                    Name="Silická ľadnica",
+                    Latitude=48.532540,
+                    Longtitude=20.485660,
                     IsVisible=false,
-                    WebSite="https://sk.wikipedia.org/wiki/Dem%C3%A4novsk%C3%A1_jasky%C5%88a_slobody", },
+                    WebSite="https://sk.wikipedia.org/wiki/Silick%C3%A1_%C4%BEadnica", },
 
                 new CavesModel(){
-                    MainUrl="https://upload.wikimedia.org/wikipedia/commons/3/3f/Demenovska_jaskyna_slobody-smaragdove_jazierko.jpg",
-                    Name="Demänovská jaskyňa",
-                    Latitude=48.971600,
-                    Longtitude=19.580730,
+                    MainUrl="https://www.megaubytovanie.sk/images/attractionphotos/0487effa-4841-43e6-9dbb-8d264fdbcc78.jpg",
+                    Name="Šarkanova diera",
+                    Latitude=51.200990,
+                    Longtitude=13.404120,
                     IsVisible=false,
-                    WebSite="https://sk.wikipedia.org/wiki/Dem%C3%A4novsk%C3%A1_jasky%C5%88a_slobody", },
+                    WebSite="https://sk.wikipedia.org/wiki/%C5%A0arkanova_diera", },
 
                 new CavesModel(){
-                    MainUrl="https://lh3.googleusercontent.com/proxy/7jzbNsrmJ9P6JGL4Qx3Nzrtnf8C4J7ACGHmhZjbyEk2hub_ApC5kgJAbI1c0624ZHhN5KyIYIUln-5DRGpdN4-zIuI9xakhx-emo2U7zS_Lu",
+                    MainUrl="https://tipnatrip.com/wp-content/uploads/2020/06/Demanovska_Ladova_jaskyna__Jaskyne_na_Slovensku.jpg",
                     Name="Demänovská ľadová jaskyňa",
                     Latitude=48.876030,
                     Longtitude=20.296630,
@@ -129,7 +117,53 @@ namespace Slovak_Travel_Guide.Service
         {
             return new ObservableCollection<MountainsModel>
             {
-                new MountainsModel(){MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",Name="Bratislavský hrad", Latitude=48.142248, Longtitude=17.0996481, IsVisible=false, },
+                new MountainsModel(){
+                    MainUrl="https://t.aimg.sk/magaziny/V6G-HK4iSjjP2nzSrciJNw.1280~Vysok-Tatry-patria-medzi-naj-miesta-pre-rok-2019.jpg?t=LzB4Mzg6MTI4MHg3NTgvODAweDQ1MC9zbWFydA%3D%3D&h=GqhbKVzDJBfxvOTnTZMJpA&e=2145916800&v=2",
+                    Name="Vysoké Tatry", 
+                    Latitude=49.139050, 
+                    Longtitude=20.220381, 
+                    IsVisible=false, 
+                    WebSite="https://sk.wikipedia.org/wiki/Vysok%C3%A9_Tatry_(pohorie)", },
+
+                new MountainsModel(){
+                    MainUrl="https://www.villaflora.sk/sites/villaflora/files/2018-07/nizke_tatry_dumbier_family_resort_www.villaflora.sk_.jpg",
+                    Name="Nízke Tatry",
+                    Latitude=49.139050,
+                    Longtitude=20.220381,
+                    IsVisible=false,
+                    WebSite="https://sk.wikipedia.org/wiki/N%C3%ADzke_Tatry", },
+
+                new MountainsModel(){
+                    MainUrl="https://t.aimg.sk/magaziny/V6G-HK4iSjjP2nzSrciJNw.1280~Vysok-Tatry-patria-medzi-naj-miesta-pre-rok-2019.jpg?t=LzB4Mzg6MTI4MHg3NTgvODAweDQ1MC9zbWFydA%3D%3D&h=GqhbKVzDJBfxvOTnTZMJpA&e=2145916800&v=2",
+                    Name="Bratislavský hrad",
+                    Latitude=49.139050,
+                    Longtitude=20.220381,
+                    IsVisible=false,
+                    WebSite="https://sk.wikipedia.org/wiki/Vysok%C3%A9_Tatry_(pohorie)", },
+
+                new MountainsModel(){
+                    MainUrl="https://t.aimg.sk/magaziny/V6G-HK4iSjjP2nzSrciJNw.1280~Vysok-Tatry-patria-medzi-naj-miesta-pre-rok-2019.jpg?t=LzB4Mzg6MTI4MHg3NTgvODAweDQ1MC9zbWFydA%3D%3D&h=GqhbKVzDJBfxvOTnTZMJpA&e=2145916800&v=2",
+                    Name="Bratislavský hrad",
+                    Latitude=49.139050,
+                    Longtitude=20.220381,
+                    IsVisible=false,
+                    WebSite="https://sk.wikipedia.org/wiki/Vysok%C3%A9_Tatry_(pohorie)", },
+
+                new MountainsModel(){
+                    MainUrl="https://t.aimg.sk/magaziny/V6G-HK4iSjjP2nzSrciJNw.1280~Vysok-Tatry-patria-medzi-naj-miesta-pre-rok-2019.jpg?t=LzB4Mzg6MTI4MHg3NTgvODAweDQ1MC9zbWFydA%3D%3D&h=GqhbKVzDJBfxvOTnTZMJpA&e=2145916800&v=2",
+                    Name="Bratislavský hrad",
+                    Latitude=49.139050,
+                    Longtitude=20.220381,
+                    IsVisible=false,
+                    WebSite="https://sk.wikipedia.org/wiki/Vysok%C3%A9_Tatry_(pohorie)", },
+
+                new MountainsModel(){
+                    MainUrl="https://t.aimg.sk/magaziny/V6G-HK4iSjjP2nzSrciJNw.1280~Vysok-Tatry-patria-medzi-naj-miesta-pre-rok-2019.jpg?t=LzB4Mzg6MTI4MHg3NTgvODAweDQ1MC9zbWFydA%3D%3D&h=GqhbKVzDJBfxvOTnTZMJpA&e=2145916800&v=2",
+                    Name="Bratislavský hrad",
+                    Latitude=49.139050,
+                    Longtitude=20.220381,
+                    IsVisible=false,
+                    WebSite="https://sk.wikipedia.org/wiki/Vysok%C3%A9_Tatry_(pohorie)", },
 
             };
         }
