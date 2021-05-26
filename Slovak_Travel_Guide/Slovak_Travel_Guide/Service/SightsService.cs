@@ -16,7 +16,12 @@ namespace Slovak_Travel_Guide.Service
                     Latitude=48.142248, 
                     Longtitude=17.0996481, 
                     IsVisible=false, 
-                    WebSite="https://sk.wikipedia.org/wiki/Bratislavsk%C3%BD_hrad" },
+                    WebSite="https://sk.wikipedia.org/wiki/Bratislavsk%C3%BD_hrad",
+                    AboutSight="Bratislavský hrad (-normovaný názov[3]; iné názvy: (hrad) Bratislava[3]; staršie: Bratislavský zámok[4]; do roku 1919: Prešporek, Prešporok[3], Prešporský zámok[5], Prešporský hrad[6]) je súbor stavieb v historickom areáli, ktorý zaberá vrchol návršia na juhozápadnom ostrohu malokarpatského chrbta na ľavom brehu Dunaja v Bratislave. Hradu dominuje monumentálna stavba bývalého kráľovského paláca tvoriaca neodmysliteľnú panorámu hlavného mesta Slovenska. Svojím zástojom v dejinách Veľkej Moravy, Uhorska, Česko-Slovenska a moderného Slovenska predstavuje Bratislavský hrad významný pamätník spoločensko-historického vývoja v tejto oblasti.",
+                    Url1="https://www.slovakia.com/wp-content/uploads/bigstock-Bratislava-Slovakia-May-375142654.jpg",
+                    Url2="https://www.loftpremiumhotel.sk/uploads/nr_photos/Sightseeing_1954.jpg",
+                    Url3="https://add.eventland.eu/uploads/1616270478-trVwt.jpg",
+                    Url4="https://upload.wikimedia.org/wikipedia/commons/a/ab/Bratislavsk%C3%BD_hrad_pri_v%C3%BDchode_slnka.jpg",},
 
                 new CastlesModel(){
                     MainUrl="https://slovenskycestovatel.sk/images/items/193/oravsky-hrad47507501.jpg", 
@@ -24,7 +29,12 @@ namespace Slovak_Travel_Guide.Service
                     Latitude=49.2737007, 
                     Longtitude=19.3521274591451, 
                     IsVisible=false, 
-                    WebSite="https://sk.wikipedia.org/wiki/Oravsk%C3%BD_hrad" },
+                    WebSite="https://sk.wikipedia.org/wiki/Oravsk%C3%BD_hrad",
+                    AboutSight="Jednou z najväčších turistických atrakcií severného Slovenska je Oravský hrad, vybudovaný na skale nad riekou Orava v Oravskom Podzámku ako „orlie hniezdo“. Hrad začali budovať na mieste starého dreveného hrádku po tatárskom vpáde v roku 1241. Z pôvodne malej pevnosti z 13.storočia vznikol v priebehu nasledujúcich storočí rozsiahly hradný areál, ktorý má dnes 154 miestností.",
+                    Url1="https://www.oravskemuzeum.sk/wp-content/uploads/oravskemuzeum/oravsky-hrad.jpg",
+                    Url2="http://ipravda.sk/res/2013/10/30/thumbs/oravsky-hrad-clanokW.jpg",
+                    Url3="https://slovander.sk/wp-content/uploads/2020/03/lovci-duchov-oravsky-hrad-1170x635.png",
+                    Url4="https://media-cdn.tripadvisor.com/media/photo-s/1a/eb/90/ff/autor-michal-pisny.jpg",},
 
                 new CastlesModel(){
                     MainUrl="https://www.trencinregion.sk/images/listings/37/trenciansky_hrad-6adf3ccbeb02e1fa984b6ba53e30dbf0.jpg", 
@@ -32,7 +42,12 @@ namespace Slovak_Travel_Guide.Service
                     Latitude=48.8942001, 
                     Longtitude=18.044716600000015, 
                     IsVisible=false, 
-                    WebSite="https://sk.wikipedia.org/wiki/Tren%C4%8Diansky_hrad"},
+                    WebSite="https://sk.wikipedia.org/wiki/Tren%C4%8Diansky_hrad",
+                    AboutSight="Dominanta Trenčína i celého Považia stráži pradávne obchodné trasy spájajúce stredomorskú oblasť s Pobaltím a severnou Európou. Na mieste dnešného hradu stálo v období Veľkej Moravy hradisko ako správne centrum priľahlého regiónu. Dnešný hrad vznikol v 11. storočí ako pohraničná pevnosť, strážiaca dôležité vážske brody a dôležité karpatské priesmyky, cez ktoré prechádzali obchodné cesty, spájajúce oblasť severného Uhorska a stredoslovenských banských miest s Čechami, Moravou, Sliezskom a Poľskom.",
+                    Url1="https://www.trencinregion.sk/images/listings/37/trenciansky_hrad-6adf3ccbeb02e1fa984b6ba53e30dbf0.jpg",
+                    Url2="https://visit.trencin.sk/wp-content/uploads/2020/06/Tren%C4%8Diansky-hrad-08-1.jpg",
+                    Url3="https://turisticky.sk/wp-content/uploads/2019/04/trenciansky-hrad_ss_01.jpg",
+                    Url4="https://m.smedata.sk/api-media/media/image/sme/3/60/6005663/6005663_1200x.jpeg?rev=3"},
 
                 new CastlesModel(){
                     MainUrl="https://www.terasybojnice.sk/wp-content/uploads/2020/08/dreamstime_186283861-zamoj-bojnice.jpg", 
@@ -40,7 +55,12 @@ namespace Slovak_Travel_Guide.Service
                     Latitude=48.391050, 
                     Longtitude=17.798090, 
                     IsVisible=false, 
-                    WebSite="https://sk.wikipedia.org/wiki/Bojnick%C3%BD_z%C3%A1mok"},
+                    WebSite="https://sk.wikipedia.org/wiki/Bojnick%C3%BD_z%C3%A1mok",
+                    AboutSight="Bojnický zámok patrí k najstarším a najvýznamnejším pamiatkam na Slovensku. Stojí na travertínovej kope nad mestom. Prvá písomná zmienka o existencii hradu je z roku 1113 v listine zoborského opátstva. Pôvodne bol hradom dreveným a vyvinul sa zo staršieho hradiska. Postupne v priebehu 13. storočia bol budovaný z kameňa ako majetok rodu Poznanovcov.",
+                    Url1="https://www.megaubytovanie.sk/images/attractionphotos/fcb491fe-821f-433b-be14-552ed89c9235.jpg",
+                    Url2="https://www.snm.sk/swift_data/source/sidelna_budova/2020/ts/c_bojnice%20web.jpg",
+                    Url3="http://www.justride.cz/Content/Images/TripTip/bojnicky-zamok/e4f9de306c6e456197b6327bfff64ccf.jpg",
+                    Url4="https://slovenskycestovatel.sk/images/items/153/bojnicky-zamok72785786.jpg"},
 
                 new CastlesModel(){
                     MainUrl="https://www.zilinak.sk/assets/images/za/posts/img-1/1588527483-video-najnovsie-zabery-z-vysky-na-hrad-strecno-a-rozhladnu-spicak.jpg", 
@@ -48,7 +68,12 @@ namespace Slovak_Travel_Guide.Service
                     Latitude=49.183500, 
                     Longtitude=18.863380, 
                     IsVisible=false, 
-                    WebSite="https://sk.wikipedia.org/wiki/Stre%C4%8Dno_(hrad)"},
+                    WebSite="https://sk.wikipedia.org/wiki/Stre%C4%8Dno_(hrad)",
+                    AboutSight="Hrad Strečno je konzervovaná ruina stredovekého hradu nachádzajúca sa nad historickou hlavnou cestou medzi Žilinou a Vrútkami. V podhradí bola vybudovaná v roku 2013 bezplatne prístupná oddychová zóna so stredovekou dedinou Pasekou. Prístup do hradu je umožnený formou organizovanej prehliadky so sprievodcom. Okrem prehliadky objektu sú sprístupnené historické expozície, výstavná miestnosť a kaplnka. Vo vybraných dňoch sa na hrade uskutočňujú podujatia, ktoré sú uvedené na hlavnej stránke.",
+                    Url1="https://img.topky.sk/cestovky/320px/186850.jpg/zaujimavosti-den-hrad-strecno0-Europa.jpg",
+                    Url2="https://slovenskycestovatel.sk/images/items/206/hrad-strecno65400294.jpg",
+                    Url3="https://www.megaubytovanie.sk/images/attractionphotos/f40eab78-8661-4935-b050-94f5c9f26d69.jpg",
+                    Url4="https://turisticky.sk/wp-content/uploads/2019/04/hrad_strecno_ss_03.jpg"},
 
                 new CastlesModel(){
                     MainUrl="https://mrtns.eu/tovar/_l/606/l606033.jpg?v=1607139091", 
@@ -56,7 +81,12 @@ namespace Slovak_Travel_Guide.Service
                     Latitude=49.000771, 
                     Longtitude=20.753990, 
                     IsVisible=false, 
-                    WebSite="https://sk.wikipedia.org/wiki/Spi%C5%A1sk%C3%BD_hrad"}
+                    WebSite="https://sk.wikipedia.org/wiki/Spi%C5%A1sk%C3%BD_hrad",
+                    AboutSight="",
+                    Url1="https://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Depositphotos_287582176_ds%2520%25285%2529_07c6acd716.jpg",
+                    Url2="https://www.filmcommission.sk/data/images/1732.jpg",
+                    Url3="https://www.megaubytovanie.sk/images/attractionphotos/9487905f-74d0-46c1-a7ee-57cf21a76ec0.jpg",
+                    Url4="http://www.severovychod.sk/content/images/s/spissky-hrad-a-spisska-kapitula-autor-zoltan-duray-zdroj-kocr-severovychod-slovenska_full.jpg"}
             };
         }
         public ObservableCollection<CavesModel> GetListCaves()
