@@ -134,36 +134,36 @@ namespace Slovak_Travel_Guide.Service
                     WebSite="https://sk.wikipedia.org/wiki/N%C3%ADzke_Tatry", },
 
                 new MountainsModel(){
-                    MainUrl="https://t.aimg.sk/magaziny/V6G-HK4iSjjP2nzSrciJNw.1280~Vysok-Tatry-patria-medzi-naj-miesta-pre-rok-2019.jpg?t=LzB4Mzg6MTI4MHg3NTgvODAweDQ1MC9zbWFydA%3D%3D&h=GqhbKVzDJBfxvOTnTZMJpA&e=2145916800&v=2",
-                    Name="Bratislavský hrad",
-                    Latitude=49.139050,
-                    Longtitude=20.220381,
+                    MainUrl="https://www.planetslovakia.sk/images/priroda/kralova-hola-nizke-tatry/190706-19-44-DSC_5046-kralova-hola-nizke-tatry.jpg",
+                    Name="Kráľova Hoľa",
+                    Latitude=50.450090,
+                    Longtitude=16.059080,
                     IsVisible=false,
-                    WebSite="https://sk.wikipedia.org/wiki/Vysok%C3%A9_Tatry_(pohorie)", },
+                    WebSite="https://sk.wikipedia.org/wiki/Kr%C3%A1%C4%BEova_ho%C4%BEa", },
 
                 new MountainsModel(){
-                    MainUrl="https://t.aimg.sk/magaziny/V6G-HK4iSjjP2nzSrciJNw.1280~Vysok-Tatry-patria-medzi-naj-miesta-pre-rok-2019.jpg?t=LzB4Mzg6MTI4MHg3NTgvODAweDQ1MC9zbWFydA%3D%3D&h=GqhbKVzDJBfxvOTnTZMJpA&e=2145916800&v=2",
-                    Name="Bratislavský hrad",
-                    Latitude=49.139050,
-                    Longtitude=20.220381,
+                    MainUrl="https://www.terchova.eu/images/stories/velky_krivan.jpg",
+                    Name="Kriváň",
+                    Latitude=49.1625586,
+                    Longtitude=19.9911611,
                     IsVisible=false,
-                    WebSite="https://sk.wikipedia.org/wiki/Vysok%C3%A9_Tatry_(pohorie)", },
+                    WebSite="https://sk.wikipedia.org/wiki/Ve%C4%BEk%C3%BD_Kriv%C3%A1%C5%88", },
 
                 new MountainsModel(){
-                    MainUrl="https://t.aimg.sk/magaziny/V6G-HK4iSjjP2nzSrciJNw.1280~Vysok-Tatry-patria-medzi-naj-miesta-pre-rok-2019.jpg?t=LzB4Mzg6MTI4MHg3NTgvODAweDQ1MC9zbWFydA%3D%3D&h=GqhbKVzDJBfxvOTnTZMJpA&e=2145916800&v=2",
-                    Name="Bratislavský hrad",
-                    Latitude=49.139050,
-                    Longtitude=20.220381,
+                    MainUrl="https://www.visitliptov.sk/wp-content/uploads/2019/03/chopok09.jpg",
+                    Name="Chopok",
+                    Latitude=48.9434057,
+                    Longtitude=19.5812725,
                     IsVisible=false,
-                    WebSite="https://sk.wikipedia.org/wiki/Vysok%C3%A9_Tatry_(pohorie)", },
+                    WebSite="https://sk.wikipedia.org/wiki/Ve%C4%BEk%C3%BD_Kriv%C3%A1%C5%88", },
 
                 new MountainsModel(){
-                    MainUrl="https://t.aimg.sk/magaziny/V6G-HK4iSjjP2nzSrciJNw.1280~Vysok-Tatry-patria-medzi-naj-miesta-pre-rok-2019.jpg?t=LzB4Mzg6MTI4MHg3NTgvODAweDQ1MC9zbWFydA%3D%3D&h=GqhbKVzDJBfxvOTnTZMJpA&e=2145916800&v=2",
-                    Name="Bratislavský hrad",
-                    Latitude=49.139050,
-                    Longtitude=20.220381,
+                    MainUrl="https://www.terchova.eu/images/stories/turisticke_trasy/vrcholy_malej_fatry/turisticka_trasa_na_maly_rozsutec.jpg",                  
+                    Name="Malý Rozsutec",
+                    Latitude=49.2464764,
+                    Longtitude=19.0928837,
                     IsVisible=false,
-                    WebSite="https://sk.wikipedia.org/wiki/Vysok%C3%A9_Tatry_(pohorie)", },
+                    WebSite="https://sk.wikipedia.org/wiki/Mal%C3%BD_Rozsutec", },
 
             };
         }
@@ -171,8 +171,53 @@ namespace Slovak_Travel_Guide.Service
         {
             return new ObservableCollection<OldVillagesModel>
             {
-                new OldVillagesModel(){MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",Name="Bratislavský hrad", Latitude=48.142248, Longtitude=17.0996481, IsVisible=false, },
+                new OldVillagesModel(){
+                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
+                Name="Jasná", 
+                Latitude=48.9672732, 
+                Longtitude=19.5831966, 
+                IsVisible=false, 
+                WebSite="https://www.jasna.sk/"},
 
+                new OldVillagesModel(){
+                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
+                Name="Jasná",
+                Latitude=49.2282509,
+                Longtitude=19.0338454,
+                IsVisible=false,
+                WebSite="https://www.jasna.sk/"},
+
+                new OldVillagesModel(){
+                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
+                Name="Jasná",
+                Latitude=48.9672732,
+                Longtitude=19.5831966,
+                IsVisible=false,
+                WebSite="https://www.jasna.sk/"},
+
+                new OldVillagesModel(){
+                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
+                Name="Jasná",
+                Latitude=48.9672732,
+                Longtitude=19.5831966,
+                IsVisible=false,
+                WebSite="https://www.jasna.sk/"},
+
+                new OldVillagesModel(){
+                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
+                Name="Jasná",
+                Latitude=48.9672732,
+                Longtitude=19.5831966,
+                IsVisible=false,
+                WebSite="https://www.jasna.sk/"},
+
+                new OldVillagesModel(){
+                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
+                Name="Jasná",
+                Latitude=48.9672732,
+                Longtitude=19.5831966,
+                IsVisible=false,
+                WebSite="https://www.jasna.sk/"},
             };
         }
         public ObservableCollection<SkiDestinationsModel> GetListSkiDestinations()
