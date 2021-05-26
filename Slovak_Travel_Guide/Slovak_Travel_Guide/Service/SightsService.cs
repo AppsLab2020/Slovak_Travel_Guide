@@ -181,7 +181,7 @@ namespace Slovak_Travel_Guide.Service
 
                 new OldVillagesModel(){
                 MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
-                Name="Jasná",
+                Name="Vrátna Paseky",
                 Latitude=49.2282509,
                 Longtitude=19.0338454,
                 IsVisible=false,
@@ -224,7 +224,54 @@ namespace Slovak_Travel_Guide.Service
         {
             return new ObservableCollection<SkiDestinationsModel>
             {
-                new SkiDestinationsModel(){MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",Name="Bratislavský hrad", Latitude=48.142248, Longtitude=17.0996481, IsVisible=false, },
+                new SkiDestinationsModel(){
+                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
+                Name="Jasná",
+                Latitude=48.9672732,
+                Longtitude=19.5831966,
+                IsVisible=false,
+                WebSite="https://www.jasna.sk/"},
+
+                new SkiDestinationsModel(){
+                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
+                Name="Vrátna Paseky",
+                Latitude=49.2282509,
+                Longtitude=19.0338454,
+                IsVisible=false,
+                WebSite="https://www.jasna.sk/"},
+
+                new SkiDestinationsModel(){
+                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
+                Name="Kubínska Hoľa",
+                Latitude=49.2741801,
+                Longtitude=19.2595782,
+                IsVisible=false,
+                WebSite="https://kubinska.sk/"},
+
+                new SkiDestinationsModel(){
+                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
+                Name="Jasná",
+                Latitude=48.9672732,
+                Longtitude=19.5831966,
+                IsVisible=false,
+                WebSite="https://www.jasna.sk/", },
+
+                new SkiDestinationsModel(){
+                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
+                Name="Jasná",
+                Latitude=48.9672732,
+                Longtitude=19.5831966,
+                IsVisible=false,
+                WebSite="https://www.jasna.sk/", },
+
+                new SkiDestinationsModel(){
+                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
+                Name="Jasná",
+                Latitude=48.9672732,
+                Longtitude=19.5831966,
+                IsVisible=false,
+                WebSite="https://www.jasna.sk/", },
+
             };
         }
         public ObservableCollection<ZoosModel> GetListZoos()
