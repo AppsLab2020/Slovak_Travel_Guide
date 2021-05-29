@@ -6,6 +6,8 @@ namespace Slovak_Travel_Guide.Service
 {
     class SightsService
     {
+
+        // Castles DONE
         public ObservableCollection<CastlesModel> GetListCastles()
         {
             return new ObservableCollection<CastlesModel>
@@ -37,7 +39,7 @@ namespace Slovak_Travel_Guide.Service
                     Url4="https://media-cdn.tripadvisor.com/media/photo-s/1a/eb/90/ff/autor-michal-pisny.jpg",},
 
                 new CastlesModel(){
-                    MainUrl="https://www.trencinregion.sk/images/listings/37/trenciansky_hrad-6adf3ccbeb02e1fa984b6ba53e30dbf0.jpg", 
+                    MainUrl="https://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_2_Foto%2520Patrik%2520%25C5%25BD%25C3%25A1k%252C%2520Mesto%2520Tren%25C4%258D%25C3%25ADn-1920x%2520%25283%2529_8ccdaec52e.jpg", 
                     Name="Trenčiansky hrad", 
                     Latitude=48.8942001, 
                     Longtitude=18.044716600000015, 
@@ -89,6 +91,8 @@ namespace Slovak_Travel_Guide.Service
                     Url4="http://www.severovychod.sk/content/images/s/spissky-hrad-a-spisska-kapitula-autor-zoltan-duray-zdroj-kocr-severovychod-slovenska_full.jpg"}
             };
         }
+
+        // Caves DONE
         public ObservableCollection<CavesModel> GetListCaves()
         {
             return new ObservableCollection<CavesModel>
@@ -143,6 +147,8 @@ namespace Slovak_Travel_Guide.Service
                     WebSite="https://sk.wikipedia.org/wiki/Perlov%C3%A1_jasky%C5%88a", },
             };
         }
+
+        // Mountains DONE
         public ObservableCollection<MountainsModel> GetListMountains()
         {
             return new ObservableCollection<MountainsModel>
@@ -197,65 +203,69 @@ namespace Slovak_Travel_Guide.Service
 
             };
         }
+
+        //Skanzens DONE
         public ObservableCollection<OldVillagesModel> GetListOldVillages()
         {
             return new ObservableCollection<OldVillagesModel>
             {
                 new OldVillagesModel(){
-                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
-                Name="Jasná", 
-                Latitude=48.9672732, 
-                Longtitude=19.5831966, 
+                MainUrl="https://img.uns.sk/blog-larges/mhxwiriRKjDZPHjiM.jpg",
+                Name="Vlkolínec", 
+                Latitude=49.0388732, 
+                Longtitude=19.2693852, 
                 IsVisible=false, 
-                WebSite="https://www.jasna.sk/"},
+                WebSite="https://www.vlkolinec.sk/"},
 
                 new OldVillagesModel(){
-                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
-                Name="Vrátna Paseky",
-                Latitude=49.2282509,
-                Longtitude=19.0338454,
+                MainUrl="https://img.uns.sk/blog-larges/bJhzXinJBhjzth2qG.jpg",
+                Name="Čičmany",
+                Latitude=48.9640973,
+                Longtitude=18.4835085,
                 IsVisible=false,
-                WebSite="https://www.jasna.sk/"},
+                WebSite="https://www.cicmany.net/"},
 
                 new OldVillagesModel(){
-                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
-                Name="Jasná",
-                Latitude=48.9672732,
-                Longtitude=19.5831966,
+                MainUrl="https://img.uns.sk/blog-larges/ttWeyQLcFKnLkhpZq.jpg",
+                Name="Múzeum Horného Šariša",
+                Latitude=49.3304553,
+                Longtitude=21.2651598,
                 IsVisible=false,
-                WebSite="https://www.jasna.sk/"},
+                WebSite="https://www.muzeum.sk/skanzen-muzeum-ludovej-architektury-narodopisna-expozicia-bardejovske-kupele.html"},
 
                 new OldVillagesModel(){
-                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
-                Name="Jasná",
-                Latitude=48.9672732,
-                Longtitude=19.5831966,
+                MainUrl="https://img.uns.sk/blog-larges/9wRZhNrJNf8fGWqCk.jpg",
+                Name="Múzeum Oravskej Dediny",
+                Latitude=49.2601312,
+                Longtitude=19.6607765,
                 IsVisible=false,
-                WebSite="https://www.jasna.sk/"},
+                WebSite="https://muzeum.zuberec.sk/"},
 
                 new OldVillagesModel(){
-                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
-                Name="Jasná",
-                Latitude=48.9672732,
-                Longtitude=19.5831966,
+                MainUrl="https://img.uns.sk/blog-larges/PnFDj2ppGWcJ87ugu.jpg",
+                Name="Múzeum Slovenskej Dediny",
+                Latitude=49.038772,
+                Longtitude=18.9264881,
                 IsVisible=false,
-                WebSite="https://www.jasna.sk/"},
+                WebSite="https://www.skanzenmartin.sk/"},
 
                 new OldVillagesModel(){
-                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
-                Name="Jasná",
-                Latitude=48.9672732,
-                Longtitude=19.5831966,
+                MainUrl="https://img.uns.sk/blog-larges/iTDfPgKbFXwt6SnJu.jpg",
+                Name="Skanzen Stará Ľubovňa",
+                Latitude=49.3169283,
+                Longtitude=20.6926647,
                 IsVisible=false,
-                WebSite="https://www.jasna.sk/"},
+                WebSite="https://www.staralubovna.sk/skanzen/"},
             };
         }
+
+        // Ski Destinations DONE
         public ObservableCollection<SkiDestinationsModel> GetListSkiDestinations()
         {
             return new ObservableCollection<SkiDestinationsModel>
             {
                 new SkiDestinationsModel(){
-                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
+                MainUrl="https://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Jasn%25C3%25A1%2520N%25C3%25ADzke%2520Tatry%252004%2520%25283%2529_0616181e02.jpg",
                 Name="Jasná",
                 Latitude=48.9672732,
                 Longtitude=19.5831966,
@@ -263,7 +273,7 @@ namespace Slovak_Travel_Guide.Service
                 WebSite="https://www.jasna.sk/"},
 
                 new SkiDestinationsModel(){
-                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
+                MainUrl="https://www.terchova.uteczmesta.eu/images/stories/paseky.jpg",
                 Name="Vrátna Paseky",
                 Latitude=49.2282509,
                 Longtitude=19.0338454,
@@ -271,7 +281,7 @@ namespace Slovak_Travel_Guide.Service
                 WebSite="https://www.jasna.sk/"},
 
                 new SkiDestinationsModel(){
-                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
+                MainUrl="https://img3.onthesnow.com/image/gg/50/505538.jpg",
                 Name="Kubínska Hoľa",
                 Latitude=49.2741801,
                 Longtitude=19.2595782,
@@ -279,28 +289,28 @@ namespace Slovak_Travel_Guide.Service
                 WebSite="https://kubinska.sk/"},
 
                 new SkiDestinationsModel(){
-                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
-                Name="Jasná",
-                Latitude=48.9672732,
-                Longtitude=19.5831966,
+                MainUrl="https://www.parksnow.sk/winter/images/content/slide48m_novahola.jpg",
+                Name="Donovaly",
+                Latitude=48.8729533,
+                Longtitude=19.2132326,
                 IsVisible=false,
-                WebSite="https://www.jasna.sk/", },
+                WebSite="https://www.parksnow.sk/leto/", },
 
                 new SkiDestinationsModel(){
-                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
-                Name="Jasná",
-                Latitude=48.9672732,
-                Longtitude=19.5831966,
+                MainUrl="https://mgwdata.net/forbes/prod/uploads/2018/11/velkaraca-2.jpg",
+                Name="Veľká Rača",
+                Latitude=49.4133064,
+                Longtitude=18.9666885,
                 IsVisible=false,
-                WebSite="https://www.jasna.sk/", },
+                WebSite="https://snowparadise.sk/", },
 
                 new SkiDestinationsModel(){
-                MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",
-                Name="Jasná",
-                Latitude=48.9672732,
-                Longtitude=19.5831966,
+                MainUrl="https://media-cdn.tripadvisor.com/media/photo-s/0b/79/c6/62/ski-rohace-spalena.jpg",
+                Name="Roháče",
+                Latitude=49.2293631,
+                Longtitude=19.6541772,
                 IsVisible=false,
-                WebSite="https://www.jasna.sk/", },
+                WebSite="https://www.rohacespalena.sk/", },
 
             };
         }
@@ -308,7 +318,53 @@ namespace Slovak_Travel_Guide.Service
         {
             return new ObservableCollection<ZoosModel>
             {
-                new ZoosModel(){MainUrl="https://bratislavskykraj.sk/wp-content/uploads/2020/05/str-38_hrad-696x626.jpg",Name="Bratislavský hrad", Latitude=48.142248, Longtitude=17.0996481, IsVisible=false, },
+                new ZoosModel(){
+                MainUrl="https://cdn.webnoviny.sk/sites/3/2018/11/zoo-bratislava-mikulas-mapy-640x366.jpg",
+                Name="ZOO Bratislava", 
+                Latitude=48.1566914, 
+                Longtitude=17.0735419, 
+                IsVisible=false, 
+                WebSite="https://www.zoobratislava.sk/", },
+
+                new ZoosModel(){
+                MainUrl="https://www.sdetmi.com/assets/Uploads/Event/3713/P1010140.jpg",
+                Name="ZOO Bojnice",
+                Latitude=48.7831183,
+                Longtitude=18.5734229,
+                IsVisible=false,
+                WebSite="https://zoobojnice.sk/", },
+
+                new ZoosModel(){
+                MainUrl="https://m.smedata.sk/api-media/media/image/sme/0/27/2757760/2757760_1000x.jpeg?rev=2",
+                Name="ZOO Košice",
+                Latitude=48.7835925,
+                Longtitude=21.2018527,
+                IsVisible=false,
+                WebSite="https://www.dinopark.sk/sk/kosice", },
+
+                new ZoosModel(){
+                MainUrl="https://staticcdn.sk/images/photoarchive/sized/700/2018/08/23/DIB-7882.JPG",
+                Name="ZOO Spišská Nová Ves",
+                Latitude=48.9322125,
+                Longtitude=20.5738957,
+                IsVisible=false,
+                WebSite="https://www.zookosice.sk/", },
+
+                new ZoosModel(){
+                MainUrl="https://www.beautifulslovakia.sk/uploads/item_gallery/1031_1229.jpg",
+                Name="ZOO Stropkov",
+                Latitude=49.2048898,
+                Longtitude=21.6494637,
+                IsVisible=false,
+                WebSite="http://www.zoostropkov.sk/", },
+
+                new ZoosModel(){
+                MainUrl="https://www.slovago.sk/images/node/item/716/original/51b651ec479.jpg",
+                Name="Ranč Pri Žiline",
+                Latitude=49.2736086,
+                Longtitude=18.7611304,
+                IsVisible=false,
+                WebSite="http://rancpriziline.sk/", },
             };
         }
             
