@@ -15,7 +15,11 @@
     <None Remove="images\lightTheme\BackGroundLight.png" />
     <None Remove="images\lightTheme\BackGroundLight2.png" />
     <None Remove="images\lightTheme\InfoButton.png" />
+    <None Remove="images\lightTheme\LoginBtn.png" />
+    <None Remove="images\lightTheme\LoginBtnLight.png" />
     <None Remove="images\lightTheme\NavigateButtonLight.png" />
+    <None Remove="images\lightTheme\RegisterBtn.png" />
+    <None Remove="images\lightTheme\RegisterBtnLight.png" />
     <None Remove="images\lightTheme\SettingsButtonLight.png" />
     <None Remove="images\lightTheme\SignInButton.png" />
     <None Remove="images\lightTheme\SignUpButton.png" />
@@ -35,7 +39,11 @@
     <EmbeddedResource Include="images\lightTheme\BackGroundLight.png" />
     <EmbeddedResource Include="images\lightTheme\BackGroundLight2.png" />
     <EmbeddedResource Include="images\lightTheme\InfoButton.png" />
+    <EmbeddedResource Include="images\lightTheme\LoginBtn.png" />
+    <EmbeddedResource Include="images\lightTheme\LoginBtnLight.png" />
     <EmbeddedResource Include="images\lightTheme\NavigateButtonLight.png" />
+    <EmbeddedResource Include="images\lightTheme\RegisterBtn.png" />
+    <EmbeddedResource Include="images\lightTheme\RegisterBtnLight.png" />
     <EmbeddedResource Include="images\lightTheme\SettingsButtonLight.png" />
     <EmbeddedResource Include="images\lightTheme\SignInButton.png" />
     <EmbeddedResource Include="images\lightTheme\SignUpButton.png" />

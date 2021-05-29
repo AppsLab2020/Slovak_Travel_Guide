@@ -2,7 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Slovak_Travel_Guide.Registration.RegistrationPage"
-             xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:local="clr-namespace:Slovak_Travel_Guide"
+             BackgroundImageSource="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.BackGroundLight.png}"
+              BackgroundColor="#E0E0E0">
 
 
     <ContentPage.Content>
@@ -47,7 +50,15 @@
                     <Entry Grid.Row="4" Grid.Column="2" Placeholder="PhoneNumber" FontSize="16" x:Name="EntryUserPhoneNumber" Text="{Binding TakePhoneNumber, Mode=OneWayToSource}"/>
 
                     <StackLayout Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3">
-                    <Button xct:TouchEffect.NativeAnimation="True" HorizontalOptions="Center" CornerRadius="15" Text="Register"  WidthRequest="100" TextColor="White" BackgroundColor="Blue" Command="{Binding RegisterButton}"/>
+                        
+                    <ImageButton 
+                        Source="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.RegisterBtnLight.png}"
+                        xct:TouchEffect.NativeAnimation="True" 
+                        HorizontalOptions="Center" 
+                        CornerRadius="15" 
+                        WidthRequest="100"  
+                        BackgroundColor="Blue" 
+                        Command="{Binding RegisterButton}"/>
                     </StackLayout>
                 </Grid>
                 

@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Slovak_Travel_Guide.Registration.LoginPage">
+             x:Class="Slovak_Travel_Guide.Registration.LoginPage"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:local="clr-namespace:Slovak_Travel_Guide"
+             BackgroundImageSource="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.BackGroundLight.png}"
+             BackgroundColor="#E0E0E0">
 
     <ContentPage.Content>
         
@@ -36,9 +40,21 @@
                     <Image Grid.Column="1" Grid.Row="3" Source="{Binding UsersIcon}"/>
                     <Entry Grid.Column="2" Placeholder="Password" x:Name="EntryPassword" IsPassword="True" Grid.Row="3" Text="{Binding TakePassword, Mode=OneWayToSource}"/>
 
-                    <Button Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="4" CornerRadius="15"  Text="Login"  BackgroundColor="#0077BE" TextColor="White" Command="{Binding LoginBtnClicked}"/>
+                    <ImageButton 
+                        Source="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.LoginBtn.png}"
+                        Grid.Column="1" 
+                        Grid.ColumnSpan="2" 
+                        Grid.Row="4" 
+                        CornerRadius="15"  
+                        Command="{Binding LoginBtnClicked}"/>
 
-                    <Button Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="5" CornerRadius="15" Text="SignUp"  Command="{Binding BackToSignUpPageBtn}"/>
+                    <ImageButton 
+                        Source="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.RegisterBtn.png}"
+                        Grid.Column="1" 
+                        Grid.ColumnSpan="2" 
+                        Grid.Row="5" 
+                        CornerRadius="15"   
+                        Command="{Binding BackToSignUpPageBtn}"/>
 
                 </Grid>
                 
