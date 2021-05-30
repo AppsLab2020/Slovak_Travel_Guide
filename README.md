@@ -15,8 +15,8 @@
   
 ## 3) Strana výberu
 
-  Min. 2 možnosti ako si vybrať medzi nejakými napr. hradmi, jaskyňami atď...
-  Keď stlačíme button napr. s hradmi tak nás to presunie na stranu, kde budú hrady, budeme si ich môsť rozkliknúť, zistiť nejaké bližšie info o nich
+  1. Min. 2 možnosti ako si vybrať medzi nejakými napr. hradmi, jaskyňami atď... 
+  1. Keď stlačíme button napr. s hradmi tak nás to presunie na stranu, kde budú hrady, budeme si ich môsť rozkliknúť, zistiť nejaké bližšie info o nich
   1. V bližšom infe o napr. hradoch budú 3 buttony, jeden na GPS a druhý na počasie:
       1. GPS button - funkcia po kliknutí taká, že nám nastaví navigáciu s aktuálneho miesta do cieľovej destinácie
       2. Počasie button - po kliknutí bude ukazovať, aké je na danom mieste počasie
