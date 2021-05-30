@@ -18,6 +18,9 @@ namespace Slovak_Travel_Guide.View
             InitializeComponent();
 
             BindingContext = new InfoPageViewModel(Navigation, webSite, aboutSight, name, url1, url2, url3, url4);
+
+            var navigationPage = Application.Current.MainPage as NavigationPage;
+            navigationPage.BarBackgroundColor = Color.Green;
         }
     }
 }

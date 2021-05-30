@@ -13,6 +13,9 @@ namespace Slovak_Travel_Guide.View
             InitializeComponent();
 
             BindingContext = new WebViewViewModel(WebSite);
+
+            var navigationPage = Application.Current.MainPage as NavigationPage;
+            navigationPage.BarBackgroundColor = Color.Green;
         }
 
         private void WebView_Navigated(object sender, WebNavigatedEventArgs e)

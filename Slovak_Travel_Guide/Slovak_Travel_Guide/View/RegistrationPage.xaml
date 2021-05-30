@@ -38,16 +38,16 @@
                     <Image Grid.Column="1" Grid.ColumnSpan="2" Source="{Binding UrlSignUp}"/>
 
                     <Image Grid.Column="1" Grid.Row="1" Source="{Binding UsersIcon}"/>
-                    <Entry Grid.Row="1" Grid.Column="2" Placeholder="UserName" FontSize="16" x:Name="EntryUserName" Text="{Binding TakeUserName, Mode=OneWayToSource}"/>
+                    <Entry TextColor="#1AAF00" FontAttributes="Bold" PlaceholderColor="#1AAF00" Grid.Row="1" Grid.Column="2" Placeholder="UserName" FontSize="24" x:Name="EntryUserName" Text="{Binding TakeUserName, Mode=OneWayToSource}"/>
 
                     <Image Grid.Column="1" Grid.Row="2" Source="{Binding UsersIcon}"/>
-                    <Entry Grid.Row="2" Grid.Column="2" Placeholder="Password" IsPassword="True" FontSize="16" x:Name="EntryUserPassword" Text="{Binding TakeUserPassword, Mode=OneWayToSource}"/>
+                    <Entry TextColor="#1AAF00" FontAttributes="Bold" PlaceholderColor="#1AAF00" Grid.Row="2" Grid.Column="2" Placeholder="Password" IsPassword="True" FontSize="24" x:Name="EntryUserPassword" Text="{Binding TakeUserPassword, Mode=OneWayToSource}"/>
 
                     <Image Grid.Column="1" Grid.Row="3" Source="{Binding UsersIcon}"/>
-                    <Entry Grid.Row="3" Grid.Column="2" Placeholder="E-Mail" FontSize="16" x:Name="EntryUserEmail" Text="{Binding TakeEmail, Mode=OneWayToSource}"/>
+                    <Entry TextColor="#1AAF00" FontAttributes="Bold" PlaceholderColor="#1AAF00" Grid.Row="3" Grid.Column="2" Placeholder="E-Mail" FontSize="24" x:Name="EntryUserEmail" Text="{Binding TakeEmail, Mode=OneWayToSource}"/>
 
                     <Image Grid.Column="1" Grid.Row="4" Source="{Binding UsersIcon}"/>
-                    <Entry Grid.Row="4" Grid.Column="2" Placeholder="PhoneNumber" FontSize="16" x:Name="EntryUserPhoneNumber" Text="{Binding TakePhoneNumber, Mode=OneWayToSource}"/>
+                    <Entry TextColor="#1AAF00" FontAttributes="Bold" PlaceholderColor="#1AAF00" Grid.Row="4" Grid.Column="2" Placeholder="PhoneNumber" FontSize="24" x:Name="EntryUserPhoneNumber" Text="{Binding TakePhoneNumber, Mode=OneWayToSource}"/>
 
                     <StackLayout Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3">
                         
@@ -56,8 +56,9 @@
                         xct:TouchEffect.NativeAnimation="True" 
                         HorizontalOptions="Center" 
                         CornerRadius="15" 
-                        WidthRequest="100"  
-                        BackgroundColor="Blue" 
+                        WidthRequest="200"
+                        HeightRequest="100"
+                        BackgroundColor="Transparent"
                         Command="{Binding RegisterButton}"/>
                     </StackLayout>
                 </Grid>

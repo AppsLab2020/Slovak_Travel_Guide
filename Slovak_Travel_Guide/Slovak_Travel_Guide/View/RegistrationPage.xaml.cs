@@ -16,6 +16,9 @@ namespace Slovak_Travel_Guide.Registration
             InitializeComponent();
 
             BindingContext = new RegistrationPageViewModel(Navigation);
+
+            var navigationPage = Application.Current.MainPage as NavigationPage;
+            navigationPage.BarBackgroundColor = Color.Green;
         }
 
     }
