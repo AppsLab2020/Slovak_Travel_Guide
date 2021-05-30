@@ -17,21 +17,22 @@
 
   1. Min. 2 možnosti ako si vybrať medzi nejakými napr. hradmi, jaskyňami atď...
   1. Keď stlačíme button napr. s hradmi tak nás to presunie na stranu, kde budú hrady, budeme si ich môsť rozkliknúť, zistiť nejaké bližšie info o nich
-  1. Ak nebudeme chcieť stránku s hradmi všeobecne, tak dole na stránke sa bude nachádzať Entry, do ktorého budeme môcť zadať názov konkrétneho hradu
-  1. V bližšom infe o napr. hradoch budú 2 buttony, jeden na GPS a druhý na počasie:
-       GPS button - funkcia po kliknutí taká, že nám nastaví navigáciu s aktuálneho miesta do cieľovej destinácie
-       Počasie button - po kliknutí bude ukazovať, aké je na danom mieste počasie
+  1. V bližšom infe o napr. hradoch budú 3 buttony, jeden na GPS a druhý na počasie:
+      1.1. GPS button - funkcia po kliknutí taká, že nám nastaví navigáciu s aktuálneho miesta do cieľovej destinácie
+      1.1. Počasie button - po kliknutí bude ukazovať, aké je na danom mieste počasie
+      1.1. Info button - zobrazia sa nám základné aplikície o pamiatke
        
 ## Snímky z aplikácie
 ![MAIN PAGE](Images/MainPage.png)
 ![](Images/SelectPage.png)
 ![](Images/CatlesPage_-_1.png)
 ![](Images/CastlesPage_-_opened.png)
+
 ## 1) Demo (15.3.2021)
   1. do prvého dema stihnúť spojazdniť GPSku, aby sme sa vedeli navigovat pomocou tlačidla na miesto, na ktoré chceme ísť ✔
   2. funkcny splach screen ✔
 
-## 2) Demo (neviem dátum)
+## 2) Demo
    Do druhého dema chcem stihnuť:
    1. Prerobiť kód do MVVM ✔
    2. Spojazdniť "Weather Button", aby sa nám zobrazilo počasie na danom mieste ❌
@@ -39,13 +40,11 @@
    4. Spraviť SignUp a LogIn pages ✔
 
 ## Posledné demo
-   Funkčná celá appka❌
-   1. Hotový celý design❌
-   2. Funkčné buttony✔
-   3. Pridať nejaké výhody pre ľudí, ktorí sa zaregistrujú❌
-   4. Light/Dark mode❌
-   5. Nastaviť na splashscreen našu vlasntú grafiku❌
-   6. Spravené logo❌
+   Funkčná celá appka ✔
+   1. Hotový celý design ✔
+   3. Funkčné buttony✔
+   4. Nastaviť na splashscreen našu vlasntú grafiku ✔
+ 
 *Vytvorili Martinek a Jaro 🤣* 
 
 
