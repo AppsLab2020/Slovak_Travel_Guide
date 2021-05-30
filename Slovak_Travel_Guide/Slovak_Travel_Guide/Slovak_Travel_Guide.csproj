@@ -18,6 +18,7 @@
     <None Remove="images\lightTheme\LoginBtn.png" />
     <None Remove="images\lightTheme\LoginBtnLight.png" />
     <None Remove="images\lightTheme\NavigateButtonLight.png" />
+    <None Remove="images\lightTheme\RefreshButton.png" />
     <None Remove="images\lightTheme\RegisterBtn.png" />
     <None Remove="images\lightTheme\RegisterBtnLight.png" />
     <None Remove="images\lightTheme\SettingsButtonLight.png" />
@@ -42,6 +43,7 @@
     <EmbeddedResource Include="images\lightTheme\LoginBtn.png" />
     <EmbeddedResource Include="images\lightTheme\LoginBtnLight.png" />
     <EmbeddedResource Include="images\lightTheme\NavigateButtonLight.png" />
+    <EmbeddedResource Include="images\lightTheme\RefreshButton.png" />
     <EmbeddedResource Include="images\lightTheme\RegisterBtn.png" />
     <EmbeddedResource Include="images\lightTheme\RegisterBtnLight.png" />
     <EmbeddedResource Include="images\lightTheme\SettingsButtonLight.png" />

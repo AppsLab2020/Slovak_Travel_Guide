@@ -136,14 +136,15 @@
                 FontAttributes="Bold"/>
         </StackLayout>
         
-        <Button 
+        <ImageButton 
             Grid.Row="6"
             Grid.Column="0"
             Grid.ColumnSpan="2"
-            Text="Reset" 
+            Source="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.RefreshButton.png}" 
             Command="{Binding Source={x:Reference WeatherPage}, Path=BindingContext.Reset}"
             xct:TouchEffect.NativeAnimation="True"
-            BackgroundColor="LightGray"/>
+            CornerRadius="30"
+            BackgroundColor="Transparent"/>
         
     </Grid>
 
