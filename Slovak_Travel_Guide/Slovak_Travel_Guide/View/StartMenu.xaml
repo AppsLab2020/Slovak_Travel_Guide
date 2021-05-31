@@ -16,9 +16,12 @@
             
             <Image
                 Source="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.SlovakTravelGuide.png}"/>
+
+            <Image
+                Source="{local:ImageResource Slovak_Travel_Guide.images.lightTheme.Mountains.png}"
+                Margin="0,120,0,0"/>
         </StackLayout>
-        
-        
+
         <StackLayout
         VerticalOptions="End"
         Margin="0,0,0,10">
