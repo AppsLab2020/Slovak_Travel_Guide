@@ -23,7 +23,7 @@ namespace Slovak_Travel_Guide.View
             ((NavigationPage)Application.Current.MainPage).BarTextColor = Color.Green;*/
 
             var navigationPage = Application.Current.MainPage as NavigationPage;
-            navigationPage.BarBackgroundColor = Color.Green;
+            navigationPage.BarBackgroundColor = Color.LightGreen;
         }
 
         protected async override void OnAppearing()

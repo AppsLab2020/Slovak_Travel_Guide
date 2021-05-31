@@ -25,11 +25,11 @@
         </Grid.ColumnDefinitions>
 
         <StackLayout Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
-            <Label Text="{Binding Name}" HorizontalOptions="Center" FontSize="40" FontAttributes="Bold" TextColor="Green"/>
+            <Label Text="{Binding Name}" HorizontalOptions="Center" FontSize="40" FontAttributes="Bold,Italic" TextColor="Green"/>
         </StackLayout>
 
         <StackLayout Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
-            <Label Text="{Binding AboutSight}" FontSize="16" TextColor="LightGreen" HorizontalTextAlignment="Center"/>
+            <Label Text="{Binding AboutSight}" FontSize="16" TextColor="Green" HorizontalTextAlignment="Start"/>
         </StackLayout>
             
         <Image Source="{Binding Url1}" Grid.Row="4" Grid.Column="1" Aspect="AspectFill" />
